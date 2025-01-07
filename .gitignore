@@ -1,0 +1,11 @@
+# Ignore JSON files
+*.json
+
+# Ignore JSONL files
+*.jsonl
+
+# Ignore log files
+*.log
+
+# Ignore model files (.bin)
+*.bin
