@@ -1,0 +1,199 @@
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/utils/generic.py:260: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+INFO:name:device: cuda:2, n_gpu: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 138334479251056 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/795adb0ea7051555f0e082c61fdeb83e1f5014c0.lock
+DEBUG:filelock:Lock 138334479251056 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/795adb0ea7051555f0e082c61fdeb83e1f5014c0.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/graphcodebert-base/resolve/main/config.json HTTP/1.1" 200 539
+DEBUG:filelock:Attempting to release lock 138334479251056 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/795adb0ea7051555f0e082c61fdeb83e1f5014c0.lock
+DEBUG:filelock:Lock 138334479251056 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/795adb0ea7051555f0e082c61fdeb83e1f5014c0.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 138334479252832 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:filelock:Lock 138334479252832 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/graphcodebert-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 25
+DEBUG:filelock:Attempting to release lock 138334479252832 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:filelock:Lock 138334479252832 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/vocab.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 138334465770496 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:filelock:Lock 138334465770496 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/graphcodebert-base/resolve/main/vocab.json HTTP/1.1" 200 898822
+DEBUG:filelock:Attempting to release lock 138334465770496 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:filelock:Lock 138334465770496 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/merges.txt HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 138334465770496 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:filelock:Lock 138334465770496 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/graphcodebert-base/resolve/main/merges.txt HTTP/1.1" 200 456318
+DEBUG:filelock:Attempting to release lock 138334465770496 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:filelock:Lock 138334465770496 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/tokenizer.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 138334465770928 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/e97d1993365bb21c88f390e8703e4c1af564821f.lock
+DEBUG:filelock:Lock 138334465770928 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/e97d1993365bb21c88f390e8703e4c1af564821f.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/graphcodebert-base/resolve/main/special_tokens_map.json HTTP/1.1" 200 772
+DEBUG:filelock:Attempting to release lock 138334465770928 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/e97d1993365bb21c88f390e8703e4c1af564821f.lock
+DEBUG:filelock:Lock 138334465770928 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/e97d1993365bb21c88f390e8703e4c1af564821f.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/model.safetensors HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/graphcodebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:filelock:Attempting to acquire lock 138334466447952 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/fc542850abf74be2df516bcdedfc2dcdb9bd02c8098a6d5f4d63da73cbcb9e71.lock
+DEBUG:filelock:Lock 138334466447952 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/fc542850abf74be2df516bcdedfc2dcdb9bd02c8098a6d5f4d63da73cbcb9e71.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-lfs.hf.co:443
+DEBUG:urllib3.connectionpool:https://cdn-lfs.hf.co:443 "GET /microsoft/graphcodebert-base/fc542850abf74be2df516bcdedfc2dcdb9bd02c8098a6d5f4d63da73cbcb9e71?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1736981183&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczNjk4MTE4M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9taWNyb3NvZnQvZ3JhcGhjb2RlYmVydC1iYXNlL2ZjNTQyODUwYWJmNzRiZTJkZjUxNmJjZGVkZmMyZGNkYjliZDAyYzgwOThhNmQ1ZjRkNjNkYTczY2JjYjllNzE~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=Fpu~OgabxLFMYtvICqfzJSqXJJihTtII90x8lnhonuxAdiuefG348Lkh~tp2GZ5aFeqtYJBT5Y2RACoH5gzt0cEkbCV9D3iA6AHmKSJ~cRuZn4j2XoYWG2L8kk~v3Rerv2mJ77~MTwfyPPJh~L3mNZvF1B5RPAb5N-kVAsjBWc2fpXXbyzftqG22~rdvRNevIdguNPzI0bF4cP8A0g6TAoicNx5VfS9AxexOK4WAmp8nZrQH0ScfEoviz6Sftzo8RoEdbGvZjZHrF4lP3ARLHTj-wzolHWU9eSsQXmA2rCmZ8R-EtQoMhsBy-EdNS68jkz13GM0E7zseHUcdfUgNww__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/1.1" 200 498845934
+DEBUG:filelock:Attempting to release lock 138334466447952 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/fc542850abf74be2df516bcdedfc2dcdb9bd02c8098a6d5f4d63da73cbcb9e71.lock
+DEBUG:filelock:Lock 138334466447952 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--graphcodebert-base/fc542850abf74be2df516bcdedfc2dcdb9bd02c8098a6d5f4d63da73cbcb9e71.lock
+INFO:name:***** Running training for defect detection *****
+INFO:name:  Num examples = 21854
+INFO:name:  Num Epochs = 10
+INFO:name:  Total train batch size  = 32
+INFO:name:  Total optimization steps = 6830
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 0 Step 99 Train Loss 0.692   Accuracy 53.531 
+Epoch 0 Step 199 Train Loss 0.689   Accuracy 54.375 
+Epoch 0 Step 299 Train Loss 0.684   Accuracy 55.292 
+Epoch 0 Step 399 Train Loss 0.681   Accuracy 55.891 
+Epoch 0 Step 499 Train Loss 0.679   Accuracy 56.094 
+Epoch 0 Step 599 Train Loss 0.675   Accuracy 56.458 
+INFO:name:  eval_loss = 0.6499
+INFO:name:  eval_acc = 0.6138
+INFO:name:  f1_score = 0.4294
+INFO:name:  recall = 0.3345
+INFO:name:  precision = 0.5997
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6138
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.5985, 'test_f1_score': 0.418, 'test_recall': 0.3139, 'test_precision': 0.6254}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 1 Step 99 Train Loss 0.652   Accuracy 59.625 
+Epoch 1 Step 199 Train Loss 0.643   Accuracy 60.578 
+Epoch 1 Step 299 Train Loss 0.642   Accuracy 60.969 
+Epoch 1 Step 399 Train Loss 0.639   Accuracy 61.344 
+Epoch 1 Step 499 Train Loss 0.636   Accuracy 61.481 
+Epoch 1 Step 599 Train Loss 0.634   Accuracy 61.812 
+INFO:name:  eval_loss = 0.6009
+INFO:name:  eval_acc = 0.6589
+INFO:name:  f1_score = 0.5733
+INFO:name:  recall = 0.5274
+INFO:name:  precision = 0.6279
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6589
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.6358, 'test_f1_score': 0.5568, 'test_recall': 0.498, 'test_precision': 0.6313}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 2 Step 99 Train Loss 0.583   Accuracy 66.875 
+Epoch 2 Step 199 Train Loss 0.564   Accuracy 68.453 
+Epoch 2 Step 299 Train Loss 0.563   Accuracy 68.646 
+Epoch 2 Step 399 Train Loss 0.562   Accuracy 68.648 
+Epoch 2 Step 499 Train Loss 0.559   Accuracy 68.856 
+Epoch 2 Step 599 Train Loss 0.56   Accuracy 68.635 
+INFO:name:  eval_loss = 0.6158
+INFO:name:  eval_acc = 0.6402
+INFO:name:  f1_score = 0.6015
+INFO:name:  recall = 0.6251
+INFO:name:  precision = 0.5797
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 3 Step 99 Train Loss 0.481   Accuracy 75.219 
+Epoch 3 Step 199 Train Loss 0.473   Accuracy 76.109 
+Epoch 3 Step 299 Train Loss 0.473   Accuracy 75.927 
+Epoch 3 Step 399 Train Loss 0.475   Accuracy 75.672 
+Epoch 3 Step 499 Train Loss 0.478   Accuracy 75.219 
+Epoch 3 Step 599 Train Loss 0.48   Accuracy 74.984 
+INFO:name:  eval_loss = 0.6333
+INFO:name:  eval_acc = 0.649
+INFO:name:  f1_score = 0.6166
+INFO:name:  recall = 0.6495
+INFO:name:  precision = 0.5868
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 4 Step 99 Train Loss 0.383   Accuracy 80.5 
+Epoch 4 Step 199 Train Loss 0.391   Accuracy 80.453 
+Epoch 4 Step 299 Train Loss 0.391   Accuracy 80.042 
+Epoch 4 Step 399 Train Loss 0.394   Accuracy 80.188 
+Epoch 4 Step 499 Train Loss 0.399   Accuracy 80.106 
+Epoch 4 Step 599 Train Loss 0.401   Accuracy 79.854 
+INFO:name:  eval_loss = 0.7692
+INFO:name:  eval_acc = 0.6343
+INFO:name:  f1_score = 0.6138
+INFO:name:  recall = 0.6689
+INFO:name:  precision = 0.5671
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 5 Step 99 Train Loss 0.303   Accuracy 85.656 
+Epoch 5 Step 199 Train Loss 0.317   Accuracy 84.953 
+Epoch 5 Step 299 Train Loss 0.319   Accuracy 84.719 
+Epoch 5 Step 399 Train Loss 0.324   Accuracy 84.125 
+Epoch 5 Step 499 Train Loss 0.324   Accuracy 84.131 
+Epoch 5 Step 599 Train Loss 0.325   Accuracy 84.172 
+INFO:name:  eval_loss = 0.97
+INFO:name:  eval_acc = 0.6482
+INFO:name:  f1_score = 0.6092
+INFO:name:  recall = 0.631
+INFO:name:  precision = 0.5888
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 6 Step 99 Train Loss 0.24   Accuracy 89.281 
+Epoch 6 Step 199 Train Loss 0.243   Accuracy 88.719 
+Epoch 6 Step 299 Train Loss 0.247   Accuracy 88.833 
+Epoch 6 Step 399 Train Loss 0.253   Accuracy 88.414 
+Epoch 6 Step 499 Train Loss 0.258   Accuracy 87.981 
+Epoch 6 Step 599 Train Loss 0.26   Accuracy 87.979 
+INFO:name:  eval_loss = 1.0915
+INFO:name:  eval_acc = 0.6373
+INFO:name:  f1_score = 0.5763
+INFO:name:  recall = 0.5678
+INFO:name:  precision = 0.5851
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 7 Step 99 Train Loss 0.199   Accuracy 91.031 
+Epoch 7 Step 199 Train Loss 0.203   Accuracy 90.719 
+Epoch 7 Step 299 Train Loss 0.203   Accuracy 90.833 
+Epoch 7 Step 399 Train Loss 0.204   Accuracy 90.898 
+Epoch 7 Step 499 Train Loss 0.208   Accuracy 90.75 
+Epoch 7 Step 599 Train Loss 0.212   Accuracy 90.589 
+INFO:name:  eval_loss = 1.1755
+INFO:name:  eval_acc = 0.6439
+INFO:name:  f1_score = 0.5749
+INFO:name:  recall = 0.5543
+INFO:name:  precision = 0.5971
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 8 Step 99 Train Loss 0.152   Accuracy 93.656 
+Epoch 8 Step 199 Train Loss 0.157   Accuracy 93.281 
+Epoch 8 Step 299 Train Loss 0.155   Accuracy 93.26 
+Epoch 8 Step 399 Train Loss 0.159   Accuracy 92.984 
+Epoch 8 Step 499 Train Loss 0.161   Accuracy 92.906 
+Epoch 8 Step 599 Train Loss 0.164   Accuracy 92.63 
+INFO:name:  eval_loss = 1.3722
+INFO:name:  eval_acc = 0.6362
+INFO:name:  f1_score = 0.5697
+INFO:name:  recall = 0.5543
+INFO:name:  precision = 0.5859

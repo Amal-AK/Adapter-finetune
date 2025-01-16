@@ -3,8 +3,8 @@ python3 main_clone.py \
     --output_dir=./ \
     --eval_data_file=./datasets/dataset_clone/valid.txt \
     --test_data_file=./datasets/dataset_clone/test.txt \
-    --model_name_or_path=Salesforce/codet5p-220m \
-    --tokenizer_name=Salesforce/codet5p-220m  \
+    --model_name_or_path=Salesforce/codet5-base \
+    --tokenizer_name=Salesforce/codet5-base \
     --num_classes 1 \
     --nl_length 128 \
     --code_length 512 \
@@ -22,6 +22,6 @@ python3 main_clone.py \
     --cycles 30 \
     --max_grad_norm 1.0 \
     --num_train_epochs 5 \
-    --optimization_history_file=logs_optim/codet5p_optim_history_clone.txt \
-    --stats_file=codet5p_stats_clone.json \
-    --seed 42 2>&1 | tee ./logs_optim/codet5p_clone_detection.log
+    --optimization_history_file=logs_optim/codet5_optim_history_clone.txt \
+    --stats_file=logs_optim/codet5_stats_clone.json \
+    --seed 42 2>&1 | tee ./logs_optim/codet5_clone_detection.log

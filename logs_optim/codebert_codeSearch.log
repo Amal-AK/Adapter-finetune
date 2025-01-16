@@ -1,0 +1,1539 @@
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/utils/generic.py:260: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+INFO:name:device: cuda:0, n_gpu: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 125309748788288 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/cd6f88de92758ae36c1c6e18a03ad288ccb41172.lock
+DEBUG:filelock:Lock 125309748788288 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/cd6f88de92758ae36c1c6e18a03ad288ccb41172.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 498
+DEBUG:filelock:Attempting to release lock 125309748788288 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/cd6f88de92758ae36c1c6e18a03ad288ccb41172.lock
+DEBUG:filelock:Lock 125309748788288 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/cd6f88de92758ae36c1c6e18a03ad288ccb41172.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 125309748783584 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:filelock:Lock 125309748783584 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/codebert-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 25
+DEBUG:filelock:Attempting to release lock 125309748783584 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:filelock:Lock 125309748783584 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/vocab.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 125309748939600 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:filelock:Lock 125309748939600 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/codebert-base/resolve/main/vocab.json HTTP/1.1" 200 898822
+DEBUG:filelock:Attempting to release lock 125309748939600 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:filelock:Lock 125309748939600 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/0a39732b2d8be8e493cab3da68b68cc3e28221de.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/merges.txt HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 125309748939600 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:filelock:Lock 125309748939600 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/codebert-base/resolve/main/merges.txt HTTP/1.1" 200 456318
+DEBUG:filelock:Attempting to release lock 125309748939600 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:filelock:Lock 125309748939600 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/226b0752cac7789c48f0cb3ec53eda48b7be36cc.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/tokenizer.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 125309748939408 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/6cd1d9021e10d47aed59399af6b0e30312b46ca4.lock
+DEBUG:filelock:Lock 125309748939408 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/6cd1d9021e10d47aed59399af6b0e30312b46ca4.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/codebert-base/resolve/main/special_tokens_map.json HTTP/1.1" 200 150
+DEBUG:filelock:Attempting to release lock 125309748939408 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/6cd1d9021e10d47aed59399af6b0e30312b46ca4.lock
+DEBUG:filelock:Lock 125309748939408 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/6cd1d9021e10d47aed59399af6b0e30312b46ca4.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/model.safetensors HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:filelock:Attempting to acquire lock 125309744751104 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/28b61fd8fa069f6bc966f4cb9572a4026ab2a784fca8fb224020d91b744e32d6.lock
+DEBUG:filelock:Lock 125309744751104 acquired on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/28b61fd8fa069f6bc966f4cb9572a4026ab2a784fca8fb224020d91b744e32d6.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-lfs.hf.co:443
+DEBUG:urllib3.connectionpool:https://cdn-lfs.hf.co:443 "GET /microsoft/codebert-base/28b61fd8fa069f6bc966f4cb9572a4026ab2a784fca8fb224020d91b744e32d6?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1736600566&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczNjYwMDU2Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9taWNyb3NvZnQvY29kZWJlcnQtYmFzZS8yOGI2MWZkOGZhMDY5ZjZiYzk2NmY0Y2I5NTcyYTQwMjZhYjJhNzg0ZmNhOGZiMjI0MDIwZDkxYjc0NGUzMmQ2P3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=hkOsM0OM18og4zeNOfFd3XjI5wqkygEbEyDAbQUC2Zh0iLNVrbr6Fs1OunpyKQJRV4clIGcnxl0qhYuV2QOznZndvKBl~X-0~YyH7LoQ9VieohZIV25A-2jPQAPfmIi0uudqNoLZURvQD-WIohu0Qocx4vISjqDUD9v4cHpbtmf8ZMsqCi691-WOCQDb7UXGtnNXzAwSRe6B7tBuh-SFPMvgO65u~hLen1pzEaMVKNc34Bvvqu-yIkKvziXERbrmR3hh0Muan-YHRgZ4HFORMeAxs4jQqpQywV72CSUxNocJU2Ouhr3IILfBExUerBvfkwpshTCiJTQKD8AxeHlP6Q__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/1.1" 200 498627950
+DEBUG:filelock:Attempting to release lock 125309744751104 on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/28b61fd8fa069f6bc966f4cb9572a4026ab2a784fca8fb224020d91b744e32d6.lock
+DEBUG:filelock:Lock 125309744751104 released on /home/aakli/.cache/huggingface/hub/.locks/models--microsoft--codebert-base/28b61fd8fa069f6bc966f4cb9572a4026ab2a784fca8fb224020d91b744e32d6.lock
+INFO:name:Preparing the code search Dataset...
+
+INFO:name:Preparing the code search Dataset...
+
+INFO:name:Preparing the code search Dataset...
+
+INFO:name:
+
+Initialization of the population, may take a while ...
+
+
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:03:08,246 >> Trainable Ratio: 890496/125536128=0.709354%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:03:08,246 >> Delta Parameter Ratio: 890496/125536128=0.709354%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:03:08,246 >> Static Memory 0.00 GB, Max Memory 0.00 GB
+INFO:name:1.04
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0] 
+
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+INFO:name:==> Fitness : 0.311
+INFO:name:==> Eval Accuracy : 0.315
+INFO:name:==> Eval f1 score : 0.315
+INFO:name:==> Parameters % : 0.7100000000000001
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:08:16,712 >> Trainable Ratio: 3194544/127840176=2.498858%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:08:16,712 >> Delta Parameter Ratio: 3194544/127840176=2.498858%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:08:16,712 >> Static Memory 0.49 GB, Max Memory 5.27 GB
+INFO:name:3.62
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['output', 'attention.output', 'intermediate'], 'bottleneck_dim': [128, 64, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.output'], 'bottleneck_dim': [64, 128, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.self', 'attention.output'], 'bottleneck_dim': [128, 16, 32], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 128, 16], 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'attention.self'], 'bottleneck_dim': [64, 16], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0] 
+
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+INFO:name:==> Fitness : 0.3
+INFO:name:==> Eval Accuracy : 0.313
+INFO:name:==> Eval f1 score : 0.313
+INFO:name:==> Parameters % : 2.5
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:14:47,103 >> Trainable Ratio: 1654832/126300464=1.310234%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:14:47,103 >> Delta Parameter Ratio: 1654832/126300464=1.310234%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:14:47,103 >> Static Memory 0.97 GB, Max Memory 9.05 GB
+INFO:name:1.91
+INFO:name: ==> Delta parameters 
+ [0, 0, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [16, 128, 32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0] 
+
+INFO:name:==> Fitness : 0.319
+INFO:name:==> Eval Accuracy : 0.326
+INFO:name:==> Eval f1 score : 0.326
+INFO:name:==> Parameters % : 1.31
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:20:28,084 >> Trainable Ratio: 2302128/126947760=1.813445%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:20:28,084 >> Delta Parameter Ratio: 2302128/126947760=1.813445%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:20:28,084 >> Static Memory 1.47 GB, Max Memory 9.05 GB
+INFO:name:2.64
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['output', 'attention.self', 'attention.output'], 'bottleneck_dim': [128, 32, 32], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'intermediate'], 'bottleneck_dim': [64, 128, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [16, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.414
+INFO:name:==> Eval Accuracy : 0.423
+INFO:name:==> Eval f1 score : 0.423
+INFO:name:==> Parameters % : 1.81
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:26:41,252 >> Trainable Ratio: 2421728/127067360=1.905862%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:26:41,252 >> Delta Parameter Ratio: 2421728/127067360=1.905862%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:26:41,252 >> Static Memory 1.94 GB, Max Memory 9.45 GB
+INFO:name:2.77
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 32], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.self', 'intermediate', 'output'], 'bottleneck_dim': [32, 128, 128], 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.399
+INFO:name:==> Eval Accuracy : 0.409
+INFO:name:==> Eval f1 score : 0.409
+INFO:name:==> Parameters % : 1.91
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:32:55,876 >> Trainable Ratio: 4027728/128673360=3.130196%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:32:55,877 >> Delta Parameter Ratio: 4027728/128673360=3.130196%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:32:55,877 >> Static Memory 2.42 GB, Max Memory 9.95 GB
+INFO:name:4.52
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output', 'attention.self', 'output'], 'bottleneck_dim': [32, 16, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 128], 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.output', 'attention.self'], 'bottleneck_dim': [256, 32, 16], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 32], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.374
+INFO:name:==> Eval Accuracy : 0.39
+INFO:name:==> Eval f1 score : 0.39
+INFO:name:==> Parameters % : 3.1300000000000003
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:39:27,497 >> Trainable Ratio: 4952544/129598176=3.821461%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:39:27,497 >> Delta Parameter Ratio: 4952544/129598176=3.821461%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:39:27,497 >> Static Memory 2.90 GB, Max Memory 10.85 GB
+INFO:name:5.5
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['output', 'attention.self'], 'bottleneck_dim': [128, 32], 'non_linearity': 'silu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'attention.self'], 'bottleneck_dim': [32, 32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.output', 'intermediate'], 'bottleneck_dim': [256, 64, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'attention.self'], 'bottleneck_dim': [64, 16], 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'output', 'intermediate'], 'bottleneck_dim': [16, 128, 64], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [64, 16], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'output'], 'bottleneck_dim': [64, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output', 'output'], 'bottleneck_dim': [64, 64, 128], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [64, 16], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.373
+INFO:name:==> Eval Accuracy : 0.392
+INFO:name:==> Eval f1 score : 0.392
+INFO:name:==> Parameters % : 3.82
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:46:19,528 >> Trainable Ratio: 5610032/130255664=4.306939%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:46:19,528 >> Delta Parameter Ratio: 5610032/130255664=4.306939%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:46:19,528 >> Static Memory 3.39 GB, Max Memory 12.15 GB
+INFO:name:6.1899999999999995
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output'], 'bottleneck_dim': [64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [32, 128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.self', 'attention.output'], 'bottleneck_dim': [256, 32, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output', 'attention.self'], 'bottleneck_dim': [128, 32, 32], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [256, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 128, 32], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [16, 256], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.393
+INFO:name:==> Eval Accuracy : 0.415
+INFO:name:==> Eval f1 score : 0.415
+INFO:name:==> Parameters % : 4.31
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:53:06,171 >> Trainable Ratio: 4794560/129440192=3.704074%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:53:06,171 >> Delta Parameter Ratio: 4794560/129440192=3.704074%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:53:06,171 >> Static Memory 0.51 GB, Max Memory 12.30 GB
+INFO:name:5.34
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [32, 128], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'output'], 'bottleneck_dim': [128, 256], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [64, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'attention.self', 'output'], 'bottleneck_dim': [32, 32, 128], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [32, 128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [64, 256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [16, 256], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [64, 128], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [64], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.067
+INFO:name:==> Eval Accuracy : 0.086
+INFO:name:==> Eval f1 score : 0.086
+INFO:name:==> Parameters % : 3.6999999999999997
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 13:59:45,460 >> Trainable Ratio: 6182560/130828192=4.725709%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 13:59:45,460 >> Delta Parameter Ratio: 6182560/130828192=4.725709%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 13:59:45,460 >> Static Memory 1.02 GB, Max Memory 12.30 GB
+INFO:name:6.78
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'output'], 'bottleneck_dim': [64, 128], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 32], 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [16, 64, 32], 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate', 'output'], 'bottleneck_dim': [64, 64, 256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'output'], 'bottleneck_dim': [128, 256], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [64, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.366
+INFO:name:==> Eval Accuracy : 0.39
+INFO:name:==> Eval f1 score : 0.39
+INFO:name:==> Parameters % : 4.73
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:06:44,886 >> Trainable Ratio: 5684064/130329696=4.361296%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:06:44,886 >> Delta Parameter Ratio: 5684064/130329696=4.361296%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:06:44,886 >> Static Memory 1.52 GB, Max Memory 12.30 GB
+INFO:name:6.260000000000001
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [64, 32], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 128], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [128, 32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 128, 32], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 128], 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.372
+INFO:name:==> Eval Accuracy : 0.394
+INFO:name:==> Eval f1 score : 0.394
+INFO:name:==> Parameters % : 4.36
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:12:55,395 >> Trainable Ratio: 4652064/129297696=3.597948%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:12:55,395 >> Delta Parameter Ratio: 4652064/129297696=3.597948%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:12:55,395 >> Static Memory 2.02 GB, Max Memory 12.30 GB
+INFO:name:5.19
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [16, 64, 32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'attention.self'], 'bottleneck_dim': [64, 32], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'attention.output'], 'bottleneck_dim': [128, 16, 32], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [64, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.self', 'attention.output'], 'bottleneck_dim': [128, 32, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output', 'intermediate'], 'bottleneck_dim': [32, 64, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.416
+INFO:name:==> Eval Accuracy : 0.434
+INFO:name:==> Eval f1 score : 0.434
+INFO:name:==> Parameters % : 3.5999999999999996
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:19:29,594 >> Trainable Ratio: 2795088/127440720=2.193246%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:19:29,594 >> Delta Parameter Ratio: 2795088/127440720=2.193246%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:19:29,594 >> Static Memory 2.50 GB, Max Memory 12.30 GB
+INFO:name:3.18
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [256, 32], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'attention.self'], 'bottleneck_dim': [64, 32], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'intermediate'], 'bottleneck_dim': [32, 128, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.self'], 'bottleneck_dim': [256, 32], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.359
+INFO:name:==> Eval Accuracy : 0.37
+INFO:name:==> Eval f1 score : 0.37
+INFO:name:==> Parameters % : 2.19
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:25:51,729 >> Trainable Ratio: 2624064/127269696=2.061814%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:25:51,729 >> Delta Parameter Ratio: 2624064/127269696=2.061814%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:25:51,730 >> Static Memory 2.98 GB, Max Memory 12.30 GB
+INFO:name:2.9899999999999998
+INFO:name: ==> Delta parameters 
+ [0, 0, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [32, 64, 32], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'attention.output'], 'bottleneck_dim': [64, 32, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate', 'output'], 'bottleneck_dim': [64, 128, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'attention.output', 'attention.self'], 'bottleneck_dim': [256, 32, 16], 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0] 
+
+INFO:name:==> Fitness : 0.369
+INFO:name:==> Eval Accuracy : 0.379
+INFO:name:==> Eval f1 score : 0.379
+INFO:name:==> Parameters % : 2.06
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:31:50,660 >> Trainable Ratio: 4525872/129171504=3.503770%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:31:50,660 >> Delta Parameter Ratio: 4525872/129171504=3.503770%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:31:50,660 >> Static Memory 3.45 GB, Max Memory 12.30 GB
+INFO:name:5.050000000000001
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate', 'attention.output', 'output'], 'bottleneck_dim': [64, 64, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.self'], 'bottleneck_dim': [128, 16], 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'output', 'intermediate'], 'bottleneck_dim': [32, 256, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [32, 64, 32], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 16], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:31:51,577 >> Trainable Ratio: 3727376/128373008=2.903551%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:31:51,577 >> Delta Parameter Ratio: 3727376/128373008=2.903551%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:31:51,577 >> Static Memory 3.93 GB, Max Memory 12.30 GB
+INFO:name:4.2
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self', 'output', 'intermediate'], 'bottleneck_dim': [16, 128, 128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.output'], 'bottleneck_dim': [128, 256, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [128, 32, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0, 0] 
+
+INFO:name:==> Fitness : 0.256
+INFO:name:==> Eval Accuracy : 0.27
+INFO:name:==> Eval f1 score : 0.27
+INFO:name:==> Parameters % : 2.9000000000000004
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:38:16,602 >> Trainable Ratio: 2599792/127245424=2.043132%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:38:16,602 >> Delta Parameter Ratio: 2599792/127245424=2.043132%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:38:16,602 >> Static Memory 4.42 GB, Max Memory 12.30 GB
+INFO:name:2.97
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['output', 'attention.self', 'intermediate'], 'bottleneck_dim': [128, 32, 128], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output', 'attention.self'], 'bottleneck_dim': [64, 32, 32], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0, 0, {'insert_modules': ['output', 'attention.output', 'attention.self'], 'bottleneck_dim': [128, 32, 16], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.259
+INFO:name:==> Eval Accuracy : 0.269
+INFO:name:==> Eval f1 score : 0.269
+INFO:name:==> Parameters % : 2.04
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:44:29,187 >> Trainable Ratio: 7142416/131788048=5.419623%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:44:29,187 >> Delta Parameter Ratio: 7142416/131788048=5.419623%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:44:29,187 >> Static Memory 4.90 GB, Max Memory 12.30 GB
+INFO:name:7.75
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output', 'intermediate', 'attention.self'], 'bottleneck_dim': [32, 128, 32], 'non_linearity': 'silu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [16, 128], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate', 'attention.self'], 'bottleneck_dim': [256, 128, 16], 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [64, 32, 256], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [64, 128], 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [64, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate', 'output'], 'bottleneck_dim': [64, 64, 256], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [64, 128], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:44:30,218 >> Trainable Ratio: 2599280/127244912=2.042738%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:44:30,218 >> Delta Parameter Ratio: 2599280/127244912=2.042738%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:44:30,218 >> Static Memory 5.39 GB, Max Memory 12.30 GB
+INFO:name:2.97
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [32, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'attention.self', 'output'], 'bottleneck_dim': [32, 16, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [32, 64], 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [32, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.398
+INFO:name:==> Eval Accuracy : 0.408
+INFO:name:==> Eval f1 score : 0.408
+INFO:name:==> Parameters % : 2.04
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:50:56,809 >> Trainable Ratio: 6324800/130970432=4.829182%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:50:56,809 >> Delta Parameter Ratio: 6324800/130970432=4.829182%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:50:56,809 >> Static Memory 5.87 GB, Max Memory 13.70 GB
+INFO:name:6.92
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [32, 128], 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.output', 'intermediate'], 'bottleneck_dim': [128, 32, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.self'], 'bottleneck_dim': [256, 16], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 16], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [64, 32], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate', 'output'], 'bottleneck_dim': [64, 64, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'intermediate'], 'bottleneck_dim': [64, 128, 128], 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.381
+INFO:name:==> Eval Accuracy : 0.405
+INFO:name:==> Eval f1 score : 0.405
+INFO:name:==> Parameters % : 4.83
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 14:57:41,990 >> Trainable Ratio: 3999584/128645216=3.109003%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 14:57:41,990 >> Delta Parameter Ratio: 3999584/128645216=3.109003%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 14:57:41,990 >> Static Memory 0.51 GB, Max Memory 14.72 GB
+INFO:name:4.49
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 128], 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.output', 'intermediate'], 'bottleneck_dim': [128, 64, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [64], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [64], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.412
+INFO:name:==> Eval Accuracy : 0.428
+INFO:name:==> Eval f1 score : 0.428
+INFO:name:==> Parameters % : 3.11
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:03:51,062 >> Trainable Ratio: 4872944/129518576=3.762351%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:03:51,062 >> Delta Parameter Ratio: 4872944/129518576=3.762351%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:03:51,062 >> Static Memory 1.01 GB, Max Memory 14.72 GB
+INFO:name:5.42
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 128, 16], 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output', 'intermediate'], 'bottleneck_dim': [32, 32, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [32, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [16, 128, 32], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [64, 16], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.327
+INFO:name:==> Eval Accuracy : 0.346
+INFO:name:==> Eval f1 score : 0.346
+INFO:name:==> Parameters % : 3.7600000000000002
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:10:37,180 >> Trainable Ratio: 2226688/126872320=1.755062%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:10:37,180 >> Delta Parameter Ratio: 2226688/126872320=1.755062%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:10:37,180 >> Static Memory 1.52 GB, Max Memory 14.72 GB
+INFO:name:2.55
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output', 'attention.self'], 'bottleneck_dim': [32, 32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'output', 'attention.self'], 'bottleneck_dim': [32, 256, 32], 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'attention.output', 'attention.self'], 'bottleneck_dim': [256, 64, 16], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [32, 128], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.394
+INFO:name:==> Eval Accuracy : 0.403
+INFO:name:==> Eval f1 score : 0.403
+INFO:name:==> Parameters % : 1.76
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:16:54,415 >> Trainable Ratio: 2073344/126718976=1.636175%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:16:54,415 >> Delta Parameter Ratio: 2073344/126718976=1.636175%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:16:54,415 >> Static Memory 2.01 GB, Max Memory 14.72 GB
+INFO:name:2.3800000000000003
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, 0, 0, {'insert_modules': ['intermediate', 'attention.output', 'output'], 'bottleneck_dim': [128, 32, 256], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.391
+INFO:name:==> Eval Accuracy : 0.399
+INFO:name:==> Eval f1 score : 0.399
+INFO:name:==> Parameters % : 1.6400000000000001
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:21:59,072 >> Trainable Ratio: 5728896/130374528=4.394184%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:21:59,072 >> Delta Parameter Ratio: 5728896/130374528=4.394184%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:21:59,072 >> Static Memory 2.48 GB, Max Memory 14.72 GB
+INFO:name:6.3100000000000005
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [256, 32], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'intermediate', 'attention.output'], 'bottleneck_dim': [128, 128, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [16, 128, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [128, 256, 32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'intermediate', 'attention.self'], 'bottleneck_dim': [256, 64, 16], 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.354
+INFO:name:==> Eval Accuracy : 0.376
+INFO:name:==> Eval f1 score : 0.376
+INFO:name:==> Parameters % : 4.390000000000001
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:28:29,349 >> Trainable Ratio: 2646096/127291728=2.078765%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:28:29,349 >> Delta Parameter Ratio: 2646096/127291728=2.078765%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:28:29,349 >> Static Memory 2.97 GB, Max Memory 14.72 GB
+INFO:name:3.02
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['attention.self', 'attention.output', 'output'], 'bottleneck_dim': [16, 32, 256], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'silu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['intermediate', 'output'], 'bottleneck_dim': [64, 256], 'non_linearity': 'tanh', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [128, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.364
+INFO:name:==> Eval Accuracy : 0.374
+INFO:name:==> Eval f1 score : 0.374
+INFO:name:==> Parameters % : 2.08
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:34:37,290 >> Trainable Ratio: 2499888/127145520=1.966163%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:34:37,290 >> Delta Parameter Ratio: 2499888/127145520=1.966163%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:34:37,290 >> Static Memory 3.45 GB, Max Memory 14.72 GB
+INFO:name:2.86
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [64, 32, 128], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'attention.output', 'attention.self'], 'bottleneck_dim': [64, 32, 16], 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.363
+INFO:name:==> Eval Accuracy : 0.373
+INFO:name:==> Eval f1 score : 0.373
+INFO:name:==> Parameters % : 1.97
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:40:40,993 >> Trainable Ratio: 1066128/125711760=0.848073%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:40:40,993 >> Delta Parameter Ratio: 1066128/125711760=0.848073%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:40:40,993 >> Static Memory 3.92 GB, Max Memory 14.72 GB
+INFO:name:1.24
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self', 'intermediate', 'output'], 'bottleneck_dim': [16, 64, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [64, 32], 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0, 0, 0, 0] 
+
+INFO:name:==> Fitness : 0.254
+INFO:name:==> Eval Accuracy : 0.258
+INFO:name:==> Eval f1 score : 0.258
+INFO:name:==> Parameters % : 0.8500000000000001
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:46:47,995 >> Trainable Ratio: 4106048/128751680=3.189122%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:46:47,995 >> Delta Parameter Ratio: 4106048/128751680=3.189122%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:46:47,995 >> Static Memory 4.39 GB, Max Memory 14.72 GB
+INFO:name:4.61
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output', 'output'], 'bottleneck_dim': [32, 64, 128], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.self', 'intermediate', 'output'], 'bottleneck_dim': [32, 64, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [16, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate', 'attention.self'], 'bottleneck_dim': [128, 128, 16], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [256, 64], 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.356
+INFO:name:==> Eval Accuracy : 0.372
+INFO:name:==> Eval f1 score : 0.372
+INFO:name:==> Parameters % : 3.19
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:53:08,478 >> Trainable Ratio: 1460752/126106384=1.158349%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:53:08,478 >> Delta Parameter Ratio: 1460752/126106384=1.158349%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:53:08,478 >> Static Memory 4.87 GB, Max Memory 14.72 GB
+INFO:name:1.69
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, 0, 0, 0, 0, {'insert_modules': ['attention.self', 'output', 'attention.output'], 'bottleneck_dim': [16, 128, 32], 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.self', 'attention.output', 'output'], 'bottleneck_dim': [32, 64, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.self', 'intermediate'], 'bottleneck_dim': [256, 32, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.391
+INFO:name:==> Eval Accuracy : 0.397
+INFO:name:==> Eval f1 score : 0.397
+INFO:name:==> Parameters % : 1.16
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 15:57:49,986 >> Trainable Ratio: 3438416/128084048=2.684500%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 15:57:49,986 >> Delta Parameter Ratio: 3438416/128084048=2.684500%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 15:57:49,986 >> Static Memory 5.34 GB, Max Memory 14.72 GB
+INFO:name:3.8899999999999997
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['attention.self', 'attention.output', 'intermediate'], 'bottleneck_dim': [16, 32, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [128, 16], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'attention.self', 'intermediate'], 'bottleneck_dim': [256, 32, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.self', 'intermediate'], 'bottleneck_dim': [256, 16, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.373
+INFO:name:==> Eval Accuracy : 0.386
+INFO:name:==> Eval f1 score : 0.386
+INFO:name:==> Parameters % : 2.68
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:04:07,319 >> Trainable Ratio: 4865424/129511056=3.756763%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:04:07,319 >> Delta Parameter Ratio: 4865424/129511056=3.756763%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:04:07,319 >> Static Memory 5.83 GB, Max Memory 14.72 GB
+INFO:name:5.41
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.output', 'attention.self'], 'bottleneck_dim': [128, 32, 16], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'attention.output', 'output'], 'bottleneck_dim': [128, 64, 256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [128, 16, 128], 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'attention.self', 'intermediate'], 'bottleneck_dim': [32, 16, 128], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.401
+INFO:name:==> Eval Accuracy : 0.42
+INFO:name:==> Eval f1 score : 0.42
+INFO:name:==> Parameters % : 3.7600000000000002
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:10:38,452 >> Trainable Ratio: 3930640/128576272=3.057049%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:10:38,452 >> Delta Parameter Ratio: 3930640/128576272=3.057049%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:10:38,452 >> Static Memory 0.50 GB, Max Memory 14.72 GB
+INFO:name:4.42
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [128, 32], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output', 'attention.self'], 'bottleneck_dim': [128, 32, 16], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [256, 32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.self'], 'bottleneck_dim': [128, 32], 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['output', 'attention.self', 'attention.output'], 'bottleneck_dim': [256, 32, 32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.028
+INFO:name:==> Eval Accuracy : 0.043
+INFO:name:==> Eval f1 score : 0.043
+INFO:name:==> Parameters % : 3.06
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:17:09,720 >> Trainable Ratio: 2298032/126943664=1.810277%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:17:09,720 >> Delta Parameter Ratio: 2298032/126943664=1.810277%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:17:09,720 >> Static Memory 1.01 GB, Max Memory 14.72 GB
+INFO:name:2.63
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0, 0, 0, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'output', 'intermediate'], 'bottleneck_dim': [64, 128, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.244
+INFO:name:==> Eval Accuracy : 0.253
+INFO:name:==> Eval f1 score : 0.253
+INFO:name:==> Parameters % : 1.81
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:23:20,073 >> Trainable Ratio: 2027424/126673056=1.600517%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:23:20,073 >> Delta Parameter Ratio: 2027424/126673056=1.600517%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:23:20,073 >> Static Memory 1.50 GB, Max Memory 14.72 GB
+INFO:name:2.33
+INFO:name: ==> Delta parameters 
+ [0, 0, {'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'output', 'attention.output'], 'bottleneck_dim': [64, 128, 64], 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0] 
+
+INFO:name:==> Fitness : 0.327
+INFO:name:==> Eval Accuracy : 0.335
+INFO:name:==> Eval f1 score : 0.335
+INFO:name:==> Parameters % : 1.6
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:29:08,081 >> Trainable Ratio: 2198928/126844560=1.733561%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:29:08,082 >> Delta Parameter Ratio: 2198928/126844560=1.733561%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:29:08,082 >> Static Memory 1.99 GB, Max Memory 14.72 GB
+INFO:name:2.52
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output', 'attention.self', 'output'], 'bottleneck_dim': [32, 16, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [64], 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ['output', 'attention.output', 'intermediate'], 'bottleneck_dim': [128, 32, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0] 
+
+INFO:name:==> Fitness : 0.387
+INFO:name:==> Eval Accuracy : 0.396
+INFO:name:==> Eval f1 score : 0.396
+INFO:name:==> Parameters % : 1.73
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:35:23,092 >> Trainable Ratio: 2544784/127190416=2.000767%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:35:23,092 >> Delta Parameter Ratio: 2544784/127190416=2.000767%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:35:23,092 >> Static Memory 2.47 GB, Max Memory 14.72 GB
+INFO:name:2.91
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [128, 16], 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [64, 256], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [64, 32], 'non_linearity': 'silu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.357
+INFO:name:==> Eval Accuracy : 0.367
+INFO:name:==> Eval f1 score : 0.367
+INFO:name:==> Parameters % : 2.0
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:41:41,727 >> Trainable Ratio: 4890976/129536608=3.775748%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:41:41,727 >> Delta Parameter Ratio: 4890976/129536608=3.775748%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:41:41,728 >> Static Memory 2.95 GB, Max Memory 14.72 GB
+INFO:name:5.4399999999999995
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate', 'attention.self', 'attention.output'], 'bottleneck_dim': [128, 32, 32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'attention.output', 'output'], 'bottleneck_dim': [32, 32, 256], 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [128, 32], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.332
+INFO:name:==> Eval Accuracy : 0.351
+INFO:name:==> Eval f1 score : 0.351
+INFO:name:==> Parameters % : 3.7800000000000002
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:48:23,519 >> Trainable Ratio: 4578672/129224304=3.543197%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:48:23,519 >> Delta Parameter Ratio: 4578672/129224304=3.543197%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:48:23,519 >> Static Memory 3.43 GB, Max Memory 14.72 GB
+INFO:name:5.11
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output', 'output'], 'bottleneck_dim': [32, 32, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'attention.output', 'intermediate'], 'bottleneck_dim': [128, 32, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [16, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'attention.self', 'intermediate'], 'bottleneck_dim': [64, 32, 128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output', 'attention.self'], 'bottleneck_dim': [128, 64, 16], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'attention.self', 'intermediate'], 'bottleneck_dim': [32, 16, 64], 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.396
+INFO:name:==> Eval Accuracy : 0.414
+INFO:name:==> Eval f1 score : 0.414
+INFO:name:==> Parameters % : 3.54
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 16:55:09,118 >> Trainable Ratio: 7020640/131666272=5.332148%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 16:55:09,118 >> Delta Parameter Ratio: 7020640/131666272=5.332148%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 16:55:09,118 >> Static Memory 3.91 GB, Max Memory 14.72 GB
+INFO:name:7.62
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output', 'output', 'intermediate'], 'bottleneck_dim': [32, 128, 128], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [32, 128, 64], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'output'], 'bottleneck_dim': [128, 128], 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [128, 256, 16], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [128, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [16, 32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'intermediate', 'attention.output'], 'bottleneck_dim': [256, 128, 64], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 128, 32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [32, 64], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.259
+INFO:name:==> Eval Accuracy : 0.286
+INFO:name:==> Eval f1 score : 0.286
+INFO:name:==> Parameters % : 5.33
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:02:20,007 >> Trainable Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:02:20,007 >> Delta Parameter Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:02:20,007 >> Static Memory 4.40 GB, Max Memory 14.72 GB
+INFO:name:2.4899999999999998
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, 0, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [32, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [256, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [128, 32, 256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.42
+INFO:name:==> Eval Accuracy : 0.429
+INFO:name:==> Eval f1 score : 0.429
+INFO:name:==> Parameters % : 1.71
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:07:46,300 >> Trainable Ratio: 1535328/126180960=1.216767%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:07:46,300 >> Delta Parameter Ratio: 1535328/126180960=1.216767%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:07:46,300 >> Static Memory 4.88 GB, Max Memory 14.72 GB
+INFO:name:1.77
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [32, 32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [32, 128, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0, {'insert_modules': ['attention.output', 'intermediate', 'attention.self'], 'bottleneck_dim': [32, 64, 32], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0] 
+
+INFO:name:==> Fitness : 0.351
+INFO:name:==> Eval Accuracy : 0.357
+INFO:name:==> Eval f1 score : 0.357
+INFO:name:==> Parameters % : 1.22
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:13:48,859 >> Trainable Ratio: 1976704/126622336=1.561102%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:13:48,859 >> Delta Parameter Ratio: 1976704/126622336=1.561102%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:13:48,859 >> Static Memory 5.35 GB, Max Memory 14.72 GB
+INFO:name:2.27
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, 0, 0, 0, 0, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [256, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:13:49,789 >> Trainable Ratio: 2079424/126725056=1.640894%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:13:49,789 >> Delta Parameter Ratio: 2079424/126725056=1.640894%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:13:49,789 >> Static Memory 5.83 GB, Max Memory 14.72 GB
+INFO:name:2.39
+INFO:name: ==> Delta parameters 
+ [0, 0, {'insert_modules': ['intermediate', 'output', 'attention.output'], 'bottleneck_dim': [64, 128, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [32, 256], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 16], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.364
+INFO:name:==> Eval Accuracy : 0.372
+INFO:name:==> Eval f1 score : 0.372
+INFO:name:==> Parameters % : 1.6400000000000001
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:19:47,188 >> Trainable Ratio: 495168/125140800=0.395689%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:19:47,189 >> Delta Parameter Ratio: 495168/125140800=0.395689%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:19:47,189 >> Static Memory 6.31 GB, Max Memory 14.72 GB
+INFO:name:0.58
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, {'insert_modules': ['output', 'attention.self', 'attention.output'], 'bottleneck_dim': [128, 32, 32], 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0] 
+
+INFO:name:==> Fitness : 0.345
+INFO:name:==> Eval Accuracy : 0.347
+INFO:name:==> Eval f1 score : 0.347
+INFO:name:==> Parameters % : 0.4
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:25:12,520 >> Trainable Ratio: 1582720/126228352=1.253855%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:25:12,520 >> Delta Parameter Ratio: 1582720/126228352=1.253855%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:25:12,520 >> Static Memory 0.49 GB, Max Memory 14.72 GB
+INFO:name:1.83
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, 0, 0, 0, 0, {'insert_modules': ['output', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [32, 64], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [32, 128], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.376
+INFO:name:==> Eval Accuracy : 0.382
+INFO:name:==> Eval f1 score : 0.382
+INFO:name:==> Parameters % : 1.25
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:29:58,227 >> Trainable Ratio: 5910480/130556112=4.527157%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:29:58,227 >> Delta Parameter Ratio: 5910480/130556112=4.527157%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:29:58,227 >> Static Memory 0.98 GB, Max Memory 14.72 GB
+INFO:name:6.5
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.output', 'intermediate', 'output'], 'bottleneck_dim': [32, 128, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [64, 128], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output', 'output'], 'bottleneck_dim': [16, 32, 128], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [128, 32, 128], 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'output'], 'bottleneck_dim': [64, 128], 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate', 'output'], 'bottleneck_dim': [16, 64, 256], 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['output', 'intermediate', 'attention.self'], 'bottleneck_dim': [256, 64, 16], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.374
+INFO:name:==> Eval Accuracy : 0.397
+INFO:name:==> Eval f1 score : 0.397
+INFO:name:==> Parameters % : 4.53
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:37:01,503 >> Trainable Ratio: 4707008/129352640=3.638896%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:37:01,503 >> Delta Parameter Ratio: 4707008/129352640=3.638896%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:37:01,503 >> Static Memory 1.49 GB, Max Memory 14.72 GB
+INFO:name:5.24
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [16, 64, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [32, 32], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'gelu_new', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'attention.output'], 'bottleneck_dim': [64, 16, 32], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 128, 32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'attention.output'], 'bottleneck_dim': [64, 32, 32], 'non_linearity': 'silu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [128, 128], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [64, 16, 128], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [16, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}] 
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:37:02,647 >> Trainable Ratio: 4653728/129299360=3.599189%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:37:02,647 >> Delta Parameter Ratio: 4653728/129299360=3.599189%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:37:02,647 >> Static Memory 1.99 GB, Max Memory 14.72 GB
+INFO:name:5.19
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [16, 128, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 16], 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self'], 'bottleneck_dim': [64, 16], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [64, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [16, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'attention.output', 'attention.self'], 'bottleneck_dim': [128, 32, 32], 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate', 'attention.self'], 'bottleneck_dim': [32, 64, 16], 'non_linearity': 'silu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.self'], 'bottleneck_dim': [256, 16], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.37
+INFO:name:==> Eval Accuracy : 0.388
+INFO:name:==> Eval f1 score : 0.388
+INFO:name:==> Parameters % : 3.5999999999999996
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:44:01,263 >> Trainable Ratio: 5166288/129811920=3.979826%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:44:01,263 >> Delta Parameter Ratio: 5166288/129811920=3.979826%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:44:01,263 >> Static Memory 2.47 GB, Max Memory 14.72 GB
+INFO:name:5.7299999999999995
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['output', 'attention.output', 'intermediate'], 'bottleneck_dim': [128, 64, 64], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate', 'attention.output'], 'bottleneck_dim': [256, 64, 32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'intermediate'], 'bottleneck_dim': [64, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output'], 'bottleneck_dim': [128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'output'], 'bottleneck_dim': [128, 16, 128], 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate'], 'bottleneck_dim': [128], 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [64, 256], 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self', 'attention.output'], 'bottleneck_dim': [16, 64], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.35
+INFO:name:==> Eval Accuracy : 0.37
+INFO:name:==> Eval f1 score : 0.37
+INFO:name:==> Parameters % : 3.9800000000000004
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:50:53,020 >> Trainable Ratio: 2052144/126697776=1.619716%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:50:53,020 >> Delta Parameter Ratio: 2052144/126697776=1.619716%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:50:53,020 >> Static Memory 2.96 GB, Max Memory 14.72 GB
+INFO:name:2.36
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate', 'attention.output'], 'bottleneck_dim': [128, 64], 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['output', 'intermediate', 'attention.self'], 'bottleneck_dim': [256, 64, 16], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.output', 'output'], 'bottleneck_dim': [64, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0] 
+
+INFO:name:==> Fitness : 0.319
+INFO:name:==> Eval Accuracy : 0.327
+INFO:name:==> Eval f1 score : 0.327
+INFO:name:==> Parameters % : 1.6199999999999999
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 17:57:15,604 >> Trainable Ratio: 2647824/127293456=2.080094%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 17:57:15,604 >> Delta Parameter Ratio: 2647824/127293456=2.080094%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 17:57:15,604 >> Static Memory 3.43 GB, Max Memory 14.72 GB
+INFO:name:3.02
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [16, 256], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'output'], 'bottleneck_dim': [16, 128], 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [32], 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['output', 'attention.output', 'attention.self'], 'bottleneck_dim': [128, 32, 32], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['attention.output', 'attention.self'], 'bottleneck_dim': [64, 16], 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['attention.self', 'intermediate', 'attention.output'], 'bottleneck_dim': [32, 128, 32], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['output', 'intermediate'], 'bottleneck_dim': [128, 64], 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0] 
+
+INFO:name:==> Fitness : 0.396
+INFO:name:==> Eval Accuracy : 0.406
+INFO:name:==> Eval f1 score : 0.406
+INFO:name:==> Parameters % : 2.08
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:03:46,713 >> Trainable Ratio: 1236064/125881696=0.981925%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:03:46,713 >> Delta Parameter Ratio: 1236064/125881696=0.981925%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:03:46,713 >> Static Memory 3.91 GB, Max Memory 14.72 GB
+INFO:name:1.43
+INFO:name: ==> Delta parameters 
+ [{'insert_modules': ['intermediate'], 'bottleneck_dim': [64], 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0, 0, {'insert_modules': ['attention.self', 'intermediate'], 'bottleneck_dim': [32, 128], 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0] 
+
+INFO:name:==> Fitness : 0.249
+INFO:name:==> Eval Accuracy : 0.254
+INFO:name:==> Eval f1 score : 0.254
+INFO:name:==> Parameters % : 0.98
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:09:53,421 >> Trainable Ratio: 2454448/127100080=1.931114%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:09:53,421 >> Delta Parameter Ratio: 2454448/127100080=1.931114%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:09:53,421 >> Static Memory 4.38 GB, Max Memory 14.72 GB
+INFO:name:2.8000000000000003
+INFO:name: ==> Delta parameters 
+ [0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.output', 'attention.self', 'intermediate'], 'bottleneck_dim': [64, 16, 64], 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ['output', 'attention.self', 'attention.output'], 'bottleneck_dim': [256, 16, 32], 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['attention.self'], 'bottleneck_dim': [16], 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.output', 'attention.self'], 'bottleneck_dim': [64, 64, 16], 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ['intermediate', 'attention.self', 'attention.output'], 'bottleneck_dim': [64, 16, 32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ['output'], 'bottleneck_dim': [256], 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}] 
+
+INFO:name:==> Fitness : 0.39
+INFO:name:==> Eval Accuracy : 0.4
+INFO:name:==> Eval f1 score : 0.4
+INFO:name:==> Parameters % : 1.9300000000000002
+
+INFO:name:
+
+ Carry out evolution in cycles... 
+
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('attention.output', 'attention.self'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (32, 256, 32), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (16,), 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output', 'attention.self'), 'bottleneck_dim': (256, 64, 16), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output', 'intermediate'), 'bottleneck_dim': (32, 128), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:16:14,474 >> Trainable Ratio: 2226688/126872320=1.755062%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:16:14,474 >> Delta Parameter Ratio: 2226688/126872320=1.755062%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:16:14,474 >> Static Memory 4.85 GB, Max Memory 14.72 GB
+INFO:name:2.55
+INFO:name:
+
+Cycle 1, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 1 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.344
+INFO:name:  Fitness Std Dev: 0.076
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.358
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.358
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 49
+
+INFO:name:MUTATION
+
+INFO:name:
+[0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:22:36,755 >> Trainable Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:22:36,756 >> Delta Parameter Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:22:36,756 >> Static Memory 5.33 GB, Max Memory 14.72 GB
+INFO:name:2.4899999999999998
+INFO:name:
+
+Cycle 2, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 2 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.345
+INFO:name:  Fitness Std Dev: 0.076
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.358
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.358
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 49
+
+INFO:name:MUTATION
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (128,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:28:28,137 >> Trainable Ratio: 1927456/126573088=1.522801%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:28:28,137 >> Delta Parameter Ratio: 1927456/126573088=1.522801%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:28:28,137 >> Static Memory 0.97 GB, Max Memory 14.72 GB
+INFO:name:2.22
+INFO:name:
+
+Cycle 3, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 3 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.346
+INFO:name:  Fitness Std Dev: 0.076
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.359
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.359
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 49
+
+INFO:name:MUTATION
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.self'), 'bottleneck_dim': (256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (16, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:33:51,587 >> Trainable Ratio: 2721728/127367360=2.136912%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:33:51,587 >> Delta Parameter Ratio: 2721728/127367360=2.136912%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:33:51,587 >> Static Memory 1.46 GB, Max Memory 14.72 GB
+INFO:name:3.1
+INFO:name:
+
+Cycle 4, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 4 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.346
+INFO:name:  Fitness Std Dev: 0.076
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.359
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.359
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 48
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('attention.output', 'attention.self'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (32, 256, 32), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (64, 256, 32), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:40:12,760 >> Trainable Ratio: 2127712/126773344=1.678359%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:40:12,760 >> Delta Parameter Ratio: 2127712/126773344=1.678359%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:40:12,760 >> Static Memory 1.96 GB, Max Memory 14.72 GB
+INFO:name:2.44
+INFO:name:
+
+Cycle 5, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 5 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.346
+INFO:name:  Fitness Std Dev: 0.076
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.359
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.359
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 48
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('attention.output', 'attention.self'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output', 'output'), 'bottleneck_dim': (16, 32, 128), 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 128), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('intermediate', 'output'), 'bottleneck_dim': (64, 128), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'intermediate', 'output'), 'bottleneck_dim': (16, 64, 256), 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('output', 'intermediate', 'attention.self'), 'bottleneck_dim': (256, 64, 16), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:46:34,723 >> Trainable Ratio: 4281776/128927408=3.321075%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:46:34,723 >> Delta Parameter Ratio: 4281776/128927408=3.321075%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:46:34,723 >> Static Memory 2.45 GB, Max Memory 14.72 GB
+INFO:name:4.79
+INFO:name:
+
+Cycle 6, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 6 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.346
+INFO:name:  Fitness Std Dev: 0.076
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.359
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.359
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 48
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (128,), 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'intermediate'), 'bottleneck_dim': (256, 128), 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.output', 'intermediate'), 'bottleneck_dim': (128, 64, 128), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 256), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:53:19,564 >> Trainable Ratio: 3801184/128446816=2.959345%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:53:19,564 >> Delta Parameter Ratio: 3801184/128446816=2.959345%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:53:19,564 >> Static Memory 2.94 GB, Max Memory 14.72 GB
+INFO:name:4.279999999999999
+INFO:name:
+
+Cycle 7, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 7 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.346
+INFO:name:  Fitness Std Dev: 0.077
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.36
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.36
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 48
+
+INFO:name:MUTATION
+
+INFO:name:
+[{'insert_modules': ('attention.self',), 'bottleneck_dim': (16,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (32,), 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output', 'attention.self', 'intermediate'), 'bottleneck_dim': (64, 16, 64), 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (256, 16, 32), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('intermediate', 'attention.output', 'attention.self'), 'bottleneck_dim': (64, 64, 16), 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate', 'attention.self', 'attention.output'), 'bottleneck_dim': (64, 16, 32), 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 18:59:28,508 >> Trainable Ratio: 2454448/127100080=1.931114%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 18:59:28,508 >> Delta Parameter Ratio: 2454448/127100080=1.931114%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 18:59:28,508 >> Static Memory 3.42 GB, Max Memory 14.72 GB
+INFO:name:2.8000000000000003
+INFO:name:
+
+Cycle 8, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 8 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.346
+INFO:name:  Fitness Std Dev: 0.076
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.359
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.359
+INFO:name:  Average Trainable Rate: 0.026
+INFO:name:  Unique Configurations: 48
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, 0, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (32, 256, 32), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (16,), 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output', 'attention.self'), 'bottleneck_dim': (256, 64, 16), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output', 'intermediate'), 'bottleneck_dim': (32, 128), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:05:59,064 >> Trainable Ratio: 1929152/126574784=1.524120%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:05:59,064 >> Delta Parameter Ratio: 1929152/126574784=1.524120%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:05:59,064 >> Static Memory 3.89 GB, Max Memory 14.72 GB
+INFO:name:2.22
+INFO:name:
+
+Cycle 9, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 9 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.353
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.365
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.365
+INFO:name:  Average Trainable Rate: 0.025
+INFO:name:  Unique Configurations: 48
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'attention.self', 'output'), 'bottleneck_dim': (32, 16, 128), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (32, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (128,), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'attention.output', 'output'), 'bottleneck_dim': (32, 64, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'attention.self', 'intermediate'), 'bottleneck_dim': (256, 32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:11:39,979 >> Trainable Ratio: 3490224/128135856=2.723846%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:11:39,979 >> Delta Parameter Ratio: 3490224/128135856=2.723846%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:11:39,979 >> Static Memory 4.36 GB, Max Memory 14.72 GB
+INFO:name:3.94
+INFO:name:
+
+Cycle 10, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 10 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.353
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.365
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.365
+INFO:name:  Average Trainable Rate: 0.025
+INFO:name:  Unique Configurations: 48
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:18:17,717 >> Trainable Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:18:17,717 >> Delta Parameter Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:18:17,717 >> Static Memory 4.84 GB, Max Memory 14.72 GB
+INFO:name:2.4899999999999998
+INFO:name:
+
+Cycle 11, the best candidate in pop : score 0.42 / Eval acc 0.429 / f1 score 0.429 / parameters 0.0171. And best in the run : score 0.42 / eval acc 0.429/ f1 score 0.429 / parameters 0.0171 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 11 Statistics:
+INFO:name:  Best Fitness: 0.42
+INFO:name:  Average Fitness: 0.354
+INFO:name:  Fitness Std Dev: 0.066
+INFO:name:  Best accuracy: 0.434
+INFO:name:  Average accuracy: 0.366
+INFO:name:  Best f1 score: 0.434
+INFO:name:  Average f1 score: 0.366
+INFO:name:  Average Trainable Rate: 0.024
+INFO:name:  Unique Configurations: 47
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.self'), 'bottleneck_dim': (256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (16, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:23:42,961 >> Trainable Ratio: 2721728/127367360=2.136912%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:23:42,961 >> Delta Parameter Ratio: 2721728/127367360=2.136912%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:23:42,961 >> Static Memory 5.32 GB, Max Memory 14.72 GB
+INFO:name:3.1
+INFO:name:
+
+Cycle 12, the best candidate in pop : score 0.425 / Eval acc 0.436 / f1 score 0.436 / parameters 0.0214. And best in the run : score 0.425 / eval acc 0.436/ f1 score 0.436 / parameters 0.0214 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 12 Statistics:
+INFO:name:  Best Fitness: 0.425
+INFO:name:  Average Fitness: 0.354
+INFO:name:  Fitness Std Dev: 0.066
+INFO:name:  Best accuracy: 0.436
+INFO:name:  Average accuracy: 0.366
+INFO:name:  Best f1 score: 0.436
+INFO:name:  Average f1 score: 0.366
+INFO:name:  Average Trainable Rate: 0.024
+INFO:name:  Unique Configurations: 46
+
+INFO:name:MUTATION
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:30:04,298 >> Trainable Ratio: 2224096/126869728=1.753055%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:30:04,298 >> Delta Parameter Ratio: 2224096/126869728=1.753055%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:30:04,298 >> Static Memory 5.80 GB, Max Memory 14.72 GB
+INFO:name:2.55
+INFO:name:
+
+Cycle 13, the best candidate in pop : score 0.425 / Eval acc 0.436 / f1 score 0.436 / parameters 0.0214. And best in the run : score 0.425 / eval acc 0.436/ f1 score 0.436 / parameters 0.0214 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 13 Statistics:
+INFO:name:  Best Fitness: 0.425
+INFO:name:  Average Fitness: 0.355
+INFO:name:  Fitness Std Dev: 0.066
+INFO:name:  Best accuracy: 0.436
+INFO:name:  Average accuracy: 0.367
+INFO:name:  Best f1 score: 0.436
+INFO:name:  Average f1 score: 0.367
+INFO:name:  Average Trainable Rate: 0.024
+INFO:name:  Unique Configurations: 46
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ('output', 'intermediate'), 'bottleneck_dim': (256, 128), 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.output', 'intermediate'), 'bottleneck_dim': (128, 64, 128), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 256), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:35:31,085 >> Trainable Ratio: 3405792/128051424=2.659706%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:35:31,085 >> Delta Parameter Ratio: 3405792/128051424=2.659706%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:35:31,085 >> Static Memory 6.28 GB, Max Memory 14.72 GB
+INFO:name:3.85
+INFO:name:
+
+Cycle 14, the best candidate in pop : score 0.425 / Eval acc 0.436 / f1 score 0.436 / parameters 0.0214. And best in the run : score 0.425 / eval acc 0.436/ f1 score 0.436 / parameters 0.0214 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 14 Statistics:
+INFO:name:  Best Fitness: 0.425
+INFO:name:  Average Fitness: 0.355
+INFO:name:  Fitness Std Dev: 0.067
+INFO:name:  Best accuracy: 0.436
+INFO:name:  Average accuracy: 0.367
+INFO:name:  Best f1 score: 0.436
+INFO:name:  Average f1 score: 0.367
+INFO:name:  Average Trainable Rate: 0.024
+INFO:name:  Unique Configurations: 46
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'attention.self', 'output'), 'bottleneck_dim': (32, 16, 128), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (32, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (128,), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'attention.output', 'output'), 'bottleneck_dim': (32, 64, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'attention.self', 'intermediate'), 'bottleneck_dim': (256, 32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:41:47,696 >> Trainable Ratio: 3490224/128135856=2.723846%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:41:47,696 >> Delta Parameter Ratio: 3490224/128135856=2.723846%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:41:47,697 >> Static Memory 6.76 GB, Max Memory 14.72 GB
+INFO:name:3.94
+INFO:name:
+
+Cycle 15, the best candidate in pop : score 0.425 / Eval acc 0.436 / f1 score 0.436 / parameters 0.0214. And best in the run : score 0.425 / eval acc 0.436/ f1 score 0.436 / parameters 0.0214 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 15 Statistics:
+INFO:name:  Best Fitness: 0.425
+INFO:name:  Average Fitness: 0.358
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.436
+INFO:name:  Average accuracy: 0.37
+INFO:name:  Best f1 score: 0.436
+INFO:name:  Average f1 score: 0.37
+INFO:name:  Average Trainable Rate: 0.024
+INFO:name:  Unique Configurations: 45
+
+INFO:name:MUTATION
+
+INFO:name:
+[{'insert_modules': ('attention.self', 'attention.output', 'intermediate'), 'bottleneck_dim': (16, 32, 64), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.self'), 'bottleneck_dim': (256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 128), 'non_linearity': 'tanh', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (16, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:48:28,111 >> Trainable Ratio: 3639056/128284688=2.836703%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:48:28,111 >> Delta Parameter Ratio: 3639056/128284688=2.836703%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:48:28,111 >> Static Memory 7.24 GB, Max Memory 15.39 GB
+INFO:name:4.1000000000000005
+INFO:name:
+
+Cycle 16, the best candidate in pop : score 0.425 / Eval acc 0.436 / f1 score 0.436 / parameters 0.0214. And best in the run : score 0.425 / eval acc 0.436/ f1 score 0.436 / parameters 0.0214 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 16 Statistics:
+INFO:name:  Best Fitness: 0.425
+INFO:name:  Average Fitness: 0.36
+INFO:name:  Fitness Std Dev: 0.064
+INFO:name:  Best accuracy: 0.436
+INFO:name:  Average accuracy: 0.373
+INFO:name:  Best f1 score: 0.436
+INFO:name:  Average f1 score: 0.373
+INFO:name:  Average Trainable Rate: 0.024
+INFO:name:  Unique Configurations: 45
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 19:55:06,524 >> Trainable Ratio: 941344/125586976=0.749555%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 19:55:06,524 >> Delta Parameter Ratio: 941344/125586976=0.749555%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 19:55:06,524 >> Static Memory 0.98 GB, Max Memory 15.96 GB
+INFO:name:1.09
+INFO:name:
+
+Cycle 17, the best candidate in pop : score 0.425 / Eval acc 0.436 / f1 score 0.436 / parameters 0.0214. And best in the run : score 0.425 / eval acc 0.436/ f1 score 0.436 / parameters 0.0214 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 17 Statistics:
+INFO:name:  Best Fitness: 0.425
+INFO:name:  Average Fitness: 0.361
+INFO:name:  Fitness Std Dev: 0.064
+INFO:name:  Best accuracy: 0.436
+INFO:name:  Average accuracy: 0.373
+INFO:name:  Best f1 score: 0.436
+INFO:name:  Average f1 score: 0.373
+INFO:name:  Average Trainable Rate: 0.024
+INFO:name:  Unique Configurations: 45
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.self'), 'bottleneck_dim': (256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:00:23,025 >> Trainable Ratio: 3038064/127683696=2.379367%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:00:23,025 >> Delta Parameter Ratio: 3038064/127683696=2.379367%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:00:23,025 >> Static Memory 1.47 GB, Max Memory 15.96 GB
+INFO:name:3.45
+INFO:name:
+
+Cycle 18, the best candidate in pop : score 0.425 / Eval acc 0.436 / f1 score 0.436 / parameters 0.0214. And best in the run : score 0.425 / eval acc 0.436/ f1 score 0.436 / parameters 0.0214 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 18 Statistics:
+INFO:name:  Best Fitness: 0.425
+INFO:name:  Average Fitness: 0.361
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.436
+INFO:name:  Average accuracy: 0.373
+INFO:name:  Best f1 score: 0.436
+INFO:name:  Average f1 score: 0.373
+INFO:name:  Average Trainable Rate: 0.023
+INFO:name:  Unique Configurations: 45
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:06:43,240 >> Trainable Ratio: 2618464/127264096=2.057504%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:06:43,240 >> Delta Parameter Ratio: 2618464/127264096=2.057504%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:06:43,240 >> Static Memory 1.96 GB, Max Memory 15.96 GB
+INFO:name:2.9899999999999998
+INFO:name:
+
+Cycle 19, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 19 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.362
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.374
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.374
+INFO:name:  Average Trainable Rate: 0.023
+INFO:name:  Unique Configurations: 45
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:12:57,273 >> Trainable Ratio: 3112480/127758112=2.436229%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:12:57,273 >> Delta Parameter Ratio: 3112480/127758112=2.436229%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:12:57,273 >> Static Memory 2.46 GB, Max Memory 15.96 GB
+INFO:name:3.53
+INFO:name:
+
+Cycle 20, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 20 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.364
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.375
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.375
+INFO:name:  Average Trainable Rate: 0.023
+INFO:name:  Unique Configurations: 45
+
+INFO:name:MUTATION
+
+INFO:name:
+[0, 0, 0, {'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:19:15,984 >> Trainable Ratio: 3112480/127758112=2.436229%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:19:15,984 >> Delta Parameter Ratio: 3112480/127758112=2.436229%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:19:15,984 >> Static Memory 2.94 GB, Max Memory 15.96 GB
+INFO:name:3.53
+INFO:name:
+
+Cycle 21, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 21 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.364
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.375
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.375
+INFO:name:  Average Trainable Rate: 0.023
+INFO:name:  Unique Configurations: 46
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:24:55,132 >> Trainable Ratio: 941344/125586976=0.749555%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:24:55,132 >> Delta Parameter Ratio: 941344/125586976=0.749555%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:24:55,132 >> Static Memory 3.42 GB, Max Memory 15.96 GB
+INFO:name:1.09
+INFO:name:
+
+Cycle 22, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 22 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.364
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.375
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.375
+INFO:name:  Average Trainable Rate: 0.023
+INFO:name:  Unique Configurations: 45
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ('output', 'attention.self'), 'bottleneck_dim': (256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (16, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:30:11,708 >> Trainable Ratio: 1783392/126429024=1.410587%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:30:11,708 >> Delta Parameter Ratio: 1783392/126429024=1.410587%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:30:11,708 >> Static Memory 3.89 GB, Max Memory 15.96 GB
+INFO:name:2.0500000000000003
+INFO:name:
+
+Cycle 23, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 23 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.365
+INFO:name:  Fitness Std Dev: 0.066
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.376
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.376
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 45
+
+INFO:name:MUTATION
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.self'), 'bottleneck_dim': (256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 256), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:35:38,001 >> Trainable Ratio: 3482256/128127888=2.717797%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:35:38,001 >> Delta Parameter Ratio: 3482256/128127888=2.717797%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:35:38,001 >> Static Memory 4.36 GB, Max Memory 15.96 GB
+INFO:name:3.93
+INFO:name:
+
+Cycle 24, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 24 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.366
+INFO:name:  Fitness Std Dev: 0.066
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.377
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.377
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 45
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:41:59,422 >> Trainable Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:41:59,422 >> Delta Parameter Ratio: 2174144/126819776=1.714357%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:41:59,422 >> Static Memory 4.84 GB, Max Memory 15.96 GB
+INFO:name:2.4899999999999998
+INFO:name:
+
+Cycle 25, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 25 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.367
+INFO:name:  Fitness Std Dev: 0.066
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.378
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.378
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 44
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (256, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:47:24,474 >> Trainable Ratio: 2568384/127214016=2.018947%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:47:24,474 >> Delta Parameter Ratio: 2568384/127214016=2.018947%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:47:24,474 >> Static Memory 5.31 GB, Max Memory 15.96 GB
+INFO:name:2.93
+INFO:name:
+
+Cycle 26, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 26 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.37
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.381
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.381
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 44
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.self'), 'bottleneck_dim': (256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (16, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:53:38,598 >> Trainable Ratio: 2721728/127367360=2.136912%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:53:38,599 >> Delta Parameter Ratio: 2721728/127367360=2.136912%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:53:38,599 >> Static Memory 5.79 GB, Max Memory 15.96 GB
+INFO:name:3.1
+INFO:name:
+
+Cycle 27, the best candidate in pop : score 0.444 / Eval acc 0.454 / f1 score 0.454 / parameters 0.0206. And best in the run : score 0.444 / eval acc 0.454/ f1 score 0.454 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 27 Statistics:
+INFO:name:  Best Fitness: 0.444
+INFO:name:  Average Fitness: 0.371
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.454
+INFO:name:  Average accuracy: 0.382
+INFO:name:  Best f1 score: 0.454
+INFO:name:  Average f1 score: 0.382
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 43
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 20:59:59,364 >> Trainable Ratio: 2618464/127264096=2.057504%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 20:59:59,364 >> Delta Parameter Ratio: 2618464/127264096=2.057504%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 20:59:59,364 >> Static Memory 6.27 GB, Max Memory 15.96 GB
+INFO:name:2.9899999999999998
+INFO:name:
+
+Cycle 28, the best candidate in pop : score 0.445 / Eval acc 0.455 / f1 score 0.455 / parameters 0.0206. And best in the run : score 0.445 / eval acc 0.455/ f1 score 0.455 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 28 Statistics:
+INFO:name:  Best Fitness: 0.445
+INFO:name:  Average Fitness: 0.372
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.455
+INFO:name:  Average accuracy: 0.383
+INFO:name:  Best f1 score: 0.455
+INFO:name:  Average f1 score: 0.383
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 42
+
+INFO:name:CROSSOVER
+
+INFO:name:
+[0, 0, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'swish', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 21:06:13,418 >> Trainable Ratio: 941344/125586976=0.749555%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 21:06:13,418 >> Delta Parameter Ratio: 941344/125586976=0.749555%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 21:06:13,418 >> Static Memory 6.75 GB, Max Memory 15.96 GB
+INFO:name:1.09
+INFO:name:
+
+Cycle 29, the best candidate in pop : score 0.445 / Eval acc 0.455 / f1 score 0.455 / parameters 0.0206. And best in the run : score 0.445 / eval acc 0.455/ f1 score 0.455 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 29 Statistics:
+INFO:name:  Best Fitness: 0.445
+INFO:name:  Average Fitness: 0.372
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.455
+INFO:name:  Average accuracy: 0.383
+INFO:name:  Best f1 score: 0.455
+INFO:name:  Average f1 score: 0.383
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 41
+
+INFO:name:MUTATION
+
+INFO:name:
+[0, {'insert_modules': ('intermediate', 'output'), 'bottleneck_dim': (128, 128), 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (32, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (64,), 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate', 'output', 'attention.self'), 'bottleneck_dim': (128, 256, 16), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}]
+
+[INFO|(OpenDelta)basemodel:700]2025-01-08 21:11:29,427 >> Trainable Ratio: 2841072/127486704=2.228524%
+[INFO|(OpenDelta)basemodel:702]2025-01-08 21:11:29,427 >> Delta Parameter Ratio: 2841072/127486704=2.228524%
+[INFO|(OpenDelta)basemodel:704]2025-01-08 21:11:29,427 >> Static Memory 7.23 GB, Max Memory 15.96 GB
+INFO:name:3.2300000000000004
+INFO:name:
+
+Cycle 30, the best candidate in pop : score 0.445 / Eval acc 0.455 / f1 score 0.455 / parameters 0.0206. And best in the run : score 0.445 / eval acc 0.455/ f1 score 0.455 / parameters 0.0206 
+INFO:name:
+
+ Statistics
+
+
+INFO:name:Cycle 30 Statistics:
+INFO:name:  Best Fitness: 0.445
+INFO:name:  Average Fitness: 0.371
+INFO:name:  Fitness Std Dev: 0.065
+INFO:name:  Best accuracy: 0.455
+INFO:name:  Average accuracy: 0.382
+INFO:name:  Best f1 score: 0.455
+INFO:name:  Average f1 score: 0.382
+INFO:name:  Average Trainable Rate: 0.022
+INFO:name:  Unique Configurations: 42
+
+INFO:name:Evolution statistics saved to ./logs_optim/codebert_stats_codeSearch.json
+INFO:name:Evolutionary Search Completed.
+
+INFO:name:Best of all candidates: ([{'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('output', 'attention.self', 'attention.output'), 'bottleneck_dim': (128, 32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0, {'insert_modules': ('intermediate', 'attention.self', 'output'), 'bottleneck_dim': (128, 32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}], 0.445, 0.455, 0.455, 0.0206)
+

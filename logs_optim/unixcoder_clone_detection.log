@@ -1,0 +1,25 @@
+/opt/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/utils/generic.py:260: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+INFO:name:device: cuda:1, n_gpu: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/unixcoder-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/unixcoder-base/resolve/main/vocab.json HTTP/1.1" 200 0
+INFO:name:Preparing the Dataset...
+
+INFO:name:Preparing the Dataset...
+
+INFO:name:Preparing the Dataset...
+
+INFO:name:Starting optimization...
+INFO:name:
+
+Initialization of the population, may take a while ...
+
+
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/unixcoder-base/resolve/main/vocab.json HTTP/1.1" 200 0
+[INFO|(OpenDelta)basemodel:700]2025-01-03 17:23:49,251 >> Trainable Ratio: 890496/126820224=0.702172%
+[INFO|(OpenDelta)basemodel:702]2025-01-03 17:23:49,251 >> Delta Parameter Ratio: 890496/126820224=0.702172%
+[INFO|(OpenDelta)basemodel:704]2025-01-03 17:23:49,251 >> Static Memory 0.00 GB, Max Memory 0.00 GB
+INFO:name: ==> Delta parameters 
+ [0, 0, 0, 0, {'insert_modules': ['attention.output'], 'bottleneck_dim': [32], 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ['intermediate', 'output', 'attention.self'], 'bottleneck_dim': [64, 256, 32], 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0] 
+

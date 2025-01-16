@@ -118,12 +118,12 @@ def train_clone(args, model,  tokenizer, train_dataloader , eval_dataloader , te
                 test_result =   test_clone(args, model, test_dataloader)  
     
         
-        if early_stopper.early_stop(round(eval_results['eval_loss'],3)):             
-            break
+        #if early_stopper.early_stop(round(eval_results['eval_loss'],3)):             
+            #break
 
-    if not args.do_optimization : 
+    #if not args.do_optimization : 
         #save_best_model(model, args , checkpoint_prefix="models/final_model_clone")
-        final_test_result =   test_clone(args, model, test_dataloader)
+        #final_test_result =   test_clone(args, model, test_dataloader)
     
     return results  
 
@@ -304,7 +304,7 @@ def main():
     set_seed(seed=args.seed)
 
     
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
     args.n_gpu = 1 #torch.cuda.device_count()
     args.device = device
     logger.info("device: %s, n_gpu: %s", device, args.n_gpu)
@@ -314,17 +314,17 @@ def main():
     model = AutoModel.from_pretrained(args.model_name_or_path,config=config ,  trust_remote_code=True)  
         
 
-    train_dataset=TextDataset_clone(tokenizer, args, args.train_data_file, nb_samples = args.nb_samples)
+    train_dataset=TextDataset_clone(tokenizer, args, args.train_data_file, nb_samples = None) #args.nb_samples)
     train_sampler = RandomSampler(train_dataset)
     train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=args.train_batch_size,num_workers=4,pin_memory=True )
 
     
-    eval_dataset = TextDataset_clone(tokenizer, args,args.eval_data_file , nb_samples=2500 )# ,nb_samples= 41541 )
+    eval_dataset = TextDataset_clone(tokenizer, args,args.eval_data_file , nb_samples=41541 )
     eval_sampler = SequentialSampler(eval_dataset)
     eval_dataloader = DataLoader(eval_dataset , sampler=eval_sampler, batch_size=args.eval_batch_size,num_workers=4,pin_memory=True)
 
 
-    test_dataset = TextDataset_clone(tokenizer, args,args.test_data_file  ,nb_samples= 2500 ) #,nb_samples= 41541 )
+    test_dataset = TextDataset_clone(tokenizer, args,args.test_data_file  ,nb_samples= 41541 ) 
     test_sampler = SequentialSampler(test_dataset)
     test_dataloader = DataLoader(test_dataset, sampler=test_sampler, batch_size=args.eval_batch_size , num_workers=4,pin_memory=True)
 
@@ -336,33 +336,34 @@ def main():
       
        
     else : 
-
-        '''
-        x =random_adapter_parameters(config)#
-        #print(x)
+        
+        # to test with a fixed adapter across all layers 
+        delta = AdapterModel(model , bottleneck_dim=[24])
+        delta.freeze_module(exclude=["deltas" ])
+        delta.log()
+        
+        
+        
+        model = Model_classification( model , config)
 
         if args.n_gpu > 1:
-            model = torch.nn.DataParallel(model, device_ids=[1])
-
+            model = torch.nn.DataParallel(model, device_ids=[0])
+            
         model.to(args.device)
-        model = get_delta_model(model , x, args.device)
-        model = Model_classification( model , config)
-        model.to(args.device)
+      
              
-        '''
+       
 
              
        
 
-        
+        '''
         x_list =[
-
-            [0, 0, {'insert_modules': ('intermediate', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (64, 256, 16), 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate', 'output', 'attention.output'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, 0],
-            [0, 0, {'insert_modules': ('intermediate', 'output', 'attention.output'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (16,), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 256), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (64, 256, 16), 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0], 
-            [0, 0, {'insert_modules': ('intermediate', 'attention.output'), 'bottleneck_dim': (128, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('intermediate', 'output', 'attention.output'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0],
-
-
-        ] 
+            [0, {'insert_modules': ('layer.1', 'layer.1.DenseReluDense', 'layer.0.SelfAttention'), 'bottleneck_dim': (128, 128, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention',), 'bottleneck_dim': (16,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention',), 'bottleneck_dim': (16,), 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention', 'layer.0', 'layer.1.DenseReluDense'), 'bottleneck_dim': (16, 64, 128), 'non_linearity': 'swish', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, 0, 0, 0, 0, 0, {'insert_modules': ('layer.1', 'layer.0', 'layer.1.DenseReluDense'), 'bottleneck_dim': (128, 64, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}],
+            [{'insert_modules': ('layer.0', 'layer.0.SelfAttention', 'layer.1'), 'bottleneck_dim': (64, 32, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.0.SelfAttention'), 'bottleneck_dim': (128, 32), 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('layer.0.SelfAttention',), 'bottleneck_dim': (16,), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1.DenseReluDense', 'layer.0', 'layer.1'), 'bottleneck_dim': (64, 64, 128), 'non_linearity': 'tanh', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention', 'layer.1.DenseReluDense', 'layer.1'), 'bottleneck_dim': (32, 128, 128), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('layer.0.SelfAttention', 'layer.1'), 'bottleneck_dim': (16, 128), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1.DenseReluDense',), 'bottleneck_dim': (128,), 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1.DenseReluDense', 'layer.0.SelfAttention', 'layer.1'), 'bottleneck_dim': (64, 16, 256), 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('layer.1', 'layer.0.SelfAttention', 'layer.1.DenseReluDense'), 'bottleneck_dim': (256, 16, 64), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}], 
+            [0, 0, {'insert_modules': ('layer.0.SelfAttention', 'layer.1', 'layer.0'), 'bottleneck_dim': (16, 128, 128), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, {'insert_modules': ('layer.1.DenseReluDense', 'layer.1', 'layer.0'), 'bottleneck_dim': (64, 128, 64), 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('layer.0.SelfAttention',), 'bottleneck_dim': (16,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.1', 'layer.1.DenseReluDense'), 'bottleneck_dim': (128, 256, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0],
+        ]
+        '''
         
         
 
@@ -372,6 +373,7 @@ def main():
     
     
         if args.do_train:
+            '''
              
             for x in x_list : 
                 set_seed(seed=args.seed)
@@ -385,14 +387,15 @@ def main():
                     model = torch.nn.DataParallel(model, device_ids=[1])
 
                 model.to(args.device)
+                '''
               
-                results = train_clone(args , model ,tokenizer ,  
+            results = train_clone(args , model ,tokenizer ,  
                                     train_dataloader , 
                                     eval_dataloader , 
                                     test_dataloader)
                 
-                logger.info("train results : \n {}\n".format(results))
-                logger.info("*"*130)
+            logger.info("train results : \n {}\n".format(results))
+            logger.info("*"*130)
 
 
         if args.do_eval:

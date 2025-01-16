@@ -3,8 +3,8 @@ python3 main_codeSearch.py \
     --train_data_file_CodeSearch=./datasets/code_search/train.jsonl \
     --eval_data_file_CodeSearch=./datasets/code_search/valid.jsonl \
     --test_data_file_CodeSearch=./datasets/code_search/test.jsonl \
-    --model_name_or_path=microsoft/graphcodebert-base  \
-    --tokenizer_name=microsoft/graphcodebert-base  \
+    --model_name_or_path=Salesforce/codet5-base   \
+    --tokenizer_name=Salesforce/codet5-base   \
     --nl_length 128 \
     --code_length 512 \
     --do_optimization True \
@@ -18,6 +18,6 @@ python3 main_codeSearch.py \
     --cycles 30 \
     --max_grad_norm 1.0 \
     --num_train_epochs 5 \
-    --optimization_history_file=logs_optim/graphcodebert_optim_history_codesearch.txt \
-    --stats_file=logs_optim/graphcodebert_stats_codeSearch.json \
-    --seed 42 2>&1 | tee ./logs_optim/graphcodebert_codeSearch.log
+    --optimization_history_file=logs_optim/codet5_optim_history_codesearch.txt \
+    --stats_file=logs_optim/codet5_stats_codeSearch.json \
+    --seed 42 2>&1 | tee ./logs_optim/codet5_codeSearch.log

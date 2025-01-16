@@ -599,18 +599,18 @@ def fitness(model, args, tokenizer, train_data, eval_data):
         # Evaluate on the specified task
         if args.task == "defect_detection":
             results = train_defect(args, model, tokenizer,train_dataloader=train_data,eval_dataloader_defect=eval_data)
-            accuracy = np.round(max(results['eval_acc']), 3)
-            f_score = np.round(max(results['eval_f1']), 3)
+            accuracy = np.round(results['eval_acc'][-1], 3)
+            f_score = np.round(results['eval_f1'][-1], 3)
 
         elif args.task == "clone_detection":
             results = train_clone(args, model, tokenizer , train_dataloader=train_data , eval_dataloader=eval_data)
-            accuracy = np.round(max(results['eval_acc']), 3)
-            f_score = np.round(max(results['eval_f1']), 3)
+            accuracy = np.round(results['eval_acc'][-1], 3)
+            f_score = np.round(results['eval_f1'][-1], 3)
 
         elif args.task == "code_search":
             # For code search, we assume MRR is used as the metric
             train_loss, eval_MRR = train_codeSearch(args, model, tokenizer,train_dataloader_code_search=train_data , eval_dataloader_code_search=eval_data)
-            accuracy = np.round(max(eval_MRR), 3)
+            accuracy = np.round(eval_MRR[-1], 3)
             f_score = accuracy
 
         else:

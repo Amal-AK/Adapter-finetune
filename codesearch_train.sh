@@ -3,8 +3,8 @@ python3 main_codeSearch.py \
     --train_data_file_CodeSearch=./datasets/code_search/train.jsonl \
     --eval_data_file_CodeSearch=./datasets/code_search/valid.jsonl \
     --test_data_file_CodeSearch=./datasets/code_search/test.jsonl \
-    --model_name_or_path=microsoft/graphcodebert-base  \
-    --tokenizer_name=microsoft/graphcodebert-base \
+    --model_name_or_path=Salesforce/codet5p-220m \
+    --tokenizer_name=Salesforce/codet5p-220m \
     --nl_length 128 \
     --code_length 512 \
     --do_train True \
@@ -13,7 +13,7 @@ python3 main_codeSearch.py \
     --train_data_rate_code_search 1.0 \
     --learning_rate 1e-4 \
     --max_grad_norm 1.0 \
-    --num_train_epochs 15 \
-    --seed 42 2>&1 | tee ./topConfigs/graphcodebert_optimal_codesearch_top3.log
+    --num_train_epochs 10 \
+    --seed 42 2>&1 | tee ./baselines/codet5p_codesearch_adapter_default.log
 
     

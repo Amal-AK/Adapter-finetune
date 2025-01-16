@@ -3,8 +3,8 @@ python3 main_defect.py \
     --output_dir=./ \
     --eval_data_file_defect=./datasets/dataset_defect/valid.jsonl \
     --test_data_file_defect=./datasets/dataset_defect/test.jsonl \
-    --model_name_or_path=microsoft/graphcodebert-base  \
-    --tokenizer_name=microsoft/graphcodebert-base  \
+    --model_name_or_path=Salesforce/codet5p-220m \
+    --tokenizer_name=Salesforce/codet5p-220m \
     --num_classes 1 \
     --nl_length 128 \
     --code_length 512 \
@@ -12,7 +12,7 @@ python3 main_defect.py \
     --train_batch_size 32 \
     --eval_batch_size 32 \
     --train_data_rate_defect 1.0 \
-    --learning_rate 1e-4 \
+    --learning_rate 5e-5 \
     --max_grad_norm 1.0 \
-    --num_train_epochs 15 \
-    --seed 42 2>&1 | tee ./topConfigs/graphcodebert_optimal_defect_top5.log
+    --num_train_epochs 10 \
+    --seed 42 2>&1 | tee ./baselines/codet5p_defect_full.log

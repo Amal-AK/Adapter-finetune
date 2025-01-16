@@ -194,17 +194,17 @@ def main():
                         help="An optional input test data file to test the MRR(a josnl file).")
     parser.add_argument("--codebase_file", default="", type=str,
                         help="An optional input test data file to codebase (a jsonl file).")  
-    parser.add_argument("--model_name_or_path", default='microsoft/unixcoder-base', type=str,
+    parser.add_argument("--model_name_or_path", default='Salesforce/codet5-base', type=str,
                         help="The model checkpoint for weights initialization.")
-    parser.add_argument("--config_name", default="", type=str,
+    parser.add_argument("--config_name", default="Salesforce/codet5-base", type=str,
                         help="Optional pretrained config name or path if not the same as model_name_or_path")
-    parser.add_argument("--tokenizer_name", default="", type=str,
+    parser.add_argument("--tokenizer_name", default="Salesforce/codet5-base", type=str,
                         help="Optional pretrained tokenizer name or path if not the same as model_name_or_path")
     parser.add_argument("--nl_length", default=128, type=int,
                         help="Optional NL input sequence length after tokenization.")    
     parser.add_argument("--code_length", default=256, type=int,
                         help="Optional Code input sequence length after tokenization.") 
-    parser.add_argument("--do_train", default=True , type = bool,
+    parser.add_argument("--do_train", default=None , type = bool,
                         help="Whether to run training.")
     parser.add_argument("--do_eval", action='store_true',
                         help="Whether to run eval on the dev set.")
@@ -218,9 +218,9 @@ def main():
                         help="Batch size for evaluation.")
     parser.add_argument("--learning_rate", default=1e-4, type=float,
                         help="The initial learning rate for Adam.")
-    parser.add_argument("--train_data_rate_code_search", default=0.001, type=float,
+    parser.add_argument("--train_data_rate_code_search", default=0.0001, type=float,
                         help="The size of the train dataset")
-    parser.add_argument("--nb_samples", default=None, type=int,
+    parser.add_argument("--nb_samples", default=1000, type=int,
                         help="Total number of train samples.")
     parser.add_argument("--max_grad_norm", default=1.0, type=float,
                         help="Max gradient norm.")
@@ -242,38 +242,34 @@ def main():
                         help="saving the history of optimization")
     parser.add_argument('--stats_file', default=None ,type=str,
                         help="saving the optimization statistics ")
- 
     
     args = parser.parse_args()
     set_seed(seed=args.seed)
 
 
-    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
     args.n_gpu = 1 #torch.cuda.device_count()
     args.device = device
     logger.info("device: %s, n_gpu: %s", device, args.n_gpu)
 
-   
 
-    config = AutoConfig.from_pretrained(args.model_name_or_path )
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
-    model = AutoModel.from_pretrained(args.model_name_or_path,config=config)  
-      
-       
+    config = AutoConfig.from_pretrained(args.model_name_or_path , trust_remote_code=True )
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path ,trust_remote_code=True)
+    model = AutoModel.from_pretrained(args.model_name_or_path,config=config , trust_remote_code=True)  
 
-     #get training dataset
-    train_dataset_code_search = TextDataset_code_search(tokenizer, args, args.train_data_file_CodeSearch )#, nb_samples=args.nb_samples)
+    #get training dataset
+    train_dataset_code_search = TextDataset_code_search(tokenizer, args, args.train_data_file_CodeSearch , nb_samples=None )#args.nb_samples)
     train_dataloader_code_search = DataLoader(train_dataset_code_search, sampler=RandomSampler(train_dataset_code_search), batch_size=args.train_batch_size,num_workers=4)
     
 
 
-    eval_dataset_code_search = TextDataset_code_search(tokenizer, args, args.eval_data_file_CodeSearch )#, nb_samples=2500)
+    eval_dataset_code_search = TextDataset_code_search(tokenizer, args, args.eval_data_file_CodeSearch , nb_samples=None)
     eval_dataloader_code_search = DataLoader(eval_dataset_code_search, sampler=SequentialSampler(eval_dataset_code_search), batch_size=args.eval_batch_size,num_workers=4)
 
 
 
-    test_dataset_code_search = TextDataset_code_search(tokenizer, args, args.test_data_file_CodeSearch )#, nb_samples=2500)
+    test_dataset_code_search = TextDataset_code_search(tokenizer, args, args.test_data_file_CodeSearch , nb_samples=None)
     test_dataloader_code_search = DataLoader(test_dataset_code_search, sampler=SequentialSampler(test_dataset_code_search), batch_size=args.train_batch_size,num_workers=4)
     
 
@@ -284,78 +280,60 @@ def main():
         #pop_list = list(population)
         #sorted_pop = sorted(pop_list, key=lambda x: x[1], reverse=True)
         #with open("./logs_optim/final_population_codeSearch_unixcoder.json", "w") as f:
-          
             #json.dump(sorted_pop, f)
 
     else : 
-
-
-
-
         
-        '''
-        x =[
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            {'insert_modules': ('attention.output', 'output'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True},
-            ]
-
-        '''
-
-        '''
-
-        x =random_adapter_parameters(config)
-        print(x)
+        
 
 
-        model = get_delta_model(model , x , args.device)
+        delta = AdapterModel(model , bottleneck_dim=[24] )
+        delta.freeze_module(exclude=["deltas" ])
+        delta.log()
         
         model = Model_codeSearch( model , config)
-
 
         if args.n_gpu > 1:
             model = torch.nn.DataParallel(model, device_ids=[1])
 
         model.to(args.device)
+        
+        
+        
 
-        '''
+
+        """
 
 
         x_list = [
-
-            [{'insert_modules': ('attention.output', 'attention.self'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (32, 256, 32), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'intermediate'), 'bottleneck_dim': (32, 128), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}], 
-            [{'insert_modules': ('attention.output', 'attention.self'), 'bottleneck_dim': (32, 32), 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (16,), 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (32, 256, 32), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (128,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('attention.output', 'intermediate'), 'bottleneck_dim': (32, 128), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (32, 256, 32), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0], 
-            [0, 0, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'output', 'attention.self'), 'bottleneck_dim': (32, 256, 32), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (16,), 'non_linearity': 'silu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('output', 'attention.output', 'attention.self'), 'bottleneck_dim': (256, 64, 16), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output', 'intermediate'), 'bottleneck_dim': (32, 128), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0], 
+                [{'insert_modules': ('layer.1.DenseReluDense',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention', 'layer.1'), 'bottleneck_dim': (16, 128), 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0',), 'bottleneck_dim': (64,), 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.1', 'layer.1.DenseReluDense'), 'bottleneck_dim': (128, 256, 128), 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.1',), 'bottleneck_dim': (128,), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1.DenseReluDense', 'layer.0.SelfAttention', 'layer.0'), 'bottleneck_dim': (64, 16, 64), 'non_linearity': 'silu', 'dropout_rate': 0.15, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.0.SelfAttention', 'layer.1'), 'bottleneck_dim': (128, 16, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1.DenseReluDense',), 'bottleneck_dim': (128,), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention', 'layer.1'), 'bottleneck_dim': (32, 256), 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention', 'layer.0'), 'bottleneck_dim': (32, 128), 'non_linearity': 'relu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.0.SelfAttention'), 'bottleneck_dim': (128, 16), 'non_linearity': 'gelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1', 'layer.0.SelfAttention'), 'bottleneck_dim': (256, 16), 'non_linearity': 'tanh', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}],
+                [0, 0, {'insert_modules': ('layer.0.SelfAttention', 'layer.0'), 'bottleneck_dim': (32, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('layer.0', 'layer.1'), 'bottleneck_dim': (64, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('layer.0.SelfAttention', 'layer.1', 'layer.0'), 'bottleneck_dim': (16, 128, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, {'insert_modules': ('layer.1',), 'bottleneck_dim': (256,), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}], 
+                [0, 0, {'insert_modules': ('layer.0.SelfAttention', 'layer.0'), 'bottleneck_dim': (32, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('layer.1.DenseReluDense', 'layer.1'), 'bottleneck_dim': (128, 128), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.1'), 'bottleneck_dim': (64, 256), 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('layer.0.SelfAttention', 'layer.1', 'layer.0'), 'bottleneck_dim': (16, 128, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('layer.0.SelfAttention', 'layer.0'), 'bottleneck_dim': (32, 128), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.1'), 'bottleneck_dim': (64, 128), 'non_linearity': 'relu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}], 
+                
         ]
-
+        
+        
+        """
 
 
 
 
      
         if args.do_train:
+            
+            """
 
-         
+ 
             for x in x_list : 
                 
                 set_seed(seed=args.seed)
-                model = AutoModel.from_pretrained(args.model_name_or_path,config=config)  
+                model = AutoModel.from_pretrained(args.model_name_or_path,config=config , trust_remote_code=True)  
                 logger.info(x)
                 model = get_delta_model(model , x , args.device)
                 model = Model_codeSearch( model , config)
                 model.to(args.device)
-
-            
-                results = train_codeSearch(args , model ,tokenizer , 
+            """
+            results = train_codeSearch(args , model ,tokenizer , 
                                            train_dataloader_code_search , 
                                            eval_dataloader_code_search , 
                                            test_dataloader_code_search)

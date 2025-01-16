@@ -4,8 +4,7 @@
 # Ignore JSONL files
 *.jsonl
 
-# Ignore log files
-*.log
-
 # Ignore model files (.bin)
 *.bin
+
+*.pyc

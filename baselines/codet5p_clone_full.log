@@ -1,0 +1,435 @@
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/utils/generic.py:260: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+INFO:name:device: cuda:3, n_gpu: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5p-220m/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5p-220m/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+INFO:name:Preparing the Dataset...
+
+INFO:name:Preparing the Dataset...
+
+INFO:name:Preparing the Dataset...
+
+INFO:name:***** Running training *****
+INFO:name:  Num examples = 90102
+INFO:name:  Num Epochs = 10
+INFO:name:  Total train batch size  = 32
+INFO:name:  Total optimization steps = 28160
+INFO:name:Epoch 0 Step 99 Train Loss 0.692   Accuracy 52.156 
+INFO:name:Epoch 0 Step 199 Train Loss 0.69   Accuracy 54.422 
+INFO:name:Epoch 0 Step 299 Train Loss 0.683   Accuracy 57.385 
+INFO:name:Epoch 0 Step 399 Train Loss 0.664   Accuracy 61.445 
+INFO:name:Epoch 0 Step 499 Train Loss 0.621   Accuracy 65.562 
+INFO:name:Epoch 0 Step 599 Train Loss 0.56   Accuracy 69.682 
+INFO:name:Epoch 0 Step 699 Train Loss 0.504   Accuracy 73.188 
+INFO:name:Epoch 0 Step 799 Train Loss 0.46   Accuracy 75.934 
+INFO:name:Epoch 0 Step 899 Train Loss 0.427   Accuracy 78.028 
+INFO:name:Epoch 0 Step 999 Train Loss 0.398   Accuracy 79.747 
+INFO:name:Epoch 0 Step 1099 Train Loss 0.374   Accuracy 81.21 
+INFO:name:Epoch 0 Step 1199 Train Loss 0.352   Accuracy 82.495 
+INFO:name:Epoch 0 Step 1299 Train Loss 0.333   Accuracy 83.558 
+INFO:name:Epoch 0 Step 1399 Train Loss 0.316   Accuracy 84.475 
+INFO:name:Epoch 0 Step 1499 Train Loss 0.301   Accuracy 85.319 
+INFO:name:Epoch 0 Step 1599 Train Loss 0.289   Accuracy 86.037 
+INFO:name:Epoch 0 Step 1699 Train Loss 0.277   Accuracy 86.68 
+INFO:name:Epoch 0 Step 1799 Train Loss 0.267   Accuracy 87.266 
+INFO:name:Epoch 0 Step 1899 Train Loss 0.256   Accuracy 87.821 
+INFO:name:Epoch 0 Step 1999 Train Loss 0.248   Accuracy 88.295 
+INFO:name:Epoch 0 Step 2099 Train Loss 0.239   Accuracy 88.749 
+INFO:name:Epoch 0 Step 2199 Train Loss 0.231   Accuracy 89.179 
+INFO:name:Epoch 0 Step 2299 Train Loss 0.224   Accuracy 89.567 
+INFO:name:Epoch 0 Step 2399 Train Loss 0.218   Accuracy 89.892 
+INFO:name:Epoch 0 Step 2499 Train Loss 0.212   Accuracy 90.204 
+INFO:name:Epoch 0 Step 2599 Train Loss 0.206   Accuracy 90.484 
+INFO:name:Epoch 0 Step 2699 Train Loss 0.201   Accuracy 90.752 
+INFO:name:Epoch 0 Step 2799 Train Loss 0.196   Accuracy 91.03 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.0784
+INFO:name:  eval_acc = 0.9772
+INFO:name:  f1_score = 0.9161
+INFO:name:  recall = 0.947
+INFO:name:  precision = 0.8872
+INFO:name:
+ ******************************
+INFO:name:  Best F1 score :0.9161
+INFO:name:  ******************************
+INFO:name:
+***** Test Results for clone detection 
+INFO:name:
+{'test_acc': 0.9762, 'test_f1_score': 0.9153, 'test_recall': 0.9351, 'test_precision': 0.8963}
+
+INFO:name:Epoch 1 Step 99 Train Loss 0.054   Accuracy 98.531 
+INFO:name:Epoch 1 Step 199 Train Loss 0.058   Accuracy 98.25 
+INFO:name:Epoch 1 Step 299 Train Loss 0.055   Accuracy 98.344 
+INFO:name:Epoch 1 Step 399 Train Loss 0.053   Accuracy 98.445 
+INFO:name:Epoch 1 Step 499 Train Loss 0.051   Accuracy 98.462 
+INFO:name:Epoch 1 Step 599 Train Loss 0.052   Accuracy 98.448 
+INFO:name:Epoch 1 Step 699 Train Loss 0.053   Accuracy 98.424 
+INFO:name:Epoch 1 Step 799 Train Loss 0.052   Accuracy 98.457 
+INFO:name:Epoch 1 Step 899 Train Loss 0.051   Accuracy 98.493 
+INFO:name:Epoch 1 Step 999 Train Loss 0.05   Accuracy 98.488 
+INFO:name:Epoch 1 Step 1099 Train Loss 0.05   Accuracy 98.503 
+INFO:name:Epoch 1 Step 1199 Train Loss 0.049   Accuracy 98.536 
+INFO:name:Epoch 1 Step 1299 Train Loss 0.049   Accuracy 98.55 
+INFO:name:Epoch 1 Step 1399 Train Loss 0.049   Accuracy 98.536 
+INFO:name:Epoch 1 Step 1499 Train Loss 0.047   Accuracy 98.56 
+INFO:name:Epoch 1 Step 1599 Train Loss 0.047   Accuracy 98.545 
+INFO:name:Epoch 1 Step 1699 Train Loss 0.046   Accuracy 98.583 
+INFO:name:Epoch 1 Step 1799 Train Loss 0.046   Accuracy 98.592 
+INFO:name:Epoch 1 Step 1899 Train Loss 0.045   Accuracy 98.6 
+INFO:name:Epoch 1 Step 1999 Train Loss 0.045   Accuracy 98.614 
+INFO:name:Epoch 1 Step 2099 Train Loss 0.044   Accuracy 98.637 
+INFO:name:Epoch 1 Step 2199 Train Loss 0.043   Accuracy 98.658 
+INFO:name:Epoch 1 Step 2299 Train Loss 0.042   Accuracy 98.693 
+INFO:name:Epoch 1 Step 2399 Train Loss 0.042   Accuracy 98.711 
+INFO:name:Epoch 1 Step 2499 Train Loss 0.041   Accuracy 98.729 
+INFO:name:Epoch 1 Step 2599 Train Loss 0.041   Accuracy 98.74 
+INFO:name:Epoch 1 Step 2699 Train Loss 0.04   Accuracy 98.755 
+INFO:name:Epoch 1 Step 2799 Train Loss 0.04   Accuracy 98.771 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.0772
+INFO:name:  eval_acc = 0.9795
+INFO:name:  f1_score = 0.9249
+INFO:name:  recall = 0.9599
+INFO:name:  precision = 0.8923
+INFO:name:
+ ******************************
+INFO:name:  Best F1 score :0.9249
+INFO:name:  ******************************
+INFO:name:
+***** Test Results for clone detection 
+INFO:name:
+{'test_acc': 0.9816, 'test_f1_score': 0.9344, 'test_recall': 0.953, 'test_precision': 0.9166}
+
+INFO:name:Epoch 2 Step 99 Train Loss 0.02   Accuracy 99.5 
+INFO:name:Epoch 2 Step 199 Train Loss 0.021   Accuracy 99.375 
+INFO:name:Epoch 2 Step 299 Train Loss 0.022   Accuracy 99.323 
+INFO:name:Epoch 2 Step 399 Train Loss 0.02   Accuracy 99.391 
+INFO:name:Epoch 2 Step 499 Train Loss 0.021   Accuracy 99.4 
+INFO:name:Epoch 2 Step 599 Train Loss 0.021   Accuracy 99.391 
+INFO:name:Epoch 2 Step 699 Train Loss 0.022   Accuracy 99.375 
+INFO:name:Epoch 2 Step 799 Train Loss 0.021   Accuracy 99.355 
+INFO:name:Epoch 2 Step 899 Train Loss 0.022   Accuracy 99.351 
+INFO:name:Epoch 2 Step 999 Train Loss 0.021   Accuracy 99.362 
+INFO:name:Epoch 2 Step 1099 Train Loss 0.021   Accuracy 99.378 
+INFO:name:Epoch 2 Step 1199 Train Loss 0.021   Accuracy 99.375 
+INFO:name:Epoch 2 Step 1299 Train Loss 0.021   Accuracy 99.368 
+INFO:name:Epoch 2 Step 1399 Train Loss 0.02   Accuracy 99.386 
+INFO:name:Epoch 2 Step 1499 Train Loss 0.02   Accuracy 99.398 
+INFO:name:Epoch 2 Step 1599 Train Loss 0.02   Accuracy 99.412 
+INFO:name:Epoch 2 Step 1699 Train Loss 0.021   Accuracy 99.39 
+INFO:name:Epoch 2 Step 1799 Train Loss 0.021   Accuracy 99.384 
+INFO:name:Epoch 2 Step 1899 Train Loss 0.02   Accuracy 99.387 
+INFO:name:Epoch 2 Step 1999 Train Loss 0.021   Accuracy 99.38 
+INFO:name:Epoch 2 Step 2099 Train Loss 0.02   Accuracy 99.394 
+INFO:name:Epoch 2 Step 2199 Train Loss 0.02   Accuracy 99.401 
+INFO:name:Epoch 2 Step 2299 Train Loss 0.02   Accuracy 99.398 
+INFO:name:Epoch 2 Step 2399 Train Loss 0.02   Accuracy 99.414 
+INFO:name:Epoch 2 Step 2499 Train Loss 0.02   Accuracy 99.4 
+INFO:name:Epoch 2 Step 2599 Train Loss 0.02   Accuracy 99.41 
+INFO:name:Epoch 2 Step 2699 Train Loss 0.02   Accuracy 99.411 
+INFO:name:Epoch 2 Step 2799 Train Loss 0.02   Accuracy 99.405 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.1075
+INFO:name:  eval_acc = 0.9749
+INFO:name:  f1_score = 0.9103
+INFO:name:  recall = 0.9698
+INFO:name:  precision = 0.8577
+INFO:name:Epoch 3 Step 99 Train Loss 0.015   Accuracy 99.75 
+INFO:name:Epoch 3 Step 199 Train Loss 0.012   Accuracy 99.75 
+INFO:name:Epoch 3 Step 299 Train Loss 0.012   Accuracy 99.75 
+INFO:name:Epoch 3 Step 399 Train Loss 0.011   Accuracy 99.781 
+INFO:name:Epoch 3 Step 499 Train Loss 0.011   Accuracy 99.769 
+INFO:name:Epoch 3 Step 599 Train Loss 0.011   Accuracy 99.755 
+INFO:name:Epoch 3 Step 699 Train Loss 0.01   Accuracy 99.759 
+INFO:name:Epoch 3 Step 799 Train Loss 0.011   Accuracy 99.746 
+INFO:name:Epoch 3 Step 899 Train Loss 0.011   Accuracy 99.743 
+INFO:name:Epoch 3 Step 999 Train Loss 0.011   Accuracy 99.75 
+INFO:name:Epoch 3 Step 1099 Train Loss 0.011   Accuracy 99.744 
+INFO:name:Epoch 3 Step 1199 Train Loss 0.011   Accuracy 99.727 
+INFO:name:Epoch 3 Step 1299 Train Loss 0.011   Accuracy 99.719 
+INFO:name:Epoch 3 Step 1399 Train Loss 0.012   Accuracy 99.717 
+INFO:name:Epoch 3 Step 1499 Train Loss 0.012   Accuracy 99.721 
+INFO:name:Epoch 3 Step 1599 Train Loss 0.012   Accuracy 99.713 
+INFO:name:Epoch 3 Step 1699 Train Loss 0.012   Accuracy 99.7 
+INFO:name:Epoch 3 Step 1799 Train Loss 0.013   Accuracy 99.691 
+INFO:name:Epoch 3 Step 1899 Train Loss 0.013   Accuracy 99.689 
+INFO:name:Epoch 3 Step 1999 Train Loss 0.012   Accuracy 99.694 
+INFO:name:Epoch 3 Step 2099 Train Loss 0.012   Accuracy 99.693 
+INFO:name:Epoch 3 Step 2199 Train Loss 0.012   Accuracy 99.695 
+INFO:name:Epoch 3 Step 2299 Train Loss 0.012   Accuracy 99.69 
+INFO:name:Epoch 3 Step 2399 Train Loss 0.013   Accuracy 99.684 
+INFO:name:Epoch 3 Step 2499 Train Loss 0.013   Accuracy 99.681 
+INFO:name:Epoch 3 Step 2599 Train Loss 0.013   Accuracy 99.684 
+INFO:name:Epoch 3 Step 2699 Train Loss 0.013   Accuracy 99.679 
+INFO:name:Epoch 3 Step 2799 Train Loss 0.013   Accuracy 99.675 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.0866
+INFO:name:  eval_acc = 0.9818
+INFO:name:  f1_score = 0.9333
+INFO:name:  recall = 0.9676
+INFO:name:  precision = 0.9015
+INFO:name:
+ ******************************
+INFO:name:  Best F1 score :0.9333
+INFO:name:  ******************************
+INFO:name:
+***** Test Results for clone detection 
+INFO:name:
+{'test_acc': 0.9805, 'test_f1_score': 0.9306, 'test_recall': 0.9543, 'test_precision': 0.9081}
+
+INFO:name:Epoch 4 Step 99 Train Loss 0.007   Accuracy 99.781 
+INFO:name:Epoch 4 Step 199 Train Loss 0.008   Accuracy 99.781 
+INFO:name:Epoch 4 Step 299 Train Loss 0.006   Accuracy 99.802 
+INFO:name:Epoch 4 Step 399 Train Loss 0.008   Accuracy 99.75 
+INFO:name:Epoch 4 Step 499 Train Loss 0.008   Accuracy 99.756 
+INFO:name:Epoch 4 Step 599 Train Loss 0.009   Accuracy 99.734 
+INFO:name:Epoch 4 Step 699 Train Loss 0.009   Accuracy 99.741 
+INFO:name:Epoch 4 Step 799 Train Loss 0.009   Accuracy 99.738 
+INFO:name:Epoch 4 Step 899 Train Loss 0.009   Accuracy 99.74 
+INFO:name:Epoch 4 Step 999 Train Loss 0.009   Accuracy 99.747 
+INFO:name:Epoch 4 Step 1099 Train Loss 0.009   Accuracy 99.753 
+INFO:name:Epoch 4 Step 1199 Train Loss 0.009   Accuracy 99.742 
+INFO:name:Epoch 4 Step 1299 Train Loss 0.009   Accuracy 99.745 
+INFO:name:Epoch 4 Step 1399 Train Loss 0.009   Accuracy 99.754 
+INFO:name:Epoch 4 Step 1499 Train Loss 0.009   Accuracy 99.756 
+INFO:name:Epoch 4 Step 1599 Train Loss 0.009   Accuracy 99.762 
+INFO:name:Epoch 4 Step 1699 Train Loss 0.008   Accuracy 99.765 
+INFO:name:Epoch 4 Step 1799 Train Loss 0.008   Accuracy 99.764 
+INFO:name:Epoch 4 Step 1899 Train Loss 0.008   Accuracy 99.762 
+INFO:name:Epoch 4 Step 1999 Train Loss 0.008   Accuracy 99.772 
+INFO:name:Epoch 4 Step 2099 Train Loss 0.008   Accuracy 99.78 
+INFO:name:Epoch 4 Step 2199 Train Loss 0.008   Accuracy 99.776 
+INFO:name:Epoch 4 Step 2299 Train Loss 0.008   Accuracy 99.777 
+INFO:name:Epoch 4 Step 2399 Train Loss 0.008   Accuracy 99.771 
+INFO:name:Epoch 4 Step 2499 Train Loss 0.008   Accuracy 99.772 
+INFO:name:Epoch 4 Step 2599 Train Loss 0.008   Accuracy 99.775 
+INFO:name:Epoch 4 Step 2699 Train Loss 0.008   Accuracy 99.778 
+INFO:name:Epoch 4 Step 2799 Train Loss 0.008   Accuracy 99.778 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.1012
+INFO:name:  eval_acc = 0.9803
+INFO:name:  f1_score = 0.9268
+INFO:name:  recall = 0.952
+INFO:name:  precision = 0.903
+INFO:name:Epoch 5 Step 99 Train Loss 0.003   Accuracy 99.906 
+INFO:name:Epoch 5 Step 199 Train Loss 0.004   Accuracy 99.875 
+INFO:name:Epoch 5 Step 299 Train Loss 0.004   Accuracy 99.865 
+INFO:name:Epoch 5 Step 399 Train Loss 0.006   Accuracy 99.844 
+INFO:name:Epoch 5 Step 499 Train Loss 0.007   Accuracy 99.806 
+INFO:name:Epoch 5 Step 599 Train Loss 0.006   Accuracy 99.828 
+INFO:name:Epoch 5 Step 699 Train Loss 0.006   Accuracy 99.835 
+INFO:name:Epoch 5 Step 799 Train Loss 0.005   Accuracy 99.852 
+INFO:name:Epoch 5 Step 899 Train Loss 0.005   Accuracy 99.868 
+INFO:name:Epoch 5 Step 999 Train Loss 0.005   Accuracy 99.875 
+INFO:name:Epoch 5 Step 1099 Train Loss 0.005   Accuracy 99.866 
+INFO:name:Epoch 5 Step 1199 Train Loss 0.005   Accuracy 99.865 
+INFO:name:Epoch 5 Step 1299 Train Loss 0.005   Accuracy 99.853 
+INFO:name:Epoch 5 Step 1399 Train Loss 0.005   Accuracy 99.85 
+INFO:name:Epoch 5 Step 1499 Train Loss 0.005   Accuracy 99.854 
+INFO:name:Epoch 5 Step 1599 Train Loss 0.005   Accuracy 99.859 
+INFO:name:Epoch 5 Step 1699 Train Loss 0.005   Accuracy 99.864 
+INFO:name:Epoch 5 Step 1799 Train Loss 0.005   Accuracy 99.872 
+INFO:name:Epoch 5 Step 1899 Train Loss 0.005   Accuracy 99.872 
+INFO:name:Epoch 5 Step 1999 Train Loss 0.005   Accuracy 99.877 
+INFO:name:Epoch 5 Step 2099 Train Loss 0.005   Accuracy 99.876 
+INFO:name:Epoch 5 Step 2199 Train Loss 0.005   Accuracy 99.879 
+INFO:name:Epoch 5 Step 2299 Train Loss 0.005   Accuracy 99.88 
+INFO:name:Epoch 5 Step 2399 Train Loss 0.005   Accuracy 99.876 
+INFO:name:Epoch 5 Step 2499 Train Loss 0.005   Accuracy 99.879 
+INFO:name:Epoch 5 Step 2599 Train Loss 0.005   Accuracy 99.876 
+INFO:name:Epoch 5 Step 2699 Train Loss 0.005   Accuracy 99.877 
+INFO:name:Epoch 5 Step 2799 Train Loss 0.005   Accuracy 99.877 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.1093
+INFO:name:  eval_acc = 0.9814
+INFO:name:  f1_score = 0.9319
+INFO:name:  recall = 0.9701
+INFO:name:  precision = 0.8967
+INFO:name:Epoch 6 Step 99 Train Loss 0.006   Accuracy 99.906 
+INFO:name:Epoch 6 Step 199 Train Loss 0.004   Accuracy 99.938 
+INFO:name:Epoch 6 Step 299 Train Loss 0.003   Accuracy 99.948 
+INFO:name:Epoch 6 Step 399 Train Loss 0.004   Accuracy 99.922 
+INFO:name:Epoch 6 Step 499 Train Loss 0.004   Accuracy 99.919 
+INFO:name:Epoch 6 Step 599 Train Loss 0.004   Accuracy 99.911 
+INFO:name:Epoch 6 Step 699 Train Loss 0.004   Accuracy 99.915 
+INFO:name:Epoch 6 Step 799 Train Loss 0.003   Accuracy 99.918 
+INFO:name:Epoch 6 Step 899 Train Loss 0.004   Accuracy 99.91 
+INFO:name:Epoch 6 Step 999 Train Loss 0.003   Accuracy 99.919 
+INFO:name:Epoch 6 Step 1099 Train Loss 0.003   Accuracy 99.918 
+INFO:name:Epoch 6 Step 1199 Train Loss 0.003   Accuracy 99.919 
+INFO:name:Epoch 6 Step 1299 Train Loss 0.003   Accuracy 99.921 
+INFO:name:Epoch 6 Step 1399 Train Loss 0.003   Accuracy 99.922 
+INFO:name:Epoch 6 Step 1499 Train Loss 0.003   Accuracy 99.925 
+INFO:name:Epoch 6 Step 1599 Train Loss 0.003   Accuracy 99.928 
+INFO:name:Epoch 6 Step 1699 Train Loss 0.003   Accuracy 99.923 
+INFO:name:Epoch 6 Step 1799 Train Loss 0.003   Accuracy 99.925 
+INFO:name:Epoch 6 Step 1899 Train Loss 0.003   Accuracy 99.923 
+INFO:name:Epoch 6 Step 1999 Train Loss 0.003   Accuracy 99.917 
+INFO:name:Epoch 6 Step 2099 Train Loss 0.003   Accuracy 99.918 
+INFO:name:Epoch 6 Step 2199 Train Loss 0.003   Accuracy 99.922 
+INFO:name:Epoch 6 Step 2299 Train Loss 0.003   Accuracy 99.921 
+INFO:name:Epoch 6 Step 2399 Train Loss 0.003   Accuracy 99.923 
+INFO:name:Epoch 6 Step 2499 Train Loss 0.003   Accuracy 99.919 
+INFO:name:Epoch 6 Step 2599 Train Loss 0.003   Accuracy 99.917 
+INFO:name:Epoch 6 Step 2699 Train Loss 0.003   Accuracy 99.92 
+INFO:name:Epoch 6 Step 2799 Train Loss 0.003   Accuracy 99.921 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.1294
+INFO:name:  eval_acc = 0.9826
+INFO:name:  f1_score = 0.9357
+INFO:name:  recall = 0.9617
+INFO:name:  precision = 0.9111
+INFO:name:
+ ******************************
+INFO:name:  Best F1 score :0.9357
+INFO:name:  ******************************
+INFO:name:
+***** Test Results for clone detection 
+INFO:name:
+{'test_acc': 0.9838, 'test_f1_score': 0.9416, 'test_recall': 0.9532, 'test_precision': 0.9302}
+
+INFO:name:Epoch 7 Step 99 Train Loss 0.0   Accuracy 100.0 
+INFO:name:Epoch 7 Step 199 Train Loss 0.002   Accuracy 99.984 
+INFO:name:Epoch 7 Step 299 Train Loss 0.001   Accuracy 99.979 
+INFO:name:Epoch 7 Step 399 Train Loss 0.002   Accuracy 99.977 
+INFO:name:Epoch 7 Step 499 Train Loss 0.001   Accuracy 99.981 
+INFO:name:Epoch 7 Step 599 Train Loss 0.001   Accuracy 99.979 
+INFO:name:Epoch 7 Step 699 Train Loss 0.001   Accuracy 99.982 
+INFO:name:Epoch 7 Step 799 Train Loss 0.001   Accuracy 99.984 
+INFO:name:Epoch 7 Step 899 Train Loss 0.001   Accuracy 99.986 
+INFO:name:Epoch 7 Step 999 Train Loss 0.001   Accuracy 99.984 
+INFO:name:Epoch 7 Step 1099 Train Loss 0.001   Accuracy 99.983 
+INFO:name:Epoch 7 Step 1199 Train Loss 0.001   Accuracy 99.977 
+INFO:name:Epoch 7 Step 1299 Train Loss 0.001   Accuracy 99.974 
+INFO:name:Epoch 7 Step 1399 Train Loss 0.001   Accuracy 99.971 
+INFO:name:Epoch 7 Step 1499 Train Loss 0.001   Accuracy 99.973 
+INFO:name:Epoch 7 Step 1599 Train Loss 0.001   Accuracy 99.965 
+INFO:name:Epoch 7 Step 1699 Train Loss 0.001   Accuracy 99.965 
+INFO:name:Epoch 7 Step 1799 Train Loss 0.001   Accuracy 99.964 
+INFO:name:Epoch 7 Step 1899 Train Loss 0.001   Accuracy 99.964 
+INFO:name:Epoch 7 Step 1999 Train Loss 0.001   Accuracy 99.966 
+INFO:name:Epoch 7 Step 2099 Train Loss 0.001   Accuracy 99.964 
+INFO:name:Epoch 7 Step 2199 Train Loss 0.001   Accuracy 99.964 
+INFO:name:Epoch 7 Step 2299 Train Loss 0.002   Accuracy 99.962 
+INFO:name:Epoch 7 Step 2399 Train Loss 0.002   Accuracy 99.958 
+INFO:name:Epoch 7 Step 2499 Train Loss 0.002   Accuracy 99.956 
+INFO:name:Epoch 7 Step 2599 Train Loss 0.002   Accuracy 99.956 
+INFO:name:Epoch 7 Step 2699 Train Loss 0.002   Accuracy 99.954 
+INFO:name:Epoch 7 Step 2799 Train Loss 0.002   Accuracy 99.954 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.1194
+INFO:name:  eval_acc = 0.9835
+INFO:name:  f1_score = 0.9378
+INFO:name:  recall = 0.9485
+INFO:name:  precision = 0.9273
+INFO:name:
+ ******************************
+INFO:name:  Best F1 score :0.9378
+INFO:name:  ******************************
+INFO:name:
+***** Test Results for clone detection 
+INFO:name:
+{'test_acc': 0.9846, 'test_f1_score': 0.944, 'test_recall': 0.9457, 'test_precision': 0.9424}
+
+INFO:name:Epoch 8 Step 99 Train Loss 0.001   Accuracy 99.938 
+INFO:name:Epoch 8 Step 199 Train Loss 0.002   Accuracy 99.938 
+INFO:name:Epoch 8 Step 299 Train Loss 0.002   Accuracy 99.948 
+INFO:name:Epoch 8 Step 399 Train Loss 0.002   Accuracy 99.953 
+INFO:name:Epoch 8 Step 499 Train Loss 0.002   Accuracy 99.962 
+INFO:name:Epoch 8 Step 599 Train Loss 0.002   Accuracy 99.958 
+INFO:name:Epoch 8 Step 699 Train Loss 0.002   Accuracy 99.964 
+INFO:name:Epoch 8 Step 799 Train Loss 0.001   Accuracy 99.969 
+INFO:name:Epoch 8 Step 899 Train Loss 0.001   Accuracy 99.972 
+INFO:name:Epoch 8 Step 999 Train Loss 0.001   Accuracy 99.969 
+INFO:name:Epoch 8 Step 1099 Train Loss 0.001   Accuracy 99.969 
+INFO:name:Epoch 8 Step 1199 Train Loss 0.002   Accuracy 99.969 
+INFO:name:Epoch 8 Step 1299 Train Loss 0.001   Accuracy 99.971 
+INFO:name:Epoch 8 Step 1399 Train Loss 0.001   Accuracy 99.973 
+INFO:name:Epoch 8 Step 1499 Train Loss 0.001   Accuracy 99.975 
+INFO:name:Epoch 8 Step 1599 Train Loss 0.001   Accuracy 99.973 
+INFO:name:Epoch 8 Step 1699 Train Loss 0.001   Accuracy 99.974 
+INFO:name:Epoch 8 Step 1799 Train Loss 0.001   Accuracy 99.976 
+INFO:name:Epoch 8 Step 1899 Train Loss 0.001   Accuracy 99.974 
+INFO:name:Epoch 8 Step 1999 Train Loss 0.001   Accuracy 99.975 
+INFO:name:Epoch 8 Step 2099 Train Loss 0.001   Accuracy 99.975 
+INFO:name:Epoch 8 Step 2199 Train Loss 0.001   Accuracy 99.974 
+INFO:name:Epoch 8 Step 2299 Train Loss 0.001   Accuracy 99.974 
+INFO:name:Epoch 8 Step 2399 Train Loss 0.001   Accuracy 99.974 
+INFO:name:Epoch 8 Step 2499 Train Loss 0.001   Accuracy 99.975 
+INFO:name:Epoch 8 Step 2599 Train Loss 0.001   Accuracy 99.976 
+INFO:name:Epoch 8 Step 2699 Train Loss 0.001   Accuracy 99.976 
+INFO:name:Epoch 8 Step 2799 Train Loss 0.001   Accuracy 99.975 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.1444
+INFO:name:  eval_acc = 0.9832
+INFO:name:  f1_score = 0.9377
+INFO:name:  recall = 0.9606
+INFO:name:  precision = 0.9158
+INFO:name:Epoch 9 Step 99 Train Loss 0.0   Accuracy 100.0 
+INFO:name:Epoch 9 Step 199 Train Loss 0.002   Accuracy 99.969 
+INFO:name:Epoch 9 Step 299 Train Loss 0.002   Accuracy 99.958 
+INFO:name:Epoch 9 Step 399 Train Loss 0.002   Accuracy 99.969 
+INFO:name:Epoch 9 Step 499 Train Loss 0.001   Accuracy 99.975 
+INFO:name:Epoch 9 Step 599 Train Loss 0.001   Accuracy 99.974 
+INFO:name:Epoch 9 Step 699 Train Loss 0.001   Accuracy 99.978 
+INFO:name:Epoch 9 Step 799 Train Loss 0.001   Accuracy 99.977 
+INFO:name:Epoch 9 Step 899 Train Loss 0.001   Accuracy 99.979 
+INFO:name:Epoch 9 Step 999 Train Loss 0.001   Accuracy 99.978 
+INFO:name:Epoch 9 Step 1099 Train Loss 0.001   Accuracy 99.98 
+INFO:name:Epoch 9 Step 1199 Train Loss 0.001   Accuracy 99.982 
+INFO:name:Epoch 9 Step 1299 Train Loss 0.001   Accuracy 99.981 
+INFO:name:Epoch 9 Step 1399 Train Loss 0.001   Accuracy 99.982 
+INFO:name:Epoch 9 Step 1499 Train Loss 0.001   Accuracy 99.981 
+INFO:name:Epoch 9 Step 1599 Train Loss 0.001   Accuracy 99.982 
+INFO:name:Epoch 9 Step 1699 Train Loss 0.001   Accuracy 99.983 
+INFO:name:Epoch 9 Step 1799 Train Loss 0.001   Accuracy 99.983 
+INFO:name:Epoch 9 Step 1899 Train Loss 0.001   Accuracy 99.984 
+INFO:name:Epoch 9 Step 1999 Train Loss 0.001   Accuracy 99.983 
+INFO:name:Epoch 9 Step 2099 Train Loss 0.001   Accuracy 99.984 
+INFO:name:Epoch 9 Step 2199 Train Loss 0.001   Accuracy 99.984 
+INFO:name:Epoch 9 Step 2299 Train Loss 0.001   Accuracy 99.985 
+INFO:name:Epoch 9 Step 2399 Train Loss 0.001   Accuracy 99.984 
+INFO:name:Epoch 9 Step 2499 Train Loss 0.001   Accuracy 99.985 
+INFO:name:Epoch 9 Step 2599 Train Loss 0.001   Accuracy 99.986 
+INFO:name:Epoch 9 Step 2699 Train Loss 0.001   Accuracy 99.986 
+INFO:name:Epoch 9 Step 2799 Train Loss 0.0   Accuracy 99.987 
+INFO:name:***** Running evaluation *****
+INFO:name:  Num examples clone detection = 41541
+INFO:name:  Batch size = 32 
+INFO:name:  eval_loss = 0.145
+INFO:name:  eval_acc = 0.9836
+INFO:name:  f1_score = 0.9386
+INFO:name:  recall = 0.9547
+INFO:name:  precision = 0.9229
+INFO:name:
+ ******************************
+INFO:name:  Best F1 score :0.9386
+INFO:name:  ******************************
+INFO:name:
+***** Test Results for clone detection 
+INFO:name:
+{'test_acc': 0.9833, 'test_f1_score': 0.9395, 'test_recall': 0.946, 'test_precision': 0.9331}
+
+INFO:name:train results : 
+ {'train_loss': [0.195, 0.04, 0.02, 0.013, 0.008, 0.005, 0.003, 0.002, 0.001, 0.0], 'train_acc': [91.066, 98.774, 99.407, 99.675, 99.779, 99.878, 99.921, 99.953, 99.976, 99.987], 'eval_loss': [0.0784, 0.0772, 0.1075, 0.0866, 0.1012, 0.1093, 0.1294, 0.1194, 0.1444, 0.145], 'eval_acc': [0.9772, 0.9795, 0.9749, 0.9818, 0.9803, 0.9814, 0.9826, 0.9835, 0.9832, 0.9836], 'eval_f1': [0.9161, 0.9249, 0.9103, 0.9333, 0.9268, 0.9319, 0.9357, 0.9378, 0.9377, 0.9386], 'eval_precision': [0.8872, 0.8923, 0.8577, 0.9015, 0.903, 0.8967, 0.9111, 0.9273, 0.9158, 0.9229], 'eval_recall': [0.947, 0.9599, 0.9698, 0.9676, 0.952, 0.9701, 0.9617, 0.9485, 0.9606, 0.9547]}
+
+INFO:name:**********************************************************************************************************************************
