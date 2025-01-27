@@ -12,7 +12,7 @@ python3 main_flaky.py \
     --train_batch_size 32 \
     --eval_batch_size 32 \
     --train_data_rate_flaky 1.0 \
-    --learning_rate 1e-4 \
+    --learning_rate 5e-5 \
     --max_grad_norm 1.0 \
     --num_train_epochs 15 \
-    --seed 42 2>&1 | tee ./topConfigs/unixcoder_transferToFlaky.log
+    --seed 42 2>&1 | tee ./baselines/unixcoder_flaky_full.log

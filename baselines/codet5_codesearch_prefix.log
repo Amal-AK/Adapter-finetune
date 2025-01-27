@@ -1,0 +1,990 @@
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/utils/generic.py:260: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+INFO:name:device: cuda:2, n_gpu: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/vocab.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/merges.txt HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/tokenizer.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/added_tokens.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/model.safetensors HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Salesforce/codet5-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:name:Preparing the code search Dataset...
+
+INFO:name:Preparing the code search Dataset...
+
+INFO:name:Preparing the code search Dataset...
+
+root
+├── shared (Embedding) weight:[32100, 768]
+├── encoder (T5Stack)
+│   ├── embed_tokens (Embedding) weight:[32100, 768]
+│   ├── block (ModuleList)
+│   │   ├── 0 (T5Block)
+│   │   │   └── layer (ModuleList)
+│   │   │       ├── 0 (T5LayerSelfAttention)
+│   │   │       │   ├── SelfAttention (T5Attention)
+│   │   │       │   │   ├── q,k,v,o(Linear) weight:[768, 768]
+│   │   │       │   │   └── relative_attention_bias (Embedding) weight:[32, 12]
+│   │   │       │   ├── layer_norm (T5LayerNorm) weight:[768]
+│   │   │       │   └── reparams (ReparameterizeFunction) input_tokens:[6]
+│   │   │       │       ├── module_list (ModuleList)
+│   │   │       │       ├── wte (Embedding) weight:[6, 512]
+│   │   │       │       └── control_trans (Sequential)
+│   │   │       │           ├── 0 (Linear) weight:[512, 512] bias:[512]
+│   │   │       │           └── 2 (Linear) weight:[36864, 512] bias:[36864]
+│   │   │       └── 1 (T5LayerFF)
+│   │   │           ├── DenseReluDense (T5DenseActDense)
+│   │   │           │   ├── wi (Linear) weight:[3072, 768]
+│   │   │           │   └── wo (Linear) weight:[768, 3072]
+│   │   │           └── layer_norm (T5LayerNorm) weight:[768]
+│   │   └── 1-11(T5Block)
+│   │       └── layer (ModuleList)
+│   │           ├── 0 (T5LayerSelfAttention)
+│   │           │   ├── SelfAttention (T5Attention)
+│   │           │   │   └── q,k,v,o(Linear) weight:[768, 768]
+│   │           │   └── layer_norm (T5LayerNorm) weight:[768]
+│   │           └── 1 (T5LayerFF)
+│   │               ├── DenseReluDense (T5DenseActDense)
+│   │               │   ├── wi (Linear) weight:[3072, 768]
+│   │               │   └── wo (Linear) weight:[768, 3072]
+│   │               └── layer_norm (T5LayerNorm) weight:[768]
+│   └── final_layer_norm (T5LayerNorm) weight:[768]
+└── decoder (T5Stack)
+    ├── embed_tokens (Embedding) weight:[32100, 768]
+    ├── block (ModuleList)
+    │   ├── 0 (T5Block)
+    │   │   └── layer (ModuleList)
+    │   │       ├── 0 (T5LayerSelfAttention)
+    │   │       │   ├── SelfAttention (T5Attention)
+    │   │       │   │   ├── q,k,v,o(Linear) weight:[768, 768]
+    │   │       │   │   └── relative_attention_bias (Embedding) weight:[32, 12]
+    │   │       │   └── layer_norm (T5LayerNorm) weight:[768]
+    │   │       ├── 1 (T5LayerCrossAttention)
+    │   │       │   ├── EncDecAttention (T5Attention)
+    │   │       │   │   └── q,k,v,o(Linear) weight:[768, 768]
+    │   │       │   └── layer_norm (T5LayerNorm) weight:[768]
+    │   │       └── 2 (T5LayerFF)
+    │   │           ├── DenseReluDense (T5DenseActDense)
+    │   │           │   ├── wi (Linear) weight:[3072, 768]
+    │   │           │   └── wo (Linear) weight:[768, 3072]
+    │   │           └── layer_norm (T5LayerNorm) weight:[768]
+    │   └── 1-11(T5Block)
+    │       └── layer (ModuleList)
+    │           ├── 0 (T5LayerSelfAttention)
+    │           │   ├── SelfAttention (T5Attention)
+    │           │   │   └── q,k,v,o(Linear) weight:[768, 768]
+    │           │   └── layer_norm (T5LayerNorm) weight:[768]
+    │           ├── 1 (T5LayerCrossAttention)
+    │           │   ├── EncDecAttention (T5Attention)
+    │           │   │   └── q,k,v,o(Linear) weight:[768, 768]
+    │           │   └── layer_norm (T5LayerNorm) weight:[768]
+    │           └── 2 (T5LayerFF)
+    │               ├── DenseReluDense (T5DenseActDense)
+    │               │   ├── wi (Linear) weight:[3072, 768]
+    │               │   └── wo (Linear) weight:[768, 3072]
+    │               └── layer_norm (T5LayerNorm) weight:[768]
+    └── final_layer_norm (T5LayerNorm) weight:[768]
+[INFO|(OpenDelta)basemodel:700]2025-01-22 01:59:00,203 >> Trainable Ratio: 19176960/242059014=7.922432%
+[INFO|(OpenDelta)basemodel:702]2025-01-22 01:59:00,204 >> Delta Parameter Ratio: 19176966/242059014=7.922434%
+[INFO|(OpenDelta)basemodel:704]2025-01-22 01:59:00,204 >> Static Memory 0.00 GB, Max Memory 0.00 GB
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+INFO:name:***** Running training *****
+INFO:name:  Num examples = 251820
+INFO:name:  Num Epochs = 10
+INFO:name:  Instantaneous batch size per GPU = 32
+INFO:name:  Total train batch size  = 32
+INFO:name:  Total optimization steps = 78700
+INFO:name:epoch 0 step 100 loss 3.61541
+INFO:name:epoch 0 step 200 loss 1.61849
+INFO:name:epoch 0 step 300 loss 0.86056
+INFO:name:epoch 0 step 400 loss 0.62654
+INFO:name:epoch 0 step 500 loss 0.50781
+INFO:name:epoch 0 step 600 loss 0.45339
+INFO:name:epoch 0 step 700 loss 0.39977
+INFO:name:epoch 0 step 800 loss 0.38673
+INFO:name:epoch 0 step 900 loss 0.3457
+INFO:name:epoch 0 step 1000 loss 0.3578
+INFO:name:epoch 0 step 1100 loss 0.3194
+INFO:name:epoch 0 step 1200 loss 0.33454
+INFO:name:epoch 0 step 1300 loss 0.29642
+INFO:name:epoch 0 step 1400 loss 0.34036
+INFO:name:epoch 0 step 1500 loss 0.29498
+INFO:name:epoch 0 step 1600 loss 0.30359
+INFO:name:epoch 0 step 1700 loss 0.28483
+INFO:name:epoch 0 step 1800 loss 0.27816
+INFO:name:epoch 0 step 1900 loss 0.3001
+INFO:name:epoch 0 step 2000 loss 0.27508
+INFO:name:epoch 0 step 2100 loss 0.27694
+INFO:name:epoch 0 step 2200 loss 0.25172
+INFO:name:epoch 0 step 2300 loss 0.27977
+INFO:name:epoch 0 step 2400 loss 0.26842
+INFO:name:epoch 0 step 2500 loss 0.26736
+INFO:name:epoch 0 step 2600 loss 0.27725
+INFO:name:epoch 0 step 2700 loss 0.28424
+INFO:name:epoch 0 step 2800 loss 0.26049
+INFO:name:epoch 0 step 2900 loss 0.26996
+INFO:name:epoch 0 step 3000 loss 0.2236
+INFO:name:epoch 0 step 3100 loss 0.24334
+INFO:name:epoch 0 step 3200 loss 0.24827
+INFO:name:epoch 0 step 3300 loss 0.26549
+INFO:name:epoch 0 step 3400 loss 0.24328
+INFO:name:epoch 0 step 3500 loss 0.25945
+INFO:name:epoch 0 step 3600 loss 0.24239
+INFO:name:epoch 0 step 3700 loss 0.27318
+INFO:name:epoch 0 step 3800 loss 0.24076
+INFO:name:epoch 0 step 3900 loss 0.2366
+INFO:name:epoch 0 step 4000 loss 0.22935
+INFO:name:epoch 0 step 4100 loss 0.24969
+INFO:name:epoch 0 step 4200 loss 0.2261
+INFO:name:epoch 0 step 4300 loss 0.23477
+INFO:name:epoch 0 step 4400 loss 0.24445
+INFO:name:epoch 0 step 4500 loss 0.25429
+INFO:name:epoch 0 step 4600 loss 0.21924
+INFO:name:epoch 0 step 4700 loss 0.22186
+INFO:name:epoch 0 step 4800 loss 0.22447
+INFO:name:epoch 0 step 4900 loss 0.24353
+INFO:name:epoch 0 step 5000 loss 0.24252
+INFO:name:epoch 0 step 5100 loss 0.21599
+INFO:name:epoch 0 step 5200 loss 0.24431
+INFO:name:epoch 0 step 5300 loss 0.2261
+INFO:name:epoch 0 step 5400 loss 0.2216
+INFO:name:epoch 0 step 5500 loss 0.20939
+INFO:name:epoch 0 step 5600 loss 0.22976
+INFO:name:epoch 0 step 5700 loss 0.22138
+INFO:name:epoch 0 step 5800 loss 0.23392
+INFO:name:epoch 0 step 5900 loss 0.22011
+INFO:name:epoch 0 step 6000 loss 0.21897
+INFO:name:epoch 0 step 6100 loss 0.21587
+INFO:name:epoch 0 step 6200 loss 0.22531
+INFO:name:epoch 0 step 6300 loss 0.20158
+INFO:name:epoch 0 step 6400 loss 0.22086
+INFO:name:epoch 0 step 6500 loss 0.21357
+INFO:name:epoch 0 step 6600 loss 0.21318
+INFO:name:epoch 0 step 6700 loss 0.23611
+INFO:name:epoch 0 step 6800 loss 0.23352
+INFO:name:epoch 0 step 6900 loss 0.22975
+INFO:name:epoch 0 step 7000 loss 0.19181
+INFO:name:epoch 0 step 7100 loss 0.22201
+INFO:name:epoch 0 step 7200 loss 0.22156
+INFO:name:epoch 0 step 7300 loss 0.22842
+INFO:name:epoch 0 step 7400 loss 0.21093
+INFO:name:epoch 0 step 7500 loss 0.21379
+INFO:name:epoch 0 step 7600 loss 0.20963
+INFO:name:epoch 0 step 7700 loss 0.19941
+INFO:name:epoch 0 step 7800 loss 0.21183
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.1891
+INFO:name:  ********************
+INFO:name:  Best eval mrr:0.1891
+INFO:name:  ********************
+INFO:name:***** Running Test *****
+INFO:name:  Num queries = 19210
+INFO:name:  Num codes = 19210
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.1453
+INFO:name:Saving model checkpoint to ./models/best_model_codeSearch/model.bin
+INFO:name:epoch 1 step 100 loss 0.19014
+INFO:name:epoch 1 step 200 loss 0.14913
+INFO:name:epoch 1 step 300 loss 0.1431
+INFO:name:epoch 1 step 400 loss 0.16249
+INFO:name:epoch 1 step 500 loss 0.18165
+INFO:name:epoch 1 step 600 loss 0.18101
+INFO:name:epoch 1 step 700 loss 0.18344
+INFO:name:epoch 1 step 800 loss 0.14098
+INFO:name:epoch 1 step 900 loss 0.15749
+INFO:name:epoch 1 step 1000 loss 0.16887
+INFO:name:epoch 1 step 1100 loss 0.15421
+INFO:name:epoch 1 step 1200 loss 0.15316
+INFO:name:epoch 1 step 1300 loss 0.18209
+INFO:name:epoch 1 step 1400 loss 0.17214
+INFO:name:epoch 1 step 1500 loss 0.1544
+INFO:name:epoch 1 step 1600 loss 0.15391
+INFO:name:epoch 1 step 1700 loss 0.17566
+INFO:name:epoch 1 step 1800 loss 0.16583
+INFO:name:epoch 1 step 1900 loss 0.15013
+INFO:name:epoch 1 step 2000 loss 0.15053
+INFO:name:epoch 1 step 2100 loss 0.16481
+INFO:name:epoch 1 step 2200 loss 0.15253
+INFO:name:epoch 1 step 2300 loss 0.16712
+INFO:name:epoch 1 step 2400 loss 0.15596
+INFO:name:epoch 1 step 2500 loss 0.147
+INFO:name:epoch 1 step 2600 loss 0.16609
+INFO:name:epoch 1 step 2700 loss 0.15709
+INFO:name:epoch 1 step 2800 loss 0.15874
+INFO:name:epoch 1 step 2900 loss 0.16439
+INFO:name:epoch 1 step 3000 loss 0.14254
+INFO:name:epoch 1 step 3100 loss 0.15541
+INFO:name:epoch 1 step 3200 loss 0.16345
+INFO:name:epoch 1 step 3300 loss 0.14363
+INFO:name:epoch 1 step 3400 loss 0.17326
+INFO:name:epoch 1 step 3500 loss 0.15182
+INFO:name:epoch 1 step 3600 loss 0.16539
+INFO:name:epoch 1 step 3700 loss 0.1639
+INFO:name:epoch 1 step 3800 loss 0.15357
+INFO:name:epoch 1 step 3900 loss 0.16167
+INFO:name:epoch 1 step 4000 loss 0.1495
+INFO:name:epoch 1 step 4100 loss 0.1539
+INFO:name:epoch 1 step 4200 loss 0.16501
+INFO:name:epoch 1 step 4300 loss 0.15648
+INFO:name:epoch 1 step 4400 loss 0.14023
+INFO:name:epoch 1 step 4500 loss 0.16134
+INFO:name:epoch 1 step 4600 loss 0.15906
+INFO:name:epoch 1 step 4700 loss 0.15938
+INFO:name:epoch 1 step 4800 loss 0.14151
+INFO:name:epoch 1 step 4900 loss 0.1566
+INFO:name:epoch 1 step 5000 loss 0.15328
+INFO:name:epoch 1 step 5100 loss 0.17574
+INFO:name:epoch 1 step 5200 loss 0.16306
+INFO:name:epoch 1 step 5300 loss 0.17137
+INFO:name:epoch 1 step 5400 loss 0.16755
+INFO:name:epoch 1 step 5500 loss 0.15994
+INFO:name:epoch 1 step 5600 loss 0.15423
+INFO:name:epoch 1 step 5700 loss 0.16296
+INFO:name:epoch 1 step 5800 loss 0.13604
+INFO:name:epoch 1 step 5900 loss 0.14257
+INFO:name:epoch 1 step 6000 loss 0.16059
+INFO:name:epoch 1 step 6100 loss 0.1429
+INFO:name:epoch 1 step 6200 loss 0.14072
+INFO:name:epoch 1 step 6300 loss 0.16219
+INFO:name:epoch 1 step 6400 loss 0.1605
+INFO:name:epoch 1 step 6500 loss 0.15545
+INFO:name:epoch 1 step 6600 loss 0.13238
+INFO:name:epoch 1 step 6700 loss 0.14903
+INFO:name:epoch 1 step 6800 loss 0.16648
+INFO:name:epoch 1 step 6900 loss 0.15246
+INFO:name:epoch 1 step 7000 loss 0.15918
+INFO:name:epoch 1 step 7100 loss 0.14352
+INFO:name:epoch 1 step 7200 loss 0.16114
+INFO:name:epoch 1 step 7300 loss 0.14486
+INFO:name:epoch 1 step 7400 loss 0.13813
+INFO:name:epoch 1 step 7500 loss 0.15283
+INFO:name:epoch 1 step 7600 loss 0.12976
+INFO:name:epoch 1 step 7700 loss 0.15273
+INFO:name:epoch 1 step 7800 loss 0.14665
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2425
+INFO:name:  ********************
+INFO:name:  Best eval mrr:0.2425
+INFO:name:  ********************
+INFO:name:***** Running Test *****
+INFO:name:  Num queries = 19210
+INFO:name:  Num codes = 19210
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.1909
+INFO:name:Saving model checkpoint to ./models/best_model_codeSearch/model.bin
+INFO:name:epoch 2 step 100 loss 0.1465
+INFO:name:epoch 2 step 200 loss 0.14561
+INFO:name:epoch 2 step 300 loss 0.13123
+INFO:name:epoch 2 step 400 loss 0.13672
+INFO:name:epoch 2 step 500 loss 0.12093
+INFO:name:epoch 2 step 600 loss 0.12725
+INFO:name:epoch 2 step 700 loss 0.15129
+INFO:name:epoch 2 step 800 loss 0.14706
+INFO:name:epoch 2 step 900 loss 0.14569
+INFO:name:epoch 2 step 1000 loss 0.12962
+INFO:name:epoch 2 step 1100 loss 0.14999
+INFO:name:epoch 2 step 1200 loss 0.12523
+INFO:name:epoch 2 step 1300 loss 0.14773
+INFO:name:epoch 2 step 1400 loss 0.13453
+INFO:name:epoch 2 step 1500 loss 0.13989
+INFO:name:epoch 2 step 1600 loss 0.12427
+INFO:name:epoch 2 step 1700 loss 0.12238
+INFO:name:epoch 2 step 1800 loss 0.13985
+INFO:name:epoch 2 step 1900 loss 0.12401
+INFO:name:epoch 2 step 2000 loss 0.14291
+INFO:name:epoch 2 step 2100 loss 0.12288
+INFO:name:epoch 2 step 2200 loss 0.11731
+INFO:name:epoch 2 step 2300 loss 0.12668
+INFO:name:epoch 2 step 2400 loss 0.12702
+INFO:name:epoch 2 step 2500 loss 0.14353
+INFO:name:epoch 2 step 2600 loss 0.13797
+INFO:name:epoch 2 step 2700 loss 0.13203
+INFO:name:epoch 2 step 2800 loss 0.12621
+INFO:name:epoch 2 step 2900 loss 0.12447
+INFO:name:epoch 2 step 3000 loss 0.15171
+INFO:name:epoch 2 step 3100 loss 0.11892
+INFO:name:epoch 2 step 3200 loss 0.12416
+INFO:name:epoch 2 step 3300 loss 0.15663
+INFO:name:epoch 2 step 3400 loss 0.12046
+INFO:name:epoch 2 step 3500 loss 0.13947
+INFO:name:epoch 2 step 3600 loss 0.13904
+INFO:name:epoch 2 step 3700 loss 0.13016
+INFO:name:epoch 2 step 3800 loss 0.14294
+INFO:name:epoch 2 step 3900 loss 0.13717
+INFO:name:epoch 2 step 4000 loss 0.15293
+INFO:name:epoch 2 step 4100 loss 0.12215
+INFO:name:epoch 2 step 4200 loss 0.12957
+INFO:name:epoch 2 step 4300 loss 0.1232
+INFO:name:epoch 2 step 4400 loss 0.1333
+INFO:name:epoch 2 step 4500 loss 0.1365
+INFO:name:epoch 2 step 4600 loss 0.11965
+INFO:name:epoch 2 step 4700 loss 0.13063
+INFO:name:epoch 2 step 4800 loss 0.14044
+INFO:name:epoch 2 step 4900 loss 0.15187
+INFO:name:epoch 2 step 5000 loss 0.13452
+INFO:name:epoch 2 step 5100 loss 0.13974
+INFO:name:epoch 2 step 5200 loss 0.13734
+INFO:name:epoch 2 step 5300 loss 0.1311
+INFO:name:epoch 2 step 5400 loss 0.12853
+INFO:name:epoch 2 step 5500 loss 0.15372
+INFO:name:epoch 2 step 5600 loss 0.13136
+INFO:name:epoch 2 step 5700 loss 0.12095
+INFO:name:epoch 2 step 5800 loss 0.1048
+INFO:name:epoch 2 step 5900 loss 0.14199
+INFO:name:epoch 2 step 6000 loss 0.14162
+INFO:name:epoch 2 step 6100 loss 0.14597
+INFO:name:epoch 2 step 6200 loss 0.11738
+INFO:name:epoch 2 step 6300 loss 0.14501
+INFO:name:epoch 2 step 6400 loss 0.1219
+INFO:name:epoch 2 step 6500 loss 0.15349
+INFO:name:epoch 2 step 6600 loss 0.1271
+INFO:name:epoch 2 step 6700 loss 0.13012
+INFO:name:epoch 2 step 6800 loss 0.1321
+INFO:name:epoch 2 step 6900 loss 0.14347
+INFO:name:epoch 2 step 7000 loss 0.13503
+INFO:name:epoch 2 step 7100 loss 0.13192
+INFO:name:epoch 2 step 7200 loss 0.12485
+INFO:name:epoch 2 step 7300 loss 0.12673
+INFO:name:epoch 2 step 7400 loss 0.14341
+INFO:name:epoch 2 step 7500 loss 0.11575
+INFO:name:epoch 2 step 7600 loss 0.11948
+INFO:name:epoch 2 step 7700 loss 0.15184
+INFO:name:epoch 2 step 7800 loss 0.13967
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2345
+INFO:name:epoch 3 step 100 loss 0.11508
+INFO:name:epoch 3 step 200 loss 0.15203
+INFO:name:epoch 3 step 300 loss 0.1125
+INFO:name:epoch 3 step 400 loss 0.12276
+INFO:name:epoch 3 step 500 loss 0.11062
+INFO:name:epoch 3 step 600 loss 0.11325
+INFO:name:epoch 3 step 700 loss 0.11514
+INFO:name:epoch 3 step 800 loss 0.12375
+INFO:name:epoch 3 step 900 loss 0.13504
+INFO:name:epoch 3 step 1000 loss 0.13466
+INFO:name:epoch 3 step 1100 loss 0.11471
+INFO:name:epoch 3 step 1200 loss 0.11192
+INFO:name:epoch 3 step 1300 loss 0.1265
+INFO:name:epoch 3 step 1400 loss 0.12404
+INFO:name:epoch 3 step 1500 loss 0.12057
+INFO:name:epoch 3 step 1600 loss 0.1202
+INFO:name:epoch 3 step 1700 loss 0.13139
+INFO:name:epoch 3 step 1800 loss 0.12608
+INFO:name:epoch 3 step 1900 loss 0.12597
+INFO:name:epoch 3 step 2000 loss 0.12355
+INFO:name:epoch 3 step 2100 loss 0.12587
+INFO:name:epoch 3 step 2200 loss 0.11921
+INFO:name:epoch 3 step 2300 loss 0.11979
+INFO:name:epoch 3 step 2400 loss 0.11401
+INFO:name:epoch 3 step 2500 loss 0.12913
+INFO:name:epoch 3 step 2600 loss 0.12395
+INFO:name:epoch 3 step 2700 loss 0.11762
+INFO:name:epoch 3 step 2800 loss 0.11375
+INFO:name:epoch 3 step 2900 loss 0.1195
+INFO:name:epoch 3 step 3000 loss 0.12174
+INFO:name:epoch 3 step 3100 loss 0.12289
+INFO:name:epoch 3 step 3200 loss 0.11523
+INFO:name:epoch 3 step 3300 loss 0.1089
+INFO:name:epoch 3 step 3400 loss 0.10227
+INFO:name:epoch 3 step 3500 loss 0.10975
+INFO:name:epoch 3 step 3600 loss 0.11725
+INFO:name:epoch 3 step 3700 loss 0.1171
+INFO:name:epoch 3 step 3800 loss 0.11539
+INFO:name:epoch 3 step 3900 loss 0.1184
+INFO:name:epoch 3 step 4000 loss 0.10389
+INFO:name:epoch 3 step 4100 loss 0.12144
+INFO:name:epoch 3 step 4200 loss 0.13173
+INFO:name:epoch 3 step 4300 loss 0.11664
+INFO:name:epoch 3 step 4400 loss 0.1297
+INFO:name:epoch 3 step 4500 loss 0.12029
+INFO:name:epoch 3 step 4600 loss 0.12127
+INFO:name:epoch 3 step 4700 loss 0.11689
+INFO:name:epoch 3 step 4800 loss 0.11712
+INFO:name:epoch 3 step 4900 loss 0.11366
+INFO:name:epoch 3 step 5000 loss 0.119
+INFO:name:epoch 3 step 5100 loss 0.12235
+INFO:name:epoch 3 step 5200 loss 0.11909
+INFO:name:epoch 3 step 5300 loss 0.11382
+INFO:name:epoch 3 step 5400 loss 0.13008
+INFO:name:epoch 3 step 5500 loss 0.11373
+INFO:name:epoch 3 step 5600 loss 0.11697
+INFO:name:epoch 3 step 5700 loss 0.12572
+INFO:name:epoch 3 step 5800 loss 0.1158
+INFO:name:epoch 3 step 5900 loss 0.12142
+INFO:name:epoch 3 step 6000 loss 0.11565
+INFO:name:epoch 3 step 6100 loss 0.11504
+INFO:name:epoch 3 step 6200 loss 0.11062
+INFO:name:epoch 3 step 6300 loss 0.11495
+INFO:name:epoch 3 step 6400 loss 0.13131
+INFO:name:epoch 3 step 6500 loss 0.11821
+INFO:name:epoch 3 step 6600 loss 0.11508
+INFO:name:epoch 3 step 6700 loss 0.1125
+INFO:name:epoch 3 step 6800 loss 0.11814
+INFO:name:epoch 3 step 6900 loss 0.11531
+INFO:name:epoch 3 step 7000 loss 0.11758
+INFO:name:epoch 3 step 7100 loss 0.12382
+INFO:name:epoch 3 step 7200 loss 0.10509
+INFO:name:epoch 3 step 7300 loss 0.11739
+INFO:name:epoch 3 step 7400 loss 0.10991
+INFO:name:epoch 3 step 7500 loss 0.1292
+INFO:name:epoch 3 step 7600 loss 0.10953
+INFO:name:epoch 3 step 7700 loss 0.11229
+INFO:name:epoch 3 step 7800 loss 0.12405
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2462
+INFO:name:  ********************
+INFO:name:  Best eval mrr:0.2462
+INFO:name:  ********************
+INFO:name:***** Running Test *****
+INFO:name:  Num queries = 19210
+INFO:name:  Num codes = 19210
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.1942
+INFO:name:Saving model checkpoint to ./models/best_model_codeSearch/model.bin
+INFO:name:epoch 4 step 100 loss 0.11241
+INFO:name:epoch 4 step 200 loss 0.09461
+INFO:name:epoch 4 step 300 loss 0.1079
+INFO:name:epoch 4 step 400 loss 0.1099
+INFO:name:epoch 4 step 500 loss 0.1002
+INFO:name:epoch 4 step 600 loss 0.11621
+INFO:name:epoch 4 step 700 loss 0.10566
+INFO:name:epoch 4 step 800 loss 0.09588
+INFO:name:epoch 4 step 900 loss 0.10488
+INFO:name:epoch 4 step 1000 loss 0.10657
+INFO:name:epoch 4 step 1100 loss 0.11599
+INFO:name:epoch 4 step 1200 loss 0.10683
+INFO:name:epoch 4 step 1300 loss 0.10704
+INFO:name:epoch 4 step 1400 loss 0.10649
+INFO:name:epoch 4 step 1500 loss 0.10031
+INFO:name:epoch 4 step 1600 loss 0.09485
+INFO:name:epoch 4 step 1700 loss 0.1124
+INFO:name:epoch 4 step 1800 loss 0.10225
+INFO:name:epoch 4 step 1900 loss 0.09961
+INFO:name:epoch 4 step 2000 loss 0.11142
+INFO:name:epoch 4 step 2100 loss 0.10867
+INFO:name:epoch 4 step 2200 loss 0.10146
+INFO:name:epoch 4 step 2300 loss 0.11255
+INFO:name:epoch 4 step 2400 loss 0.11233
+INFO:name:epoch 4 step 2500 loss 0.12003
+INFO:name:epoch 4 step 2600 loss 0.11903
+INFO:name:epoch 4 step 2700 loss 0.10777
+INFO:name:epoch 4 step 2800 loss 0.13129
+INFO:name:epoch 4 step 2900 loss 0.12205
+INFO:name:epoch 4 step 3000 loss 0.11128
+INFO:name:epoch 4 step 3100 loss 0.0977
+INFO:name:epoch 4 step 3200 loss 0.1054
+INFO:name:epoch 4 step 3300 loss 0.1121
+INFO:name:epoch 4 step 3400 loss 0.1105
+INFO:name:epoch 4 step 3500 loss 0.10568
+INFO:name:epoch 4 step 3600 loss 0.10873
+INFO:name:epoch 4 step 3700 loss 0.13034
+INFO:name:epoch 4 step 3800 loss 0.09943
+INFO:name:epoch 4 step 3900 loss 0.10713
+INFO:name:epoch 4 step 4000 loss 0.0972
+INFO:name:epoch 4 step 4100 loss 0.10981
+INFO:name:epoch 4 step 4200 loss 0.10504
+INFO:name:epoch 4 step 4300 loss 0.10658
+INFO:name:epoch 4 step 4400 loss 0.11465
+INFO:name:epoch 4 step 4500 loss 0.10294
+INFO:name:epoch 4 step 4600 loss 0.11528
+INFO:name:epoch 4 step 4700 loss 0.10848
+INFO:name:epoch 4 step 4800 loss 0.11281
+INFO:name:epoch 4 step 4900 loss 0.10862
+INFO:name:epoch 4 step 5000 loss 0.12712
+INFO:name:epoch 4 step 5100 loss 0.10918
+INFO:name:epoch 4 step 5200 loss 0.11136
+INFO:name:epoch 4 step 5300 loss 0.11871
+INFO:name:epoch 4 step 5400 loss 0.10203
+INFO:name:epoch 4 step 5500 loss 0.11841
+INFO:name:epoch 4 step 5600 loss 0.09575
+INFO:name:epoch 4 step 5700 loss 0.11082
+INFO:name:epoch 4 step 5800 loss 0.10463
+INFO:name:epoch 4 step 5900 loss 0.11724
+INFO:name:epoch 4 step 6000 loss 0.11441
+INFO:name:epoch 4 step 6100 loss 0.10671
+INFO:name:epoch 4 step 6200 loss 0.11344
+INFO:name:epoch 4 step 6300 loss 0.10797
+INFO:name:epoch 4 step 6400 loss 0.10303
+INFO:name:epoch 4 step 6500 loss 0.12102
+INFO:name:epoch 4 step 6600 loss 0.12436
+INFO:name:epoch 4 step 6700 loss 0.10449
+INFO:name:epoch 4 step 6800 loss 0.11682
+INFO:name:epoch 4 step 6900 loss 0.09874
+INFO:name:epoch 4 step 7000 loss 0.11548
+INFO:name:epoch 4 step 7100 loss 0.10133
+INFO:name:epoch 4 step 7200 loss 0.12551
+INFO:name:epoch 4 step 7300 loss 0.10708
+INFO:name:epoch 4 step 7400 loss 0.09673
+INFO:name:epoch 4 step 7500 loss 0.09533
+INFO:name:epoch 4 step 7600 loss 0.11857
+INFO:name:epoch 4 step 7700 loss 0.11714
+INFO:name:epoch 4 step 7800 loss 0.10495
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2465
+INFO:name:  ********************
+INFO:name:  Best eval mrr:0.2465
+INFO:name:  ********************
+INFO:name:***** Running Test *****
+INFO:name:  Num queries = 19210
+INFO:name:  Num codes = 19210
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.1963
+INFO:name:Saving model checkpoint to ./models/best_model_codeSearch/model.bin
+INFO:name:epoch 5 step 100 loss 0.09886
+INFO:name:epoch 5 step 200 loss 0.09322
+INFO:name:epoch 5 step 300 loss 0.09578
+INFO:name:epoch 5 step 400 loss 0.11271
+INFO:name:epoch 5 step 500 loss 0.10168
+INFO:name:epoch 5 step 600 loss 0.10968
+INFO:name:epoch 5 step 700 loss 0.10452
+INFO:name:epoch 5 step 800 loss 0.09356
+INFO:name:epoch 5 step 900 loss 0.09893
+INFO:name:epoch 5 step 1000 loss 0.10377
+INFO:name:epoch 5 step 1100 loss 0.09926
+INFO:name:epoch 5 step 1200 loss 0.09288
+INFO:name:epoch 5 step 1300 loss 0.10467
+INFO:name:epoch 5 step 1400 loss 0.09131
+INFO:name:epoch 5 step 1500 loss 0.08884
+INFO:name:epoch 5 step 1600 loss 0.08495
+INFO:name:epoch 5 step 1700 loss 0.10316
+INFO:name:epoch 5 step 1800 loss 0.11031
+INFO:name:epoch 5 step 1900 loss 0.1012
+INFO:name:epoch 5 step 2000 loss 0.10319
+INFO:name:epoch 5 step 2100 loss 0.1094
+INFO:name:epoch 5 step 2200 loss 0.1031
+INFO:name:epoch 5 step 2300 loss 0.09612
+INFO:name:epoch 5 step 2400 loss 0.0999
+INFO:name:epoch 5 step 2500 loss 0.08903
+INFO:name:epoch 5 step 2600 loss 0.08951
+INFO:name:epoch 5 step 2700 loss 0.09926
+INFO:name:epoch 5 step 2800 loss 0.08925
+INFO:name:epoch 5 step 2900 loss 0.09618
+INFO:name:epoch 5 step 3000 loss 0.08984
+INFO:name:epoch 5 step 3100 loss 0.10163
+INFO:name:epoch 5 step 3200 loss 0.1049
+INFO:name:epoch 5 step 3300 loss 0.09041
+INFO:name:epoch 5 step 3400 loss 0.09919
+INFO:name:epoch 5 step 3500 loss 0.08126
+INFO:name:epoch 5 step 3600 loss 0.10282
+INFO:name:epoch 5 step 3700 loss 0.08656
+INFO:name:epoch 5 step 3800 loss 0.10408
+INFO:name:epoch 5 step 3900 loss 0.09639
+INFO:name:epoch 5 step 4000 loss 0.10295
+INFO:name:epoch 5 step 4100 loss 0.10973
+INFO:name:epoch 5 step 4200 loss 0.10117
+INFO:name:epoch 5 step 4300 loss 0.09663
+INFO:name:epoch 5 step 4400 loss 0.09405
+INFO:name:epoch 5 step 4500 loss 0.09387
+INFO:name:epoch 5 step 4600 loss 0.09771
+INFO:name:epoch 5 step 4700 loss 0.09342
+INFO:name:epoch 5 step 4800 loss 0.08956
+INFO:name:epoch 5 step 4900 loss 0.10705
+INFO:name:epoch 5 step 5000 loss 0.10829
+INFO:name:epoch 5 step 5100 loss 0.0994
+INFO:name:epoch 5 step 5200 loss 0.10474
+INFO:name:epoch 5 step 5300 loss 0.0958
+INFO:name:epoch 5 step 5400 loss 0.10546
+INFO:name:epoch 5 step 5500 loss 0.09916
+INFO:name:epoch 5 step 5600 loss 0.09162
+INFO:name:epoch 5 step 5700 loss 0.11118
+INFO:name:epoch 5 step 5800 loss 0.10763
+INFO:name:epoch 5 step 5900 loss 0.08778
+INFO:name:epoch 5 step 6000 loss 0.10355
+INFO:name:epoch 5 step 6100 loss 0.1083
+INFO:name:epoch 5 step 6200 loss 0.11006
+INFO:name:epoch 5 step 6300 loss 0.10273
+INFO:name:epoch 5 step 6400 loss 0.09609
+INFO:name:epoch 5 step 6500 loss 0.09779
+INFO:name:epoch 5 step 6600 loss 0.09929
+INFO:name:epoch 5 step 6700 loss 0.10033
+INFO:name:epoch 5 step 6800 loss 0.09105
+INFO:name:epoch 5 step 6900 loss 0.0962
+INFO:name:epoch 5 step 7000 loss 0.11592
+INFO:name:epoch 5 step 7100 loss 0.10777
+INFO:name:epoch 5 step 7200 loss 0.11307
+INFO:name:epoch 5 step 7300 loss 0.09688
+INFO:name:epoch 5 step 7400 loss 0.08441
+INFO:name:epoch 5 step 7500 loss 0.08626
+INFO:name:epoch 5 step 7600 loss 0.10165
+INFO:name:epoch 5 step 7700 loss 0.11465
+INFO:name:epoch 5 step 7800 loss 0.1015
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2454
+INFO:name:epoch 6 step 100 loss 0.08905
+INFO:name:epoch 6 step 200 loss 0.09195
+INFO:name:epoch 6 step 300 loss 0.09805
+INFO:name:epoch 6 step 400 loss 0.09179
+INFO:name:epoch 6 step 500 loss 0.09359
+INFO:name:epoch 6 step 600 loss 0.09734
+INFO:name:epoch 6 step 700 loss 0.09235
+INFO:name:epoch 6 step 800 loss 0.08308
+INFO:name:epoch 6 step 900 loss 0.08214
+INFO:name:epoch 6 step 1000 loss 0.08759
+INFO:name:epoch 6 step 1100 loss 0.09506
+INFO:name:epoch 6 step 1200 loss 0.10545
+INFO:name:epoch 6 step 1300 loss 0.09466
+INFO:name:epoch 6 step 1400 loss 0.09444
+INFO:name:epoch 6 step 1500 loss 0.08489
+INFO:name:epoch 6 step 1600 loss 0.09181
+INFO:name:epoch 6 step 1700 loss 0.09821
+INFO:name:epoch 6 step 1800 loss 0.08776
+INFO:name:epoch 6 step 1900 loss 0.08305
+INFO:name:epoch 6 step 2000 loss 0.08897
+INFO:name:epoch 6 step 2100 loss 0.09344
+INFO:name:epoch 6 step 2200 loss 0.09805
+INFO:name:epoch 6 step 2300 loss 0.09727
+INFO:name:epoch 6 step 2400 loss 0.09427
+INFO:name:epoch 6 step 2500 loss 0.09164
+INFO:name:epoch 6 step 2600 loss 0.08651
+INFO:name:epoch 6 step 2700 loss 0.09349
+INFO:name:epoch 6 step 2800 loss 0.09805
+INFO:name:epoch 6 step 2900 loss 0.07892
+INFO:name:epoch 6 step 3000 loss 0.09063
+INFO:name:epoch 6 step 3100 loss 0.09973
+INFO:name:epoch 6 step 3200 loss 0.09432
+INFO:name:epoch 6 step 3300 loss 0.08647
+INFO:name:epoch 6 step 3400 loss 0.09235
+INFO:name:epoch 6 step 3500 loss 0.08661
+INFO:name:epoch 6 step 3600 loss 0.09499
+INFO:name:epoch 6 step 3700 loss 0.09116
+INFO:name:epoch 6 step 3800 loss 0.08409
+INFO:name:epoch 6 step 3900 loss 0.09062
+INFO:name:epoch 6 step 4000 loss 0.10398
+INFO:name:epoch 6 step 4100 loss 0.09384
+INFO:name:epoch 6 step 4200 loss 0.09102
+INFO:name:epoch 6 step 4300 loss 0.08944
+INFO:name:epoch 6 step 4400 loss 0.09012
+INFO:name:epoch 6 step 4500 loss 0.09509
+INFO:name:epoch 6 step 4600 loss 0.09046
+INFO:name:epoch 6 step 4700 loss 0.07963
+INFO:name:epoch 6 step 4800 loss 0.09983
+INFO:name:epoch 6 step 4900 loss 0.09045
+INFO:name:epoch 6 step 5000 loss 0.09226
+INFO:name:epoch 6 step 5100 loss 0.08666
+INFO:name:epoch 6 step 5200 loss 0.08675
+INFO:name:epoch 6 step 5300 loss 0.09342
+INFO:name:epoch 6 step 5400 loss 0.08655
+INFO:name:epoch 6 step 5500 loss 0.09369
+INFO:name:epoch 6 step 5600 loss 0.08481
+INFO:name:epoch 6 step 5700 loss 0.08529
+INFO:name:epoch 6 step 5800 loss 0.07815
+INFO:name:epoch 6 step 5900 loss 0.10019
+INFO:name:epoch 6 step 6000 loss 0.08793
+INFO:name:epoch 6 step 6100 loss 0.09135
+INFO:name:epoch 6 step 6200 loss 0.09857
+INFO:name:epoch 6 step 6300 loss 0.08277
+INFO:name:epoch 6 step 6400 loss 0.09334
+INFO:name:epoch 6 step 6500 loss 0.09238
+INFO:name:epoch 6 step 6600 loss 0.09215
+INFO:name:epoch 6 step 6700 loss 0.08046
+INFO:name:epoch 6 step 6800 loss 0.08965
+INFO:name:epoch 6 step 6900 loss 0.09124
+INFO:name:epoch 6 step 7000 loss 0.08092
+INFO:name:epoch 6 step 7100 loss 0.10158
+INFO:name:epoch 6 step 7200 loss 0.08737
+INFO:name:epoch 6 step 7300 loss 0.08965
+INFO:name:epoch 6 step 7400 loss 0.08471
+INFO:name:epoch 6 step 7500 loss 0.09479
+INFO:name:epoch 6 step 7600 loss 0.0952
+INFO:name:epoch 6 step 7700 loss 0.09269
+INFO:name:epoch 6 step 7800 loss 0.09057
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2549
+INFO:name:  ********************
+INFO:name:  Best eval mrr:0.2549
+INFO:name:  ********************
+INFO:name:***** Running Test *****
+INFO:name:  Num queries = 19210
+INFO:name:  Num codes = 19210
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2046
+INFO:name:Saving model checkpoint to ./models/best_model_codeSearch/model.bin
+INFO:name:epoch 7 step 100 loss 0.08881
+INFO:name:epoch 7 step 200 loss 0.08737
+INFO:name:epoch 7 step 300 loss 0.07972
+INFO:name:epoch 7 step 400 loss 0.08094
+INFO:name:epoch 7 step 500 loss 0.08708
+INFO:name:epoch 7 step 600 loss 0.08226
+INFO:name:epoch 7 step 700 loss 0.087
+INFO:name:epoch 7 step 800 loss 0.07884
+INFO:name:epoch 7 step 900 loss 0.08027
+INFO:name:epoch 7 step 1000 loss 0.09458
+INFO:name:epoch 7 step 1100 loss 0.08549
+INFO:name:epoch 7 step 1200 loss 0.07509
+INFO:name:epoch 7 step 1300 loss 0.07534
+INFO:name:epoch 7 step 1400 loss 0.0754
+INFO:name:epoch 7 step 1500 loss 0.0941
+INFO:name:epoch 7 step 1600 loss 0.08946
+INFO:name:epoch 7 step 1700 loss 0.08143
+INFO:name:epoch 7 step 1800 loss 0.08456
+INFO:name:epoch 7 step 1900 loss 0.09423
+INFO:name:epoch 7 step 2000 loss 0.08531
+INFO:name:epoch 7 step 2100 loss 0.08188
+INFO:name:epoch 7 step 2200 loss 0.08809
+INFO:name:epoch 7 step 2300 loss 0.09269
+INFO:name:epoch 7 step 2400 loss 0.08976
+INFO:name:epoch 7 step 2500 loss 0.0718
+INFO:name:epoch 7 step 2600 loss 0.08519
+INFO:name:epoch 7 step 2700 loss 0.0851
+INFO:name:epoch 7 step 2800 loss 0.08067
+INFO:name:epoch 7 step 2900 loss 0.08612
+INFO:name:epoch 7 step 3000 loss 0.09161
+INFO:name:epoch 7 step 3100 loss 0.07874
+INFO:name:epoch 7 step 3200 loss 0.08052
+INFO:name:epoch 7 step 3300 loss 0.08404
+INFO:name:epoch 7 step 3400 loss 0.0844
+INFO:name:epoch 7 step 3500 loss 0.08553
+INFO:name:epoch 7 step 3600 loss 0.08026
+INFO:name:epoch 7 step 3700 loss 0.09222
+INFO:name:epoch 7 step 3800 loss 0.08339
+INFO:name:epoch 7 step 3900 loss 0.07265
+INFO:name:epoch 7 step 4000 loss 0.09172
+INFO:name:epoch 7 step 4100 loss 0.0945
+INFO:name:epoch 7 step 4200 loss 0.07823
+INFO:name:epoch 7 step 4300 loss 0.08873
+INFO:name:epoch 7 step 4400 loss 0.09098
+INFO:name:epoch 7 step 4500 loss 0.08437
+INFO:name:epoch 7 step 4600 loss 0.08543
+INFO:name:epoch 7 step 4700 loss 0.08215
+INFO:name:epoch 7 step 4800 loss 0.0791
+INFO:name:epoch 7 step 4900 loss 0.09242
+INFO:name:epoch 7 step 5000 loss 0.09591
+INFO:name:epoch 7 step 5100 loss 0.09055
+INFO:name:epoch 7 step 5200 loss 0.08941
+INFO:name:epoch 7 step 5300 loss 0.09095
+INFO:name:epoch 7 step 5400 loss 0.091
+INFO:name:epoch 7 step 5500 loss 0.10237
+INFO:name:epoch 7 step 5600 loss 0.08005
+INFO:name:epoch 7 step 5700 loss 0.09083
+INFO:name:epoch 7 step 5800 loss 0.089
+INFO:name:epoch 7 step 5900 loss 0.09398
+INFO:name:epoch 7 step 6000 loss 0.08038
+INFO:name:epoch 7 step 6100 loss 0.07964
+INFO:name:epoch 7 step 6200 loss 0.06343
+INFO:name:epoch 7 step 6300 loss 0.09619
+INFO:name:epoch 7 step 6400 loss 0.08464
+INFO:name:epoch 7 step 6500 loss 0.08601
+INFO:name:epoch 7 step 6600 loss 0.08347
+INFO:name:epoch 7 step 6700 loss 0.07684
+INFO:name:epoch 7 step 6800 loss 0.07292
+INFO:name:epoch 7 step 6900 loss 0.07683
+INFO:name:epoch 7 step 7000 loss 0.08189
+INFO:name:epoch 7 step 7100 loss 0.08579
+INFO:name:epoch 7 step 7200 loss 0.08955
+INFO:name:epoch 7 step 7300 loss 0.07324
+INFO:name:epoch 7 step 7400 loss 0.09292
+INFO:name:epoch 7 step 7500 loss 0.0974
+INFO:name:epoch 7 step 7600 loss 0.08952
+INFO:name:epoch 7 step 7700 loss 0.07292
+INFO:name:epoch 7 step 7800 loss 0.0869
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2656
+INFO:name:  ********************
+INFO:name:  Best eval mrr:0.2656
+INFO:name:  ********************
+INFO:name:***** Running Test *****
+INFO:name:  Num queries = 19210
+INFO:name:  Num codes = 19210
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2116
+INFO:name:Saving model checkpoint to ./models/best_model_codeSearch/model.bin
+INFO:name:epoch 8 step 100 loss 0.07769
+INFO:name:epoch 8 step 200 loss 0.08058
+INFO:name:epoch 8 step 300 loss 0.08048
+INFO:name:epoch 8 step 400 loss 0.07627
+INFO:name:epoch 8 step 500 loss 0.0755
+INFO:name:epoch 8 step 600 loss 0.07458
+INFO:name:epoch 8 step 700 loss 0.06876
+INFO:name:epoch 8 step 800 loss 0.07574
+INFO:name:epoch 8 step 900 loss 0.07726
+INFO:name:epoch 8 step 1000 loss 0.07509
+INFO:name:epoch 8 step 1100 loss 0.07872
+INFO:name:epoch 8 step 1200 loss 0.0764
+INFO:name:epoch 8 step 1300 loss 0.08765
+INFO:name:epoch 8 step 1400 loss 0.07378
+INFO:name:epoch 8 step 1500 loss 0.07335
+INFO:name:epoch 8 step 1600 loss 0.07724
+INFO:name:epoch 8 step 1700 loss 0.0794
+INFO:name:epoch 8 step 1800 loss 0.07455
+INFO:name:epoch 8 step 1900 loss 0.07969
+INFO:name:epoch 8 step 2000 loss 0.07926
+INFO:name:epoch 8 step 2100 loss 0.07092
+INFO:name:epoch 8 step 2200 loss 0.07772
+INFO:name:epoch 8 step 2300 loss 0.0854
+INFO:name:epoch 8 step 2400 loss 0.0819
+INFO:name:epoch 8 step 2500 loss 0.08934
+INFO:name:epoch 8 step 2600 loss 0.0781
+INFO:name:epoch 8 step 2700 loss 0.0722
+INFO:name:epoch 8 step 2800 loss 0.08895
+INFO:name:epoch 8 step 2900 loss 0.07687
+INFO:name:epoch 8 step 3000 loss 0.08409
+INFO:name:epoch 8 step 3100 loss 0.07839
+INFO:name:epoch 8 step 3200 loss 0.07787
+INFO:name:epoch 8 step 3300 loss 0.07597
+INFO:name:epoch 8 step 3400 loss 0.07374
+INFO:name:epoch 8 step 3500 loss 0.08279
+INFO:name:epoch 8 step 3600 loss 0.08682
+INFO:name:epoch 8 step 3700 loss 0.07683
+INFO:name:epoch 8 step 3800 loss 0.07987
+INFO:name:epoch 8 step 3900 loss 0.08604
+INFO:name:epoch 8 step 4000 loss 0.07411
+INFO:name:epoch 8 step 4100 loss 0.07158
+INFO:name:epoch 8 step 4200 loss 0.08348
+INFO:name:epoch 8 step 4300 loss 0.0783
+INFO:name:epoch 8 step 4400 loss 0.07245
+INFO:name:epoch 8 step 4500 loss 0.08214
+INFO:name:epoch 8 step 4600 loss 0.07752
+INFO:name:epoch 8 step 4700 loss 0.07608
+INFO:name:epoch 8 step 4800 loss 0.0773
+INFO:name:epoch 8 step 4900 loss 0.07446
+INFO:name:epoch 8 step 5000 loss 0.07687
+INFO:name:epoch 8 step 5100 loss 0.07254
+INFO:name:epoch 8 step 5200 loss 0.07732
+INFO:name:epoch 8 step 5300 loss 0.07296
+INFO:name:epoch 8 step 5400 loss 0.07627
+INFO:name:epoch 8 step 5500 loss 0.07564
+INFO:name:epoch 8 step 5600 loss 0.07656
+INFO:name:epoch 8 step 5700 loss 0.07229
+INFO:name:epoch 8 step 5800 loss 0.07341
+INFO:name:epoch 8 step 5900 loss 0.08241
+INFO:name:epoch 8 step 6000 loss 0.07928
+INFO:name:epoch 8 step 6100 loss 0.07433
+INFO:name:epoch 8 step 6200 loss 0.07336
+INFO:name:epoch 8 step 6300 loss 0.07354
+INFO:name:epoch 8 step 6400 loss 0.07908
+INFO:name:epoch 8 step 6500 loss 0.08678
+INFO:name:epoch 8 step 6600 loss 0.07426
+INFO:name:epoch 8 step 6700 loss 0.07352
+INFO:name:epoch 8 step 6800 loss 0.06685
+INFO:name:epoch 8 step 6900 loss 0.08672
+INFO:name:epoch 8 step 7000 loss 0.06993
+INFO:name:epoch 8 step 7100 loss 0.08207
+INFO:name:epoch 8 step 7200 loss 0.06761
+INFO:name:epoch 8 step 7300 loss 0.07657
+INFO:name:epoch 8 step 7400 loss 0.09353
+INFO:name:epoch 8 step 7500 loss 0.07655
+INFO:name:epoch 8 step 7600 loss 0.07862
+INFO:name:epoch 8 step 7700 loss 0.07595
+INFO:name:epoch 8 step 7800 loss 0.07247
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2492
+INFO:name:epoch 9 step 100 loss 0.06737
+INFO:name:epoch 9 step 200 loss 0.0693
+INFO:name:epoch 9 step 300 loss 0.08454
+INFO:name:epoch 9 step 400 loss 0.06679
+INFO:name:epoch 9 step 500 loss 0.07006
+INFO:name:epoch 9 step 600 loss 0.06677
+INFO:name:epoch 9 step 700 loss 0.07661
+INFO:name:epoch 9 step 800 loss 0.07081
+INFO:name:epoch 9 step 900 loss 0.08174
+INFO:name:epoch 9 step 1000 loss 0.08345
+INFO:name:epoch 9 step 1100 loss 0.07908
+INFO:name:epoch 9 step 1200 loss 0.07202
+INFO:name:epoch 9 step 1300 loss 0.06785
+INFO:name:epoch 9 step 1400 loss 0.06841
+INFO:name:epoch 9 step 1500 loss 0.07566
+INFO:name:epoch 9 step 1600 loss 0.0769
+INFO:name:epoch 9 step 1700 loss 0.07699
+INFO:name:epoch 9 step 1800 loss 0.06987
+INFO:name:epoch 9 step 1900 loss 0.07335
+INFO:name:epoch 9 step 2000 loss 0.06655
+INFO:name:epoch 9 step 2100 loss 0.0639
+INFO:name:epoch 9 step 2200 loss 0.07289
+INFO:name:epoch 9 step 2300 loss 0.06877
+INFO:name:epoch 9 step 2400 loss 0.09038
+INFO:name:epoch 9 step 2500 loss 0.06979
+INFO:name:epoch 9 step 2600 loss 0.06923
+INFO:name:epoch 9 step 2700 loss 0.06823
+INFO:name:epoch 9 step 2800 loss 0.06842
+INFO:name:epoch 9 step 2900 loss 0.07251
+INFO:name:epoch 9 step 3000 loss 0.06092
+INFO:name:epoch 9 step 3100 loss 0.07394
+INFO:name:epoch 9 step 3200 loss 0.07214
+INFO:name:epoch 9 step 3300 loss 0.07014
+INFO:name:epoch 9 step 3400 loss 0.07638
+INFO:name:epoch 9 step 3500 loss 0.0728
+INFO:name:epoch 9 step 3600 loss 0.06606
+INFO:name:epoch 9 step 3700 loss 0.06827
+INFO:name:epoch 9 step 3800 loss 0.08298
+INFO:name:epoch 9 step 3900 loss 0.07995
+INFO:name:epoch 9 step 4000 loss 0.06953
+INFO:name:epoch 9 step 4100 loss 0.0771
+INFO:name:epoch 9 step 4200 loss 0.07861
+INFO:name:epoch 9 step 4300 loss 0.06602
+INFO:name:epoch 9 step 4400 loss 0.06854
+INFO:name:epoch 9 step 4500 loss 0.0626
+INFO:name:epoch 9 step 4600 loss 0.05375
+INFO:name:epoch 9 step 4700 loss 0.06547
+INFO:name:epoch 9 step 4800 loss 0.07047
+INFO:name:epoch 9 step 4900 loss 0.06253
+INFO:name:epoch 9 step 5000 loss 0.06409
+INFO:name:epoch 9 step 5100 loss 0.0608
+INFO:name:epoch 9 step 5200 loss 0.07151
+INFO:name:epoch 9 step 5300 loss 0.07398
+INFO:name:epoch 9 step 5400 loss 0.07231
+INFO:name:epoch 9 step 5500 loss 0.0721
+INFO:name:epoch 9 step 5600 loss 0.06995
+INFO:name:epoch 9 step 5700 loss 0.06797
+INFO:name:epoch 9 step 5800 loss 0.06598
+INFO:name:epoch 9 step 5900 loss 0.07284
+INFO:name:epoch 9 step 6000 loss 0.0651
+INFO:name:epoch 9 step 6100 loss 0.07553
+INFO:name:epoch 9 step 6200 loss 0.06924
+INFO:name:epoch 9 step 6300 loss 0.05905
+INFO:name:epoch 9 step 6400 loss 0.06615
+INFO:name:epoch 9 step 6500 loss 0.06405
+INFO:name:epoch 9 step 6600 loss 0.06191
+INFO:name:epoch 9 step 6700 loss 0.06594
+INFO:name:epoch 9 step 6800 loss 0.07026
+INFO:name:epoch 9 step 6900 loss 0.07567
+INFO:name:epoch 9 step 7000 loss 0.05956
+INFO:name:epoch 9 step 7100 loss 0.06315
+INFO:name:epoch 9 step 7200 loss 0.07175
+INFO:name:epoch 9 step 7300 loss 0.06848
+INFO:name:epoch 9 step 7400 loss 0.06673
+INFO:name:epoch 9 step 7500 loss 0.06989
+INFO:name:epoch 9 step 7600 loss 0.06344
+INFO:name:epoch 9 step 7700 loss 0.06052
+INFO:name:epoch 9 step 7800 loss 0.07709
+INFO:name:***** Running evaluation *****
+INFO:name:  Num queries = 9604
+INFO:name:  Num codes = 9604
+INFO:name:  Batch size = 32
+INFO:name:  eval_mrr = 0.2612
+INFO:name:Saving model checkpoint to ./models/final_model_codeSearch/model.bin
+INFO:name:  Num queries = 19210
+INFO:name:  Num codes = 19210
+INFO:name:  Batch size = 32
+train results ([0.3303705159139262, 0.1567303029626248, 0.13406042898830567, 0.11916537524326415, 0.10917296127275371, 0.09919249031910486, 0.09103517463469814, 0.08498152986469441, 0.07740400636748687, 0.07021615859402137], [0.18908872220702078, 0.24253319620137917, 0.2344923286606681, 0.24624959443076183, 0.24646857558728968, 0.24535973556608054, 0.25489112303248396, 0.2655621204467831, 0.2492457192759581, 0.26122576826501137])

@@ -1,0 +1,307 @@
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/utils/generic.py:260: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+INFO:name:device: cuda:0, n_gpu: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/unixcoder-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/unixcoder-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+INFO:name:Preparing the flakeFlager Dataset...
+
+INFO:name:Preparing the flakeFlager Dataset...
+
+INFO:name:Preparing the flakeFlager Dataset...
+
+INFO:name:***** Running training *****
+INFO:name:  Num examples Flakiness detection = 13081
+INFO:name:  Num Epochs = 15
+INFO:name:  Total train batch size  = 32
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 0 Step 99 Train Loss 0.353   Accuracy 87.812 
+Epoch 0 Step 199 Train Loss 0.242   Accuracy 92.172 
+Epoch 0 Step 299 Train Loss 0.194   Accuracy 93.896 
+Epoch 0 Step 399 Train Loss 0.167   Accuracy 94.711 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.0671
+INFO:name:  eval_acc = 0.9778
+INFO:name:  f1_score = 0.684
+INFO:name:  recall = 0.6481
+INFO:name:  precision = 0.7241
+INFO:name:
+***** Running Test *****
+INFO:name:  Num examples for flakiness detection = 4361
+INFO:name:  Batch size = 32
+
+***** Test Results for task  flakiness_detect
+{'task': 'flakiness_detect', 'test_acc': 0.9757, 'test_f1_score': 0.6214, 'test_recall': 0.537, 'test_precision': 0.7373} 
+
+
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 1 Step 99 Train Loss 0.077   Accuracy 97.812 
+Epoch 1 Step 199 Train Loss 0.073   Accuracy 97.891 
+Epoch 1 Step 299 Train Loss 0.069   Accuracy 98.0 
+Epoch 1 Step 399 Train Loss 0.066   Accuracy 98.039 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.0603
+INFO:name:  eval_acc = 0.9798
+INFO:name:  f1_score = 0.7161
+INFO:name:  recall = 0.6852
+INFO:name:  precision = 0.75
+INFO:name:
+***** Running Test *****
+INFO:name:  Num examples for flakiness detection = 4361
+INFO:name:  Batch size = 32
+
+***** Test Results for task  flakiness_detect
+{'task': 'flakiness_detect', 'test_acc': 0.9794, 'test_f1_score': 0.6809, 'test_recall': 0.5926, 'test_precision': 0.8} 
+
+
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 2 Step 99 Train Loss 0.043   Accuracy 98.5 
+Epoch 2 Step 199 Train Loss 0.047   Accuracy 98.312 
+Epoch 2 Step 299 Train Loss 0.046   Accuracy 98.312 
+Epoch 2 Step 399 Train Loss 0.046   Accuracy 98.398 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.0627
+INFO:name:  eval_acc = 0.9796
+INFO:name:  f1_score = 0.7192
+INFO:name:  recall = 0.7037
+INFO:name:  precision = 0.7355
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 3 Step 99 Train Loss 0.027   Accuracy 98.969 
+Epoch 3 Step 199 Train Loss 0.033   Accuracy 98.734 
+Epoch 3 Step 299 Train Loss 0.032   Accuracy 98.74 
+Epoch 3 Step 399 Train Loss 0.033   Accuracy 98.805 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.0773
+INFO:name:  eval_acc = 0.981
+INFO:name:  f1_score = 0.7243
+INFO:name:  recall = 0.6728
+INFO:name:  precision = 0.7842
+INFO:name:
+***** Running Test *****
+INFO:name:  Num examples for flakiness detection = 4361
+INFO:name:  Batch size = 32
+
+***** Test Results for task  flakiness_detect
+{'task': 'flakiness_detect', 'test_acc': 0.9796, 'test_f1_score': 0.6691, 'test_recall': 0.5556, 'test_precision': 0.8411} 
+
+
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 4 Step 99 Train Loss 0.018   Accuracy 99.344 
+Epoch 4 Step 199 Train Loss 0.017   Accuracy 99.391 
+Epoch 4 Step 299 Train Loss 0.019   Accuracy 99.271 
+Epoch 4 Step 399 Train Loss 0.022   Accuracy 99.227 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1084
+INFO:name:  eval_acc = 0.9805
+INFO:name:  f1_score = 0.7195
+INFO:name:  recall = 0.6728
+INFO:name:  precision = 0.773
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 5 Step 99 Train Loss 0.01   Accuracy 99.719 
+Epoch 5 Step 199 Train Loss 0.013   Accuracy 99.609 
+Epoch 5 Step 299 Train Loss 0.013   Accuracy 99.583 
+Epoch 5 Step 399 Train Loss 0.015   Accuracy 99.57 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1081
+INFO:name:  eval_acc = 0.9784
+INFO:name:  f1_score = 0.7134
+INFO:name:  recall = 0.7222
+INFO:name:  precision = 0.7048
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 6 Step 99 Train Loss 0.016   Accuracy 99.594 
+Epoch 6 Step 199 Train Loss 0.015   Accuracy 99.641 
+Epoch 6 Step 299 Train Loss 0.014   Accuracy 99.615 
+Epoch 6 Step 399 Train Loss 0.013   Accuracy 99.633 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1347
+INFO:name:  eval_acc = 0.9768
+INFO:name:  f1_score = 0.7003
+INFO:name:  recall = 0.7284
+INFO:name:  precision = 0.6743
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 7 Step 99 Train Loss 0.01   Accuracy 99.75 
+Epoch 7 Step 199 Train Loss 0.012   Accuracy 99.578 
+Epoch 7 Step 299 Train Loss 0.01   Accuracy 99.625 
+Epoch 7 Step 399 Train Loss 0.01   Accuracy 99.688 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1284
+INFO:name:  eval_acc = 0.98
+INFO:name:  f1_score = 0.7256
+INFO:name:  recall = 0.7099
+INFO:name:  precision = 0.7419
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 8 Step 99 Train Loss 0.008   Accuracy 99.781 
+Epoch 8 Step 199 Train Loss 0.009   Accuracy 99.781 
+Epoch 8 Step 299 Train Loss 0.01   Accuracy 99.729 
+Epoch 8 Step 399 Train Loss 0.009   Accuracy 99.758 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1518
+INFO:name:  eval_acc = 0.9784
+INFO:name:  f1_score = 0.7117
+INFO:name:  recall = 0.716
+INFO:name:  precision = 0.7073
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 9 Step 99 Train Loss 0.004   Accuracy 99.812 
+Epoch 9 Step 199 Train Loss 0.003   Accuracy 99.844 
+Epoch 9 Step 299 Train Loss 0.004   Accuracy 99.854 
+Epoch 9 Step 399 Train Loss 0.005   Accuracy 99.828 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1472
+INFO:name:  eval_acc = 0.978
+INFO:name:  f1_score = 0.7019
+INFO:name:  recall = 0.6975
+INFO:name:  precision = 0.7062
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 10 Step 99 Train Loss 0.002   Accuracy 99.812 
+Epoch 10 Step 199 Train Loss 0.003   Accuracy 99.812 
+Epoch 10 Step 299 Train Loss 0.003   Accuracy 99.844 
+Epoch 10 Step 399 Train Loss 0.003   Accuracy 99.852 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.18
+INFO:name:  eval_acc = 0.9766
+INFO:name:  f1_score = 0.689
+INFO:name:  recall = 0.6975
+INFO:name:  precision = 0.6807
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 11 Step 99 Train Loss 0.003   Accuracy 99.844 
+Epoch 11 Step 199 Train Loss 0.003   Accuracy 99.828 
+Epoch 11 Step 299 Train Loss 0.003   Accuracy 99.854 
+Epoch 11 Step 399 Train Loss 0.003   Accuracy 99.867 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1821
+INFO:name:  eval_acc = 0.978
+INFO:name:  f1_score = 0.7055
+INFO:name:  recall = 0.7099
+INFO:name:  precision = 0.7012
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 12 Step 99 Train Loss 0.002   Accuracy 99.875 
+Epoch 12 Step 199 Train Loss 0.002   Accuracy 99.859 
+Epoch 12 Step 299 Train Loss 0.002   Accuracy 99.875 
+Epoch 12 Step 399 Train Loss 0.002   Accuracy 99.867 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1754
+INFO:name:  eval_acc = 0.9794
+INFO:name:  f1_score = 0.7152
+INFO:name:  recall = 0.6975
+INFO:name:  precision = 0.7338
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 13 Step 99 Train Loss 0.003   Accuracy 99.875 
+Epoch 13 Step 199 Train Loss 0.003   Accuracy 99.906 
+Epoch 13 Step 299 Train Loss 0.002   Accuracy 99.917 
+Epoch 13 Step 399 Train Loss 0.002   Accuracy 99.898 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1927
+INFO:name:  eval_acc = 0.9773
+INFO:name:  f1_score = 0.6954
+INFO:name:  recall = 0.6975
+INFO:name:  precision = 0.6933
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples Flakiness detection = 4360
+INFO:name:  Batch size = 32 
+Epoch 14 Step 99 Train Loss 0.004   Accuracy 99.875 
+Epoch 14 Step 199 Train Loss 0.003   Accuracy 99.875 
+Epoch 14 Step 299 Train Loss 0.002   Accuracy 99.896 
+Epoch 14 Step 399 Train Loss 0.002   Accuracy 99.891 
+INFO:name:
+***** Task 1 Evaluation Results *****
+INFO:name:  task = flakiness_detect
+INFO:name:  eval_loss = 0.1903
+INFO:name:  eval_acc = 0.9778
+INFO:name:  f1_score = 0.6997
+INFO:name:  recall = 0.6975
+INFO:name:  precision = 0.7019
+INFO:name:Saving model checkpoint to ./models/final_model_flakiness/model.bin
+
+***** Test Results for task  flakiness_detect
+{'task': 'flakiness_detect', 'test_acc': 0.9787, 'test_f1_score': 0.6931, 'test_recall': 0.6481, 'test_precision': 0.7447} 
+
+
+
+ Train results : 
+
+{'total_train_loss': [0.165,
+                      0.066,
+                      0.046,
+                      0.033,
+                      0.021,
+                      0.015,
+                      0.013,
+                      0.01,
+                      0.009,
+                      0.005,
+                      0.004,
+                      0.003,
+                      0.002,
+                      0.002,
+                      0.002]}

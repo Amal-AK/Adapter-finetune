@@ -1,0 +1,330 @@
+/home/aakli/miniconda3/envs/adapter/lib/python3.10/site-packages/transformers/utils/generic.py:260: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+INFO:name:device: cuda:0, n_gpu: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+root
+├── embeddings (RobertaEmbeddings)
+│   ├── word_embeddings (Embedding) weight:[50265, 768]
+│   ├── position_embeddings (Embedding) weight:[514, 768]
+│   ├── token_type_embeddings (Embedding) weight:[1, 768]
+│   └── LayerNorm (LayerNorm) weight:[768] bias:[768]
+├── encoder (RobertaEncoder)
+│   └── layer (ModuleList)
+│       └── 0-11(RobertaLayer)
+│           ├── attention (RobertaAttention)
+│           │   ├── self (RobertaSelfAttention)
+│           │   │   ├── query,value(Linear) weight:[768, 768] bias:[768]
+│           │   │   │   └── lora (LowRankLinear) lora_A:[8, 768] lora_B:[768, 8]
+│           │   │   └── key (Linear) weight:[768, 768] bias:[768]
+│           │   └── output (RobertaSelfOutput)
+│           │       ├── dense (Linear) weight:[768, 768] bias:[768]
+│           │       └── LayerNorm (LayerNorm) weight:[768] bias:[768]
+│           ├── intermediate (RobertaIntermediate)
+│           │   └── dense (Linear) weight:[3072, 768] bias:[3072]
+│           └── output (RobertaOutput)
+│               ├── dense (Linear) weight:[768, 3072] bias:[768]
+│               └── LayerNorm (LayerNorm) weight:[768] bias:[768]
+└── pooler (RobertaPooler)
+    └── dense (Linear) weight:[768, 768] bias:[768]
+[INFO|(OpenDelta)basemodel:700]2025-01-17 00:42:18,178 >> Trainable Ratio: 294912/124940544=0.236042%
+[INFO|(OpenDelta)basemodel:702]2025-01-17 00:42:18,179 >> Delta Parameter Ratio: 294912/124940544=0.236042%
+[INFO|(OpenDelta)basemodel:704]2025-01-17 00:42:18,179 >> Static Memory 0.00 GB, Max Memory 0.00 GB
+INFO:name:***** Running training for defect detection *****
+INFO:name:  Num examples = 21854
+INFO:name:  Num Epochs = 15
+INFO:name:  Total train batch size  = 32
+INFO:name:  Total optimization steps = 10245
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 0 Step 99 Train Loss 0.69   Accuracy 54.25 
+Epoch 0 Step 199 Train Loss 0.69   Accuracy 54.344 
+Epoch 0 Step 299 Train Loss 0.69   Accuracy 54.271 
+Epoch 0 Step 399 Train Loss 0.69   Accuracy 54.164 
+Epoch 0 Step 499 Train Loss 0.69   Accuracy 54.056 
+Epoch 0 Step 599 Train Loss 0.689   Accuracy 54.073 
+INFO:name:  eval_loss = 0.6807
+INFO:name:  eval_acc = 0.5655
+INFO:name:  f1_score = 0.0
+INFO:name:  recall = 0.0
+INFO:name:  precision = 0.0
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.5655
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.5406, 'test_f1_score': 0.0, 'test_recall': 0.0, 'test_precision': 0.0}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 1 Step 99 Train Loss 0.685   Accuracy 54.625 
+Epoch 1 Step 199 Train Loss 0.687   Accuracy 54.766 
+Epoch 1 Step 299 Train Loss 0.688   Accuracy 54.771 
+Epoch 1 Step 399 Train Loss 0.687   Accuracy 54.758 
+Epoch 1 Step 499 Train Loss 0.686   Accuracy 54.869 
+Epoch 1 Step 599 Train Loss 0.685   Accuracy 55.193 
+INFO:name:  eval_loss = 0.6686
+INFO:name:  eval_acc = 0.5736
+INFO:name:  f1_score = 0.5074
+INFO:name:  recall = 0.5055
+INFO:name:  precision = 0.5093
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.5736
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.5725, 'test_f1_score': 0.5174, 'test_recall': 0.4988, 'test_precision': 0.5373}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 2 Step 99 Train Loss 0.666   Accuracy 59.188 
+Epoch 2 Step 199 Train Loss 0.666   Accuracy 58.875 
+Epoch 2 Step 299 Train Loss 0.668   Accuracy 58.625 
+Epoch 2 Step 399 Train Loss 0.669   Accuracy 58.492 
+Epoch 2 Step 499 Train Loss 0.667   Accuracy 58.781 
+Epoch 2 Step 599 Train Loss 0.668   Accuracy 58.354 
+INFO:name:  eval_loss = 0.6589
+INFO:name:  eval_acc = 0.6025
+INFO:name:  f1_score = 0.2632
+INFO:name:  recall = 0.1634
+INFO:name:  precision = 0.676
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6025
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.5728, 'test_f1_score': 0.2407, 'test_recall': 0.1474, 'test_precision': 0.656}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 3 Step 99 Train Loss 0.659   Accuracy 57.781 
+Epoch 3 Step 199 Train Loss 0.658   Accuracy 58.406 
+Epoch 3 Step 299 Train Loss 0.658   Accuracy 58.448 
+Epoch 3 Step 399 Train Loss 0.656   Accuracy 58.758 
+Epoch 3 Step 499 Train Loss 0.654   Accuracy 59.162 
+Epoch 3 Step 599 Train Loss 0.654   Accuracy 59.333 
+INFO:name:  eval_loss = 0.659
+INFO:name:  eval_acc = 0.6076
+INFO:name:  f1_score = 0.2938
+INFO:name:  recall = 0.1879
+INFO:name:  precision = 0.6737
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6076
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.5835, 'test_f1_score': 0.2861, 'test_recall': 0.1817, 'test_precision': 0.6726}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 4 Step 99 Train Loss 0.643   Accuracy 61.281 
+Epoch 4 Step 199 Train Loss 0.64   Accuracy 61.047 
+Epoch 4 Step 299 Train Loss 0.639   Accuracy 61.24 
+Epoch 4 Step 399 Train Loss 0.639   Accuracy 61.336 
+Epoch 4 Step 499 Train Loss 0.642   Accuracy 60.819 
+Epoch 4 Step 599 Train Loss 0.643   Accuracy 60.755 
+INFO:name:  eval_loss = 0.6376
+INFO:name:  eval_acc = 0.5919
+INFO:name:  f1_score = 0.4693
+INFO:name:  recall = 0.4153
+INFO:name:  precision = 0.5394
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 5 Step 99 Train Loss 0.632   Accuracy 62.469 
+Epoch 5 Step 199 Train Loss 0.632   Accuracy 61.969 
+Epoch 5 Step 299 Train Loss 0.634   Accuracy 61.99 
+Epoch 5 Step 399 Train Loss 0.636   Accuracy 61.375 
+Epoch 5 Step 499 Train Loss 0.636   Accuracy 61.388 
+Epoch 5 Step 599 Train Loss 0.635   Accuracy 61.375 
+INFO:name:  eval_loss = 0.6398
+INFO:name:  eval_acc = 0.6091
+INFO:name:  f1_score = 0.4047
+INFO:name:  recall = 0.3058
+INFO:name:  precision = 0.598
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6091
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.5966, 'test_f1_score': 0.4082, 'test_recall': 0.3028, 'test_precision': 0.626}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 6 Step 99 Train Loss 0.621   Accuracy 62.844 
+Epoch 6 Step 199 Train Loss 0.624   Accuracy 62.562 
+Epoch 6 Step 299 Train Loss 0.625   Accuracy 62.698 
+Epoch 6 Step 399 Train Loss 0.626   Accuracy 62.461 
+Epoch 6 Step 499 Train Loss 0.628   Accuracy 62.438 
+Epoch 6 Step 599 Train Loss 0.627   Accuracy 62.531 
+INFO:name:  eval_loss = 0.6354
+INFO:name:  eval_acc = 0.6094
+INFO:name:  f1_score = 0.4229
+INFO:name:  recall = 0.3294
+INFO:name:  precision = 0.5906
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6094
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.6051, 'test_f1_score': 0.4342, 'test_recall': 0.3299, 'test_precision': 0.635}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 7 Step 99 Train Loss 0.617   Accuracy 62.781 
+Epoch 7 Step 199 Train Loss 0.617   Accuracy 63.172 
+Epoch 7 Step 299 Train Loss 0.619   Accuracy 62.688 
+Epoch 7 Step 399 Train Loss 0.617   Accuracy 62.953 
+Epoch 7 Step 499 Train Loss 0.617   Accuracy 62.806 
+Epoch 7 Step 599 Train Loss 0.618   Accuracy 62.75 
+INFO:name:  eval_loss = 0.6486
+INFO:name:  eval_acc = 0.6124
+INFO:name:  f1_score = 0.3074
+INFO:name:  recall = 0.198
+INFO:name:  precision = 0.6871
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6124
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.5959, 'test_f1_score': 0.3126, 'test_recall': 0.2, 'test_precision': 0.7151}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 8 Step 99 Train Loss 0.618   Accuracy 62.594 
+Epoch 8 Step 199 Train Loss 0.616   Accuracy 62.453 
+Epoch 8 Step 299 Train Loss 0.613   Accuracy 63.135 
+Epoch 8 Step 399 Train Loss 0.614   Accuracy 63.078 
+Epoch 8 Step 499 Train Loss 0.614   Accuracy 63.125 
+Epoch 8 Step 599 Train Loss 0.613   Accuracy 63.312 
+INFO:name:  eval_loss = 0.6435
+INFO:name:  eval_acc = 0.5985
+INFO:name:  f1_score = 0.4769
+INFO:name:  recall = 0.4212
+INFO:name:  precision = 0.5495
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 9 Step 99 Train Loss 0.606   Accuracy 64.406 
+Epoch 9 Step 199 Train Loss 0.605   Accuracy 64.594 
+Epoch 9 Step 299 Train Loss 0.605   Accuracy 64.698 
+Epoch 9 Step 399 Train Loss 0.606   Accuracy 64.477 
+Epoch 9 Step 499 Train Loss 0.607   Accuracy 64.331 
+Epoch 9 Step 599 Train Loss 0.607   Accuracy 64.302 
+INFO:name:  eval_loss = 0.6447
+INFO:name:  eval_acc = 0.6153
+INFO:name:  f1_score = 0.4316
+INFO:name:  recall = 0.3361
+INFO:name:  precision = 0.6027
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.6153
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.6076, 'test_f1_score': 0.4364, 'test_recall': 0.3307, 'test_precision': 0.6414}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 10 Step 99 Train Loss 0.604   Accuracy 65.312 
+Epoch 10 Step 199 Train Loss 0.601   Accuracy 65.297 
+Epoch 10 Step 299 Train Loss 0.6   Accuracy 65.427 
+Epoch 10 Step 399 Train Loss 0.603   Accuracy 64.922 
+Epoch 10 Step 499 Train Loss 0.602   Accuracy 64.838 
+Epoch 10 Step 599 Train Loss 0.603   Accuracy 64.703 
+INFO:name:  eval_loss = 0.653
+INFO:name:  eval_acc = 0.6142
+INFO:name:  f1_score = 0.429
+INFO:name:  recall = 0.3336
+INFO:name:  precision = 0.6009
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 11 Step 99 Train Loss 0.591   Accuracy 66.281 
+Epoch 11 Step 199 Train Loss 0.595   Accuracy 65.875 
+Epoch 11 Step 299 Train Loss 0.595   Accuracy 65.49 
+Epoch 11 Step 399 Train Loss 0.597   Accuracy 65.453 
+Epoch 11 Step 499 Train Loss 0.598   Accuracy 65.231 
+Epoch 11 Step 599 Train Loss 0.598   Accuracy 65.12 
+INFO:name:  eval_loss = 0.6402
+INFO:name:  eval_acc = 0.619
+INFO:name:  f1_score = 0.446
+INFO:name:  recall = 0.353
+INFO:name:  precision = 0.6055
+INFO:name:
+ ******************************
+INFO:name:  Best validation performance :0.619
+INFO:name:  ******************************
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.6102, 'test_f1_score': 0.4485, 'test_recall': 0.345, 'test_precision': 0.6405}
+INFO:name:Saving model checkpoint to ./models/best_model_defect/model.bin
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 12 Step 99 Train Loss 0.599   Accuracy 65.281 
+Epoch 12 Step 199 Train Loss 0.596   Accuracy 65.172 
+Epoch 12 Step 299 Train Loss 0.596   Accuracy 65.073 
+Epoch 12 Step 399 Train Loss 0.594   Accuracy 65.086 
+Epoch 12 Step 499 Train Loss 0.592   Accuracy 65.294 
+Epoch 12 Step 599 Train Loss 0.594   Accuracy 65.224 
+INFO:name:  eval_loss = 0.6337
+INFO:name:  eval_acc = 0.6029
+INFO:name:  f1_score = 0.486
+INFO:name:  recall = 0.4322
+INFO:name:  precision = 0.5552
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 13 Step 99 Train Loss 0.589   Accuracy 65.969 
+Epoch 13 Step 199 Train Loss 0.589   Accuracy 66.172 
+Epoch 13 Step 299 Train Loss 0.591   Accuracy 66.083 
+Epoch 13 Step 399 Train Loss 0.593   Accuracy 65.812 
+Epoch 13 Step 499 Train Loss 0.592   Accuracy 65.769 
+Epoch 13 Step 599 Train Loss 0.59   Accuracy 65.969 
+INFO:name:  eval_loss = 0.6401
+INFO:name:  eval_acc = 0.6051
+INFO:name:  f1_score = 0.4682
+INFO:name:  recall = 0.4002
+INFO:name:  precision = 0.5641
+INFO:name:
+***** Running evaluation *****
+INFO:name:  Num examples vulnerability detection = 2732
+INFO:name:  Batch size = 32 
+Epoch 14 Step 99 Train Loss 0.596   Accuracy 64.531 
+Epoch 14 Step 199 Train Loss 0.593   Accuracy 64.984 
+Epoch 14 Step 299 Train Loss 0.591   Accuracy 65.479 
+Epoch 14 Step 399 Train Loss 0.589   Accuracy 65.789 
+Epoch 14 Step 499 Train Loss 0.586   Accuracy 65.975 
+Epoch 14 Step 599 Train Loss 0.587   Accuracy 65.964 
+INFO:name:  eval_loss = 0.6427
+INFO:name:  eval_acc = 0.6058
+INFO:name:  f1_score = 0.4692
+INFO:name:  recall = 0.401
+INFO:name:  precision = 0.5653
+INFO:name:Saving model checkpoint to ./models/final_model_defect/model.bin
+INFO:name:***** Test Results for task defect detection 
+INFO:name:{'test_acc': 0.6094, 'test_f1_score': 0.4921, 'test_recall': 0.412, 'test_precision': 0.6111}
+train results {'train_loss': [0.689, 0.684, 0.667, 0.653, 0.643, 0.635, 0.627, 0.619, 0.612, 0.606, 0.602, 0.597, 0.593, 0.59, 0.587], 'train_acc': [54.068, 55.313, 58.516, 59.531, 60.771, 61.463, 62.383, 62.722, 63.641, 64.391, 64.744, 65.076, 65.352, 65.9, 66.015], 'eval_loss': [0.681, 0.669, 0.659, 0.659, 0.638, 0.64, 0.635, 0.649, 0.643, 0.645, 0.653, 0.64, 0.634, 0.64, 0.643], 'eval_acc': [0.566, 0.574, 0.602, 0.608, 0.592, 0.609, 0.609, 0.612, 0.598, 0.615, 0.614, 0.619, 0.603, 0.605, 0.606], 'eval_f1': [0.0, 0.507, 0.263, 0.294, 0.469, 0.405, 0.423, 0.307, 0.477, 0.432, 0.429, 0.446, 0.486, 0.468, 0.469], 'eval_precision': [0.0, 0.509, 0.676, 0.674, 0.539, 0.598, 0.591, 0.687, 0.55, 0.603, 0.601, 0.606, 0.555, 0.564, 0.565], 'eval_recall': [0.0, 0.505, 0.163, 0.188, 0.415, 0.306, 0.329, 0.198, 0.421, 0.336, 0.334, 0.353, 0.432, 0.4, 0.401]}

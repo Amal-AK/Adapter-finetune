@@ -3,8 +3,8 @@ python3 main_codeSearch.py \
     --train_data_file_CodeSearch=./datasets/code_search/train.jsonl \
     --eval_data_file_CodeSearch=./datasets/code_search/valid.jsonl \
     --test_data_file_CodeSearch=./datasets/code_search/test.jsonl \
-    --model_name_or_path=Salesforce/codet5p-220m \
-    --tokenizer_name=Salesforce/codet5p-220m \
+    --model_name_or_path=microsoft/unixcoder-base  \
+    --tokenizer_name=microsoft/unixcoder-base  \
     --nl_length 128 \
     --code_length 512 \
     --do_train True \
@@ -14,6 +14,6 @@ python3 main_codeSearch.py \
     --learning_rate 1e-4 \
     --max_grad_norm 1.0 \
     --num_train_epochs 10 \
-    --seed 42 2>&1 | tee ./baselines/codet5p_codesearch_adapter_default.log
+    --seed 42 2>&1 | tee ./topConfigs/unixcoder_defect_to_codesearch.log
 
     

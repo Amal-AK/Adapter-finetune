@@ -12,7 +12,7 @@ python3 main_defect.py \
     --train_batch_size 32 \
     --eval_batch_size 32 \
     --train_data_rate_defect 1.0 \
-    --learning_rate 5e-5 \
+    --learning_rate 1e-4 \
     --max_grad_norm 1.0 \
-    --num_train_epochs 10 \
-    --seed 42 2>&1 | tee ./baselines/codet5p_defect_full.log
+    --num_train_epochs 15 \
+    --seed 42 2>&1 | tee ./baselines/codet5p_defect_prefix.log
