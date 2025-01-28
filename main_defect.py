@@ -114,12 +114,10 @@ def evaluate_defect(args, model, eval_dataloader_vul):
 
     model.eval()
     loss_fn = nn.BCELoss()
-
     eval_loss = 0.0
     nb_eval_steps = 0
     logits = []
     labels = []
-
     for batch in eval_dataloader_vul:
         inputs = batch[0].to(args.device)
         label = batch[1].to(args.device)
@@ -147,7 +145,6 @@ def evaluate_defect(args, model, eval_dataloader_vul):
     recall = recall_score(labels, preds)
     precision = precision_score(labels, preds, zero_division=0)
     f1 = f1_score(labels, preds)
-
     result = {
         "eval_loss": round(float(perplexity), 4),
         "eval_acc": round(eval_acc, 4),
@@ -155,7 +152,6 @@ def evaluate_defect(args, model, eval_dataloader_vul):
         "recall": round(recall, 4),
         "precision": round(precision, 4)
     }
-
     return result
 
 
@@ -318,9 +314,6 @@ def main():
             [{'insert_modules': ('layer.0.SelfAttention', 'layer.1.DenseReluDense', 'layer.0'), 'bottleneck_dim': (32, 128, 64), 'non_linearity': 'relu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('layer.1.DenseReluDense', 'layer.0', 'layer.1'), 'bottleneck_dim': (128, 64, 256), 'non_linearity': 'swish', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1', 'layer.0.SelfAttention'), 'bottleneck_dim': (256, 32), 'non_linearity': 'tanh', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.1.DenseReluDense',), 'bottleneck_dim': (128,), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0', 'layer.1'), 'bottleneck_dim': (64, 128), 'non_linearity': 'gelu_new', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('layer.0.SelfAttention', 'layer.0'), 'bottleneck_dim': (32, 64), 'non_linearity': 'gelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, 0, 0, {'insert_modules': ('layer.1', 'layer.0', 'layer.1.DenseReluDense'), 'bottleneck_dim': (256, 128, 64), 'non_linearity': 'silu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('layer.0', 'layer.0.SelfAttention'), 'bottleneck_dim': (64, 32), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}], 
 
         ]
-        
-      
-        
         """
         #x = [{'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (32, 128, 128), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'intermediate', 'attention.output'), 'bottleneck_dim': (32, 128, 64), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate', 'output'), 'bottleneck_dim': (128, 128), 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (32,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate', 'output', 'attention.self'), 'bottleneck_dim': (128, 256, 16), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'intermediate'), 'bottleneck_dim': (128, 64), 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (16, 32), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'intermediate', 'attention.output'), 'bottleneck_dim': (256, 128, 64), 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate', 'output', 'attention.self'), 'bottleneck_dim': (64, 128, 32), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (32, 64), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}]
         #model = get_delta_model(model , x , args.device)
@@ -340,15 +333,9 @@ def main():
             model = torch.nn.DataParallel(model, device_ids=[0])
             
         model.to(args.device)
-      
-      
-        
-      
-        
         if args.do_train:
             
             # loop for training with different configs in x_list 
-           
             """
             for x in x_list : 
                 set_seed(seed=args.seed)
@@ -370,12 +357,9 @@ def main():
                 checkpoint_prefix = 'models/final_model_vul/model.bin'
                 output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))  
                 model.load_state_dict(torch.load(output_dir) , strict=False)      
-
                 eval_dataset_vul= TextDataset_defect(tokenizer, args,args.eval_data_file_vul)
                 eval_dataloader_vul = DataLoader(eval_dataset_vul  , sampler=SequentialSampler(eval_dataset_vul ), batch_size=args.eval_batch_size,num_workers=4,pin_memory=True)
-            
                 result_task1= evaluate_defect(args, model, eval_dataloader_vul  )
-
                 logger.info("\n***** Eval results *****")
                 for key , value in result_task1.items() : 
                     logger.info("  %s = %s", key, str(value))
@@ -387,10 +371,8 @@ def main():
                 checkpoint_prefix = 'models/best_model_vul/model.bin'
                 output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))  
                 model.load_state_dict(torch.load(output_dir),  strict=False)    
-
                 test_dataset_vul= TextDataset_defect(tokenizer, args,args.test_data_file_vul)
                 test_dataloader_vul = DataLoader(test_dataset_vul  , sampler=SequentialSampler(test_dataset_vul ), batch_size=args.eval_batch_size,num_workers=4,pin_memory=True)
-            
                 task1_test_result = test_defect(args, model, test_dataloader_vul ) 
                         
 

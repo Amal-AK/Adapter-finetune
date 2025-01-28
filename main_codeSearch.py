@@ -25,9 +25,6 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 def train_codeSearch(args, model, tokenizer , train_dataloader_code_search , eval_dataloader_code_search , test_dataloader_code_search=None):
     """ Train the model """
-
-
-   
     #get optimizer and scheduler
     optimizer = AdamW(model.parameters(), lr=args.learning_rate, eps=1e-8)
     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps = 0, num_training_steps = len(train_dataloader_code_search) * args.num_train_epochs)
@@ -104,7 +101,6 @@ def train_codeSearch(args, model, tokenizer , train_dataloader_code_search , eva
 
                 save_best_model(model, args , checkpoint_prefix="models/best_model_codeSearch")  
             
-         
     if not args.do_optimization : 
         save_best_model(model, args , checkpoint_prefix="models/final_model_codeSearch")  
         test_final = evaluate_code_search(args, model, test_dataloader_code_search, test_dataloader_code_search ) 
@@ -113,10 +109,8 @@ def train_codeSearch(args, model, tokenizer , train_dataloader_code_search , eva
 
 
 def evaluate_code_search(args, model, query_dataloader , code_dataloader ,eval_when_training=False):
-   
 
     # Eval!
-   
     logger.info("  Num queries = %d", len(code_dataloader.dataset))
     logger.info("  Num codes = %d", len(code_dataloader.dataset))
     logger.info("  Batch size = %d", args.eval_batch_size)
@@ -232,17 +226,14 @@ def main():
                         help="random seed for initialization")
     parser.add_argument('--population_size', default=5 ,type=int,
                         help="population size on the evolutionary optimization algorithm")
-    
     parser.add_argument('--sample_size', default=3 ,type=int,
                         help="sample size on the evolutionary optimization algorithm")
-    
     parser.add_argument('--cycles', default=2 ,type=int,
                         help="number of cycles on the evolutionary optimization algorithm")
     parser.add_argument('--optimization_history_file', default=None ,type=str,
                         help="saving the history of optimization")
     parser.add_argument('--stats_file', default=None ,type=str,
                         help="saving the optimization statistics ")
-    
     args = parser.parse_args()
     set_seed(seed=args.seed)
 
@@ -304,11 +295,6 @@ def main():
         
         
         
-
-
-        
-
-
         x_list =[
                 [{'insert_modules': ('attention.self', 'intermediate', 'output'), 'bottleneck_dim': (16, 64, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('intermediate', 'attention.self'), 'bottleneck_dim': (64, 32), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.self', 'output'), 'bottleneck_dim': (32, 128), 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0], 
                 [{'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output', 'output'), 'bottleneck_dim': (32, 32, 128), 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'attention.output', 'intermediate'), 'bottleneck_dim': (128, 32, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (16, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'attention.self', 'intermediate'), 'bottleneck_dim': (64, 32, 128), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate', 'attention.output', 'attention.self'), 'bottleneck_dim': (128, 64, 16), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output', 'attention.self', 'intermediate'), 'bottleneck_dim': (32, 16, 64), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}], 
@@ -316,16 +302,8 @@ def main():
             ]
         
         
-
-
-
-
-     
         if args.do_train:
             
- 
-
- 
             for x in x_list : 
                 
                 set_seed(seed=args.seed)
@@ -334,7 +312,6 @@ def main():
                 model = get_delta_model(model , x , args.device)
                 model = Model_codeSearch( model , config)
                 model.to(args.device)
-   
                 results = train_codeSearch(args , model ,tokenizer , 
                                            train_dataloader_code_search , 
                                            eval_dataloader_code_search , 
@@ -347,12 +324,9 @@ def main():
                 checkpoint_prefix = 'models/final_model_codeSearch/model.bin'
                 output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))  
                 model.load_state_dict(torch.load(output_dir) , strict=False)      
-
                 eval_dataset_vul= TextDataset_defect(tokenizer, args,args.eval_data_file_vul)
                 eval_dataloader_vul = DataLoader(eval_dataset_vul  , sampler=SequentialSampler(eval_dataset_vul ), batch_size=args.eval_batch_size,num_workers=4,pin_memory=True)
-            
                 result_task1= evaluate_code_search(args, model, eval_dataloader_vul  )
-
                 logger.info("\n***** Eval results *****")
                 for key , value in result_task1.items() : 
                     logger.info("  %s = %s", key, str(value))
@@ -364,10 +338,8 @@ def main():
                 checkpoint_prefix = 'models/best_model_codeSearch/model.bin'
                 output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))  
                 model.load_state_dict(torch.load(output_dir),  strict=False)    
-
                 test_dataset_vul= TextDataset_defect(tokenizer, args,args.test_data_file_vul)
                 test_dataloader_vul = DataLoader(test_dataset_vul  , sampler=SequentialSampler(test_dataset_vul ), batch_size=args.eval_batch_size,num_workers=4,pin_memory=True)
-            
                 task1_test_result = evaluate_code_search(args, model, test_dataloader_vul ) 
                 
 

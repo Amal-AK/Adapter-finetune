@@ -67,7 +67,7 @@ def train(args, model,  tokenizer ):
     logger.info("  Num Epochs = %d", args.num_train_epochs)
     logger.info("  Total train batch size  = %d", args.train_batch_size)
 
-    # initialisation 
+
     best_perfomance= - np.inf
     loss_fn = nn.BCELoss()
     #early_stopper = EarlyStopper(patience=3, min_delta=0.1)
@@ -78,12 +78,10 @@ def train(args, model,  tokenizer ):
     model.zero_grad()
 
     for idx in range(args.num_train_epochs): 
-       
-        global_acc = {}
-        LOSSes  ,  ACCs  = [] , []
-      
+
+        LOSSes  ,  ACCs , global_acc = [] , [] ,  {}
+
         for step, batch in enumerate(train_dataloader) :
-           
 
             model.train()
 
@@ -96,10 +94,8 @@ def train(args, model,  tokenizer ):
             logits = model(code_inputs=code_inputs).to(args.device)
             loss = loss_fn(logits,labels)
             accuracy = (logits.round() == labels ).float().mean().item()*100.0
-            # perfom a backward step 
             LOSSes.append(loss.item() )
             ACCs.append(accuracy)
-            # update progress bar
             if (step+1)%100 == 0:
                 print("Epoch {} Step {} Train Loss {}   Accuracy {} ".format(idx, step, round(np.mean(LOSSes), 3) ,  round(np.mean(ACCs), 3) ))
             
@@ -113,18 +109,13 @@ def train(args, model,  tokenizer ):
         
 
         train_results.setdefault('total_train_loss', []).append(round(np.mean(LOSSes),3))
-     
-
         for key , value in global_acc.items():
             train_results.setdefault('train_acc_'+ key, []).append(round(np.mean(value),3))
 
-        # run a validation step for both tasks 
         eval_results = evaluate(args, model, eval_dataloader_flaky  )
-       
 
         perfomance = eval_results['eval_acc']
 
-        # Logging results for Task 1
         logger.info("\n***** Task 1 Evaluation Results *****")
         for key, value in eval_results.items():
             logger.info("  %s = %s", key, value )

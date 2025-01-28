@@ -29,12 +29,9 @@ logger = logging.getLogger("name")
 def train_clone(args, model,  tokenizer, train_dataloader , eval_dataloader , test_dataloader=None):
     """ Train the model """
 
-  
     optimizer =torch.optim.Adam(model.parameters(), lr=args.learning_rate )
     max_steps = len(train_dataloader) * args.num_train_epochs
     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=max_steps*0.1, num_training_steps=max_steps)
-   
-
     logger.info("***** Running training *****")
     logger.info("  Num examples = %d", len(train_dataloader.dataset))
     logger.info("  Num Epochs = %d", args.num_train_epochs)
@@ -48,14 +45,10 @@ def train_clone(args, model,  tokenizer, train_dataloader , eval_dataloader , te
 
     for idx in range(args.num_train_epochs): 
         LOSSes, ACCs =  [], []
-       
         #bar = tqdm(train_dataloader,total=len(train_dataloader))
         for step, batch in enumerate(train_dataloader) : #enumerate(bar):
-           
 
             model.train()
-
-    
             code_inputs = batch[0].to(args.device)  
             labels =  batch[1].to(args.device)  
             labels= labels.float().squeeze()
@@ -65,17 +58,15 @@ def train_clone(args, model,  tokenizer, train_dataloader , eval_dataloader , te
 
             # perfom a backward step 
             LOSSes.append(loss.item() )
-       
             # add current accuracies to accuracy arrays 
             ACCs.append(accuracy)
         
 
-             # update progress bar
+            # update progress bar
             #bar.set_description("Epoch {} Train Loss {}  Accuracy {}  ".format(idx, round(np.mean(LOSSes), 3) , np.round(np.mean(ACCs))))
 
             if (step+1)%100 == 0:
                 logger.info("Epoch {} Step {} Train Loss {}   Accuracy {} ".format(idx, step, round(np.mean(LOSSes), 3) ,  round(np.mean(ACCs), 3) ))
-           
             
             loss.backward()
             
@@ -85,21 +76,14 @@ def train_clone(args, model,  tokenizer, train_dataloader , eval_dataloader , te
             optimizer.zero_grad()
             scheduler.step() 
             
-
-        
-      
-
         results.setdefault('train_loss', []).append(round(np.mean(LOSSes),3))
         results.setdefault('train_acc', []).append(round(np.mean(ACCs),3))
-
         eval_results = evaluate_clone(args, model, eval_dataloader)
-
         results.setdefault('eval_loss', []).append(eval_results['eval_loss'])
         results.setdefault('eval_acc', []).append(eval_results['eval_acc'])
         results.setdefault('eval_f1', []).append(eval_results['f1_score'])
         results.setdefault('eval_precision', []).append(eval_results['precision'])
         results.setdefault('eval_recall', []).append(eval_results['recall'])
-
 
         for key, value in eval_results.items():
             logger.info("  %s = %s", key, value)  
@@ -333,22 +317,16 @@ def main():
     if args.do_optimization: 
         logger.info("Starting optimization...")
         history, population, best_of_all, stats  =  regularized_evolution(args, config, train_dataloader , eval_dataloader )
-      
-       
     else : 
         
         
+        # enable to insert default adapter / lora/ prefix , with a fixed adapter across all layers 
         """
-        
-        # to test with a fixed adapter across all layers 
         #delta = AdapterModel(model , bottleneck_dim=[24])
         #delta = LoraModel(model)
-        delta = PrefixModel(model)
+        #delta = PrefixModel(model)
         delta.freeze_module(exclude=["deltas" ])
         delta.log()
-        
-        
-        
         model = Model_classification( model , config)
 
         if args.n_gpu > 1:
@@ -357,20 +335,15 @@ def main():
         model.to(args.device)
         
         """
-      
-             
-       
-
-             
-       
-
-     
+        # top 3 adapter configs 
+        
+        """
         x_list =[
                 [{'insert_modules': ('attention.self', 'intermediate', 'output'), 'bottleneck_dim': (16, 64, 128), 'non_linearity': 'gelu', 'dropout_rate': 0.2, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('intermediate', 'attention.self'), 'bottleneck_dim': (64, 32), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, {'insert_modules': ('attention.self', 'output'), 'bottleneck_dim': (32, 128), 'non_linearity': 'silu', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, 0, 0, 0, 0], 
                 [{'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output', 'output'), 'bottleneck_dim': (32, 32, 128), 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'attention.output', 'intermediate'), 'bottleneck_dim': (128, 32, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (16, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.output', 'attention.self', 'intermediate'), 'bottleneck_dim': (64, 32, 128), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate', 'attention.output', 'attention.self'), 'bottleneck_dim': (128, 64, 16), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output', 'attention.self', 'intermediate'), 'bottleneck_dim': (32, 16, 64), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}], 
                 [{'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('intermediate',), 'bottleneck_dim': (64,), 'non_linearity': 'silu', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output', 'output'), 'bottleneck_dim': (32, 32, 128), 'non_linearity': 'tanh', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'attention.output', 'intermediate'), 'bottleneck_dim': (128, 32, 64), 'non_linearity': 'tanh', 'dropout_rate': 0.1, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output',), 'bottleneck_dim': (256,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.2, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.self', 'intermediate'), 'bottleneck_dim': (16, 64), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate', 'attention.output', 'attention.self'), 'bottleneck_dim': (128, 64, 16), 'non_linearity': 'tanh', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('attention.output', 'attention.self', 'intermediate'), 'bottleneck_dim': (64, 32, 128), 'non_linearity': 'gelu_new', 'dropout_rate': 0.3, 'normalization': None, 'skip_connection': True}, 0, {'insert_modules': ('attention.self',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output', 'attention.self', 'intermediate'), 'bottleneck_dim': (32, 16, 64), 'non_linearity': 'swish', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}], 
             ]
-   
+        """
         
         
 
@@ -380,29 +353,25 @@ def main():
     
     
         if args.do_train:
-         
-             
+            """
             for x in x_list : 
                 set_seed(seed=args.seed)
                 model = AutoModel.from_pretrained(args.model_name_or_path,config=config ,  trust_remote_code=True)  
                 logger.info(x)
                 model = get_delta_model(model , x, args.device)
                 model = Model_classification( model , config)
-              
-             
                 if args.n_gpu > 1:
                     model = torch.nn.DataParallel(model, device_ids=[1])
 
                 model.to(args.device)
-               
-              
-                results = train_clone(args , model ,tokenizer ,  
+            """
+            results = train_clone(args , model ,tokenizer ,  
                                     train_dataloader , 
                                     eval_dataloader , 
                                     test_dataloader)
                 
-                logger.info("train results : \n {}\n".format(results))
-                logger.info("*"*130)
+            logger.info("train results : \n {}\n".format(results))
+            logger.info("*"*130)
 
 
         if args.do_eval:
