@@ -321,20 +321,19 @@ def main():
         
         
         # enable to insert default adapter / lora/ prefix , with a fixed adapter across all layers 
-        """
         #delta = AdapterModel(model , bottleneck_dim=[24])
         #delta = LoraModel(model)
         #delta = PrefixModel(model)
-        delta.freeze_module(exclude=["deltas" ])
-        delta.log()
+        #delta.freeze_module(exclude=["deltas" ])
+        #delta.log()
         model = Model_classification( model , config)
+        
+        model.load_state_dict(torch.load("models/best_model_defect/model.bin") , strict=True)  
 
         if args.n_gpu > 1:
             model = torch.nn.DataParallel(model, device_ids=[0])
             
         model.to(args.device)
-        
-        """
         # top 3 adapter configs 
         
         """

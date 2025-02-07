@@ -232,7 +232,7 @@ def main():
                         help="Whether to run adapter optimization")  
     parser.add_argument("--do_train", default=None, type=bool,
                         help="Whether to run training.")
-    parser.add_argument("--do_eval", default=None, type=bool,
+    parser.add_argument("--do_eval", default=True, type=bool,
                         help="Whether to run eval on the dev set.")
     parser.add_argument("--do_test", default=None, type=bool,
                         help="Whether to run eval on the test set.") 
@@ -242,11 +242,11 @@ def main():
                         help="Batch size for evaluation.")
     parser.add_argument("--train_data_rate_defect", default=1.0, type= float,
                         help="Data size for train")
-    parser.add_argument("--learning_rate", default=1e-4, type=float,
+    parser.add_argument("--learning_rate", default=5e-5, type=float,
                         help="The initial learning rate for Adam.")
     parser.add_argument("--max_grad_norm", default=1.0, type=float,
                         help="Max gradient norm.")
-    parser.add_argument("--num_train_epochs", default=5, type=int,
+    parser.add_argument("--num_train_epochs", default=10, type=int,
                         help="Total number of training epochs to perform.")
     parser.add_argument("--nb_samples", default=None, type=int,
                         help="Total number of train samples.")
@@ -256,15 +256,12 @@ def main():
                         help="random seed for initialization")
     parser.add_argument('--local_rank', default=-1 ,type=int,
                         help="random seed for initialization")
-    parser.add_argument('--population_size', default=3 ,type=int,
+    parser.add_argument('--population_size', default=None ,type=int,
                         help="population size on the evolutionary optimization algorithm")
-    
-    parser.add_argument('--sample_size', default=2 ,type=int,
+    parser.add_argument('--sample_size', default=None ,type=int,
                         help="sample size on the evolutionary optimization algorithm")
-    
-    parser.add_argument('--cycles', default=2 ,type=int,
+    parser.add_argument('--cycles', default=None ,type=int,
                         help="number of cycles on the evolutionary optimization algorithm")
-    
     parser.add_argument('--optimization_history_file', default=None ,type=str,
                         help="saving the history of optimization")
     parser.add_argument('--stats_file', default=None ,type=str,
@@ -315,15 +312,14 @@ def main():
 
         ]
         """
-        #x = [{'insert_modules': ('attention.output', 'output', 'intermediate'), 'bottleneck_dim': (32, 128, 128), 'non_linearity': 'relu', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, 0, {'insert_modules': ('attention.self', 'intermediate', 'attention.output'), 'bottleneck_dim': (32, 128, 64), 'non_linearity': 'relu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate', 'output'), 'bottleneck_dim': (128, 128), 'non_linearity': 'swish', 'dropout_rate': 0.25, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (32,), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('intermediate', 'output', 'attention.self'), 'bottleneck_dim': (128, 256, 16), 'non_linearity': 'gelu_new', 'dropout_rate': 0.0, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('output', 'intermediate'), 'bottleneck_dim': (128, 64), 'non_linearity': 'gelu_new', 'dropout_rate': 0.1, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (16, 32), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.25, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('output', 'intermediate', 'attention.output'), 'bottleneck_dim': (256, 128, 64), 'non_linearity': 'swish', 'dropout_rate': 0.0, 'normalization': None, 'skip_connection': True}, {'insert_modules': ('intermediate', 'output', 'attention.self'), 'bottleneck_dim': (64, 128, 32), 'non_linearity': 'leakyrelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.output',), 'bottleneck_dim': (32,), 'non_linearity': 'gelu', 'dropout_rate': 0.15, 'normalization': 'layer_norm', 'skip_connection': True}, {'insert_modules': ('attention.self', 'attention.output'), 'bottleneck_dim': (32, 64), 'non_linearity': 'relu', 'dropout_rate': 0.3, 'normalization': 'layer_norm', 'skip_connection': True}]
-        #model = get_delta_model(model , x , args.device)
+        
         
         # to test with a fixed adapter across all layers 
         #delta = AdapterModel(model , bottleneck_dim=[24])
         #delta = LoraModel(model)
-        delta = PrefixModel(model)
-        delta.freeze_module(exclude=["deltas" ])
-        delta.log()
+        #delta = PrefixModel(model)
+        #delta.freeze_module(exclude=["deltas" ])
+        #delta.log()
         
         
         
@@ -354,10 +350,10 @@ def main():
 
     
         if args.do_eval:
-                checkpoint_prefix = 'models/final_model_vul/model.bin'
+                checkpoint_prefix = 'models/best_model_defect/model.bin'
                 output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))  
                 model.load_state_dict(torch.load(output_dir) , strict=False)      
-                eval_dataset_vul= TextDataset_defect(tokenizer, args,args.eval_data_file_vul)
+                eval_dataset_vul= TextDataset_defect(tokenizer, args,args.eval_data_file_defect)
                 eval_dataloader_vul = DataLoader(eval_dataset_vul  , sampler=SequentialSampler(eval_dataset_vul ), batch_size=args.eval_batch_size,num_workers=4,pin_memory=True)
                 result_task1= evaluate_defect(args, model, eval_dataloader_vul  )
                 logger.info("\n***** Eval results *****")
@@ -371,7 +367,7 @@ def main():
                 checkpoint_prefix = 'models/best_model_vul/model.bin'
                 output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))  
                 model.load_state_dict(torch.load(output_dir),  strict=False)    
-                test_dataset_vul= TextDataset_defect(tokenizer, args,args.test_data_file_vul)
+                test_dataset_vul= TextDataset_defect(tokenizer, args,args.test_data_file_defect)
                 test_dataloader_vul = DataLoader(test_dataset_vul  , sampler=SequentialSampler(test_dataset_vul ), batch_size=args.eval_batch_size,num_workers=4,pin_memory=True)
                 task1_test_result = test_defect(args, model, test_dataloader_vul ) 
                         

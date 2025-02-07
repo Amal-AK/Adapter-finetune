@@ -12,7 +12,7 @@ python3 main_clone.py \
     --train_batch_size 32 \
     --eval_batch_size 32 \
     --train_data_rate_clone 0.1 \
-    --learning_rate 1e-4 \
+    --learning_rate 5e-5 \
     --max_grad_norm 1.0 \
-    --num_train_epochs 15 \
-    --seed 42 2>&1 | tee ./topConfigs/unixcoder_defect_to_clone.log
+    --num_train_epochs 10 \
+    --seed 42 2>&1 | tee ./baselines/transfer_full_defect_to_clone.log

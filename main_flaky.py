@@ -129,8 +129,8 @@ def train(args, model,  tokenizer ):
             logger.info("\n***** Running Test *****" ,)
             logger.info("  Num examples for flakiness detection = %d", len(test_dataset_flaky))
             logger.info("  Batch size = %d", args.eval_batch_size)
-
-            test_result = test(args, model, test_dataloader_flaky ) 
+            test_result = test(args, model, test_dataloader_flaky )
+            save_best_model(model, args , checkpoint_prefix="models/best_model_flakiness")
     
             
 
@@ -140,7 +140,7 @@ def train(args, model,  tokenizer ):
     test_final = test(args, model, test_dataloader_flaky ) 
   
         
-    save_best_model(model, args , checkpoint_prefix="models/final_model_flakiness")
+    
             
 
     return train_results 
@@ -332,6 +332,8 @@ def main():
     #delta_model.log(delta_ratio=True, trainable_ratio=True, visualization=True)
     model = Model_classification(model,config)
     
+    model.load_state_dict(torch.load("models/best_model_defect/model.bin") , strict=True)   
+    
     if args.n_gpu > 1:
          model = torch.nn.DataParallel( model)
 
@@ -355,7 +357,6 @@ def main():
         train_results  = train(args , model ,tokenizer)
         print("\n Train results : \n")
         pprint.pprint(train_results )
-     
 
 
 
